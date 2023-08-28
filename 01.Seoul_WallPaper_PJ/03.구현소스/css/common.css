@@ -3,6 +3,9 @@
 /* common.css */
 /* 공유기능 요소 셋팅 */
 
+body {
+    font-size: 10px;
+}
 
 /************* 1. 상단영역 *************/
 #header {
@@ -14,6 +17,7 @@
     align-items: center;
     padding: 25px 60px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 #header .logo {
     width: 183px;
@@ -29,13 +33,13 @@
 #header #gnb > ul > li {
     margin-right: 40px;
     font-weight: 500;
+    cursor: pointer;
 }
 #header #gnb > ul > li:last-child {
     margin-right: 0;
 }
 #header .right-box {
     position: absolute;
-    top: 0;
     right: 122px;
     display: flex;
     align-items: center;
@@ -44,12 +48,17 @@
     margin-right: 30px;
 }
 #header .right-box .lang {
-    padding-right:20px;
+    width: 45px;
     height: 20px;
+    line-height: 20px;
     background-image: url('../images/lang-arrow-down.svg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 9px;
+    overflow: hidden;
+}
+#header .right-box .lang:hover {
+    height: 40px;
 }
 #header .right-box .lang ul li {}
 
