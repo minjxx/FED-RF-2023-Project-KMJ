@@ -57,10 +57,19 @@ body {
     background-size: 9px;
     overflow: hidden;
 }
-#header .right-box .lang:hover {
-    height: 40px;
+#header .right-box .wish {
+    width: 35px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url(../images/header-wish.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    font-size: 15px;
+    font-weight: 500;
 }
-#header .right-box .lang ul li {}
 
 
 /************* 2. 메인영역 *************/
