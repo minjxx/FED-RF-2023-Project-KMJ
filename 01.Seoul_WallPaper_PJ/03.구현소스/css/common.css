@@ -3,7 +3,7 @@
 /* common.css */
 /* 공유기능 요소 셋팅 */
 
-body {
+html {
     font-size: 10px;
 }
 
@@ -17,7 +17,7 @@ body {
     align-items: center;
     padding: 25px 60px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 #header .logo {
     width: 183px;
@@ -56,6 +56,7 @@ body {
     background-position: right center;
     background-size: 9px;
     overflow: hidden;
+    cursor: pointer;
 }
 #header .right-box .wish {
     width: 35px;
@@ -67,9 +68,42 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
+    cursor: pointer;
 }
+#header .right-box .search-box .serachIcon {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url(../images/search-box-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+#header .right-box .search-box .search-input {display: none;}
+#header .right-box .search-box .search-btn {display: none;}
+#header .allMenuBtn {
+    position: relative;
+    width: 30px;
+    height: 15px;
+}
+#header .allMenuBtn span {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0D0D0D;
+    position: absolute;
+    transform: rotate(0deg) translateY(0);
+}
+#header .allMenuBtn span:nth-child(2) {
+    top: 10px;
+}
+
 
 
 /************* 2. 메인영역 *************/
