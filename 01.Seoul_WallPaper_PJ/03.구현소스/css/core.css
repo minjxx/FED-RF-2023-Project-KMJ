@@ -27,6 +27,12 @@
     font-weight: 700;
     src: url(./fonts/NotoSansKR-Bold.woff) format("woff");
 }
+@font-face {
+    font-family: "Crimson text";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/CrimsonText-Regular.woff) format("woff");
+}
 
 body,
 h1,
@@ -39,4 +45,8 @@ input,
 textarea,
 select {
     font-family: "Noto Sans KR", sans-serif;
+}
+
+.crimson {
+    font-family: 'Crimson text';
 }

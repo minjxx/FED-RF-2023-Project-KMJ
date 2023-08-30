@@ -52,6 +52,7 @@ html {
     width: 45px;
     height: 20px;
     line-height: 20px;
+    font-weight: 500;
     background-image: url("../images/lang-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right center;
@@ -124,8 +125,58 @@ html {
     object-fit: cover;
 }
 #main .mainVisual .swiper-pagination {
-    bottom: 50px;
+    left: 60px;
+    bottom: 80px;
+    width: auto;
+}
+#main .mainVisual .swiper-pagination-bullet {
+    margin: 0 8px;
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid #0d0d0d;
+    box-sizing: border-box;
+}
+#main .mainVisual .swiper-pagination-bullet-active {
+    background-color: #0d0d0d;
 }
 /************* 3. 하단영역 *************/
 #footer {
+}
+#footer .footer-top {
+    padding: 80px 0;
+    background-image: url(../images/footer-top-bg.png);
+}
+#footer .footer-top ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#footer .footer-top ul li {
+    position: relative;
+    width: 30%;
+    margin-right: 5%;
+}
+#footer .footer-top ul li:last-child {
+    margin-right: 0;
+}
+#footer .footer-top li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #0D0D0D;
+}
+#footer .footer-top ul li p {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+
+}
+#footer .footer-top ul li span {
+    font-size: 1.6rem;
 }

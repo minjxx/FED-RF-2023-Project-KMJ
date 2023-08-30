@@ -75,7 +75,30 @@
             </div>
         </div>
         <!-- 3. 하단영역 -->
-        <div id="footer"></div>
+        <div id="footer">
+            <div class="footer-top">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p class="crimson">Contact us</p>
+                            <span>상담하고 샘플 신청하세요!</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="crimson">Find us</p>
+                            <span>서울벽지의 위치를 확인하세요</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="crimson">Promotion</p>
+                            <span>서울벽지의 미디어 소식을 전합니다</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <script>
             let mainVisualSwiper = new Swiper(".mainVisual", {
@@ -83,11 +106,11 @@
                     delay: 4000,
                     disableOnInteraction: false,
                 },
-                effect : 'fade',
+                effect: "fade",
                 loop: true,
                 slidesPerView: 1,
                 pagination: {
-                    el: '.mainVisual .swiper-pagination',
+                    el: ".mainVisual .swiper-pagination",
                     clickable: true,
                 },
             });
