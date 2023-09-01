@@ -146,7 +146,7 @@ html {
     padding: 80px 0;
     background-image: url(../images/footer-top-bg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
 }
 #footer .footer-top ul{
@@ -175,11 +175,11 @@ html {
     background-color: #0D0D0D;
 }
 #footer .footer-top ul li p {
-    font-size: 3.5rem;
+    font-size: min(3.5rem,1.8vw);
     font-weight: 400;
     margin-bottom: 15px;
 
 }
 #footer .footer-top ul li span {
-    font-size: 1.6rem;
+    font-size: min(1.6rem,.85vw);
 }
