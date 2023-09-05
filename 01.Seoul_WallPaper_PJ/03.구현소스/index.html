@@ -6,12 +6,14 @@
         <meta name="Description" content="벽지 디자인 생산 전문업체, 친환경 가소제 벽지, 항균/항바이러스 벽지 개발로 더 건강하고 아름다운 주거공간을 만듭니다." />
         <title>서울벽지</title>
         <link rel="shortcut icon" href="./images/faviconV2.ico" />
-        <!-- 메인CSS -->
+        <!-- 메인 CSS -->
         <link rel="stylesheet" href="./css/main.css" />
-        <!-- in HEAD -->
+        <!-- swiper CSS -->
         <link rel="stylesheet" href="./css/swiper.min.css" />
+        <!-- swiper JS -->
         <script src="./js/swiper.min.js"></script>
-        <script src="./js/main.js"></script>
+        <!-- 메인 JS, defer 설정으로 html로딩후 실행함! -->
+        <script src="./js/main.js" defer></script>
     </head>
     <body>
         <!-- 1. 상단영역 -->
@@ -101,7 +103,7 @@
             </div>
             <div class="footer-wrap">
                 <div class="foot-logo"><img src="./images/logo_white.png" alt="하단로고"></div>
-                <a href="#" id="topBtn" class="roboto">TOP</a>
+                <a href="javascript:void(0)" id="topBtn" class="roboto">TOP</a>
             </div>
             <div class="flow-text crimson">
                 <p>BEAUTIFUL LIFE WITH SEOUL WALLPAPER </p>
