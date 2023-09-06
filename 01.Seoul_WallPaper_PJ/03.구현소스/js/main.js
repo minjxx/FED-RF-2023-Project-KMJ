@@ -17,4 +17,4 @@ scrTopBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     // 페이지 이동하기 : scrollTo()
     window.scrollTo({top:0,behavior:'smooth'});
-}); // 
+});
