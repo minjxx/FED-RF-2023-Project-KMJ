@@ -186,10 +186,15 @@ html {
 #footer .footer-top ul li span {
     font-size: min(1.6rem, 0.85vw);
 }
+
 #footer .footer-wrap {
     position: relative;
-    padding: 4.16vw 4.16vw 0;
+    padding: 3.1vw 3.1vw 0;
     background-color: var(--main-black);
+    color: #fff;
+}
+#footer .footer-wrap a {
+    color: #fff;
 }
 #footer .footer-wrap .foot-logo {
     width: 183px;
@@ -218,10 +223,78 @@ html {
     background-color: #fff;
     color: var(--main-black);
 }
-/* 하단 움직이는 텍스트 */
+
+#footer .foot-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2.1vw;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#footer .foot-list .left {
+    display: flex;
+    flex-wrap: wrap;
+}
+#footer .foot-list .left ul:not(:last-child) {
+    margin-right: 4.1vw;
+}
+#footer .foot-list .right {
+    display: flex;
+    flex-wrap: wrap;
+}
+#footer .foot-list .right ul:not(:last-child) {
+    margin-right: 2.6vw;
+}
+#footer .foot-list ul .list-title {
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+#footer .foot-list ul li:not(.list-title) {
+    display: flex;
+    margin-top: 10px;
+}
+#footer .foot-list .right ul .list-title {
+    text-transform: uppercase;
+}
+#footer .foot-list ul li span {
+    width: 85px;
+}
+#footer .foot-list .left ul li span {
+    text-transform: capitalize;
+}
+#footer .foot-list ul li p,
+#footer .foot-list ul li a {
+    opacity: .5;
+}
+#footer .copyright {
+    display: flex;
+    margin-top: 4.9vw;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+#footer .copyright * {
+    opacity: .5;
+}
+#footer .copyright p {
+    position: relative;
+    padding-right: 40px;
+}
+#footer .copyright p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right:18px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 13px;
+    background-color: #fff;
+    opacity: .5;
+}
+
 #footer .flow-text {
     display: flex;
-    padding: 15px 0;
+    padding: 10px 0;
     white-space: nowrap;
     overflow: hidden;
     transition: .2s;
@@ -229,6 +302,7 @@ html {
     font-weight:600;
     color: rgba(255, 255, 255, .5);
     background-color: var(--main-black);
+    text-transform: uppercase;
 }
 #footer .flow-text:hover {
   color: #ddd;

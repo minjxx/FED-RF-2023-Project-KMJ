@@ -27,8 +27,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	color: #0D0D0D;
+	line-height: 1.45;
 	overflow-x: hidden;
+	font-family: "Noto Sans KR", sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -49,6 +51,10 @@ table {
 a{
     color: #222;
     text-decoration: none;
+}
+/* 이미지태그 여백없애기 */
+img {
+	vertical-align: middle;
 }
 
 /* 스크롤바 전체 기본 꾸미기 */
