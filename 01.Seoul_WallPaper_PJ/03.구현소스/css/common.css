@@ -146,6 +146,9 @@ html {
     background-color: var(--main-black);
 }
 /************* 3. 하단영역 *************/
+#footer {
+    background-color: var(--main-black);
+}
 #footer .footer-top {
     padding: 80px 0;
     background-image: url(../images/footer-top-bg.png);
@@ -204,8 +207,8 @@ html {
 }
 #footer #topBtn {
     position: absolute;
-    top: 4.16vw;
-    right: 4.16vw;
+    top: 3.1vw;
+    right: 3.1vw;
     width: 105px;
     height: 40px;
     border: 1px solid #fff;
@@ -258,7 +261,7 @@ html {
     text-transform: uppercase;
 }
 #footer .foot-list ul li span {
-    width: 85px;
+    width: 75px;
 }
 #footer .foot-list .left ul li span {
     text-transform: capitalize;
@@ -314,6 +317,45 @@ html {
 #footer .flow-text p {
   animation: textLoop 18s linear infinite;
   padding-right: 2.2vw;
+}
+
+@media screen and (max-width:1500px) {
+    #footer .foot-list .left {
+        width: 42%;
+    }
+    #footer .foot-list .left ul {
+        width: 100%;
+    }
+    #footer .foot-list .left ul:not(:last-child) {
+        margin-right: 0;
+    }
+    #footer .foot-list .left ul .list-title {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:1200px) {
+    #footer .foot-list {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:1000px) {
+    #footer .foot-list {
+        font-size: 1.3rem;
+    }
+    #footer .foot-list .right ul:not(:last-child) {
+        margin-right: 1.5vw;
+    }
+}
+@media screen and (max-width:850px) {
+    #footer .foot-list .left {
+        width: 100%;
+    }
+    #footer .foot-list .left ul:last-child{
+        margin-top: 25px;
+    }
+    #footer .foot-list .right {
+        display: none;
+    }
 }
 /* 하단 움직이는 텍스트 애니메이션 */
 @keyframes textLoop {
