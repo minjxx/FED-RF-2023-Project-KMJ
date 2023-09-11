@@ -146,9 +146,6 @@ html {
     background-color: var(--main-black);
 }
 /************* 3. 하단영역 *************/
-#footer {
-    background-color: var(--main-black);
-}
 #footer .footer-top {
     padding: 80px 0;
     background-image: url(../images/footer-top-bg.png);

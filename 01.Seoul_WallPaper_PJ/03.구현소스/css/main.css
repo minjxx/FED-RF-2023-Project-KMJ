@@ -6,3 +6,30 @@
 @import url(./core.css);
 @import url(./common.css);
 
+
+.news-box {
+    background: linear-gradient(180deg, #F7F7F7 25.53%, rgba(246, 246, 246, 0) 60.86%);
+    padding-bottom: 13.5vw;
+}
+.news-box .top-tit {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+}
+.news-box .top-tit span {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #ADB4B5;
+}
+.news-box .top-tit p {
+    font-size: 10rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+.news-box .top-tit .moreBtn {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
