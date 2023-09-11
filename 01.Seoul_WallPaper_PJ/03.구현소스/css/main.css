@@ -6,10 +6,188 @@
 @import url(./core.css);
 @import url(./common.css);
 
+/* 더보기 버튼 */
+#main .moreBtn {
+    position: absolute;
+    right: 3.1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #667475;
+    font-weight: 500;
+    background-image: url(../images/moreBtn.png);
+    background-repeat: no-repeat;
+    padding-right: 50px;
+    background-position: right 7px center;
+    transition: .3s;
+    opacity: .7;
+}
+#main .moreBtn:hover {
+    opacity: 1;
+    background-position: right 0 center;
+}
 
+/* 비주얼영역 */
+.mainVisual {
+    width: 100%;
+    height: 100vh;
+}
+.mainVisual .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mainVisual .swiper-pagination {
+    left: 60px;
+    bottom: 80px;
+    width: auto;
+}
+.mainVisual .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid var(--main-black);
+    box-sizing: border-box;
+}
+.mainVisual .swiper-pagination-bullet-active {
+    background-color: var(--main-black);
+}
+
+/* 스타일링 팁 영역 */
+.tip-box {
+    position: relative;
+    width: 100%;
+    height: 1839px;
+    background-color: #fff;
+    padding-top: 180px;
+    box-sizing: border-box;
+}
+.tip-box .title {
+    position: relative;
+    text-align: center;
+    color: #667475;
+    z-index: 9;
+}
+.tip-box .title p {
+    font-size: 10rem;
+    text-transform: capitalize;
+}
+.tip-box .title .tipBtn {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-size: 1.6rem;
+    border: 1px solid rgba(102, 116, 117, .5);
+    border-radius: 50%;
+    padding: 15px 40px;
+    transition: .3s ease;
+    color: #667475;
+    background-color: #fff;
+}
+.tip-box .title .tipBtn:hover {
+    background-color: #667475;
+    color: #fff;
+}
+/* 스타일링 팁 영역 이미지들 */
+.tip-box .hover-area .imgHover {
+    position: absolute;
+    transition: all 350ms ease;
+    filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, .2));
+}
+.tip-box .hover-area .tipImg1 {
+    width: 354px;
+    height: 482px;
+    top: 353px;
+    left: 0;
+    transform: none;
+}
+.tip-box .hover-area .tipImg1:hover {
+    top: 323px;
+}
+.tip-box .hover-area .tipImg2 {
+    width: 567px;
+    height: 364px;
+    bottom: 326px;
+    left: 60px;
+}
+.tip-box .hover-area .tipImg2:hover {
+    bottom: 356px;
+}
+.tip-box .hover-area .tipImg3 {
+    width: 464px;
+    height: 593px;
+    top: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, .4);
+    filter: none;
+}
+.tip-box .hover-area .tipImg3:hover {
+    top: 690px;
+}
+.tip-box .hover-area .tipImg4 {
+    width: 316px;
+    height: 385px;
+    top: 513px;
+    right: 331px;
+}
+.tip-box .hover-area .tipImg4:hover {
+    top: 483px;
+}
+.tip-box .hover-area .tipImg5 {
+    width: 324px;
+    height: 288px;
+    top: 287px;
+    right: -43px;
+    filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, .10));
+}
+.tip-box .hover-area .tipImg5:hover {
+    top: 257px;
+}
+.tip-box .hover-area .tipImg6 {
+    width: 376px;
+    height: 457px;
+    top: 670px;
+    right: -125px;
+    filter: drop-shadow(-10px 7px 5px rgba(0, 0, 0, .10));
+}
+.tip-box .hover-area .tipImg6:hover {
+    top: 640px;
+}
+.tip-box .hover-area .imgHover img {
+    width: 100%;
+}
+/* 스타일링 팁 영역 svg */
+.tip-box svg {
+    width: 920px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    stroke-dasharray: 4780;
+    stroke-dashoffset: 0;
+    animation: con4svg 4s ease;
+    animation-fill-mode: forwards;
+}
+/* 스타일링 팁 영역 svg 애니메이션 */
+@keyframes con4svg {
+    0% {
+        stroke-dashoffset: -4780;
+    }
+    100% {
+        stroke-dashoffset:0;
+    }
+}
+
+
+/*  뉴스 영역 */
 .news-box {
+    width: 100%;
     background: linear-gradient(180deg, #F7F7F7 25.53%, rgba(246, 246, 246, 0) 60.86%);
-    padding-bottom: 13.5vw;
+    padding-bottom: 10vw;
 }
 .news-box .top-tit {
     position: relative;
@@ -26,10 +204,35 @@
     text-transform: uppercase;
     line-height: 1.1;
 }
-.news-box .top-tit .moreBtn {
-    position: absolute;
-    right: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
+.news-slide .swiper-wrapper {
+    align-items: center;
+}
+.news-slide .img-box {
+    position: relative; 
+    width: 100%; 
+    padding-top: 100%; 
+    overflow: hidden;
+}
+.news-slide .swiper-slide:nth-child(2n) .img-box {
+    padding-top: 70%; 
+}
+.news-slide .img-box img {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+.news-slide .txt-box {
+    margin-top: 20px;
+}
+.news-slide .txt-box p {
+    font-weight: 500;
+}
+.news-slide .txt-box .date {
+    font-size: 1.6rem;
+    color: #a7a7a7;
+    margin-top: 8px;
 }
