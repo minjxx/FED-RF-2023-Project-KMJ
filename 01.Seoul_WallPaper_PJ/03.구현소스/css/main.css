@@ -37,12 +37,12 @@
     height: 100%;
     object-fit: cover;
 }
-.mainVisual .swiper-pagination {
+.mainVisual > .swiper-pagination {
     left: 60px;
     bottom: 80px;
     width: auto;
 }
-.mainVisual .swiper-pagination-bullet {
+.mainVisual > .swiper-pagination > .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     margin: 0 8px;
@@ -51,7 +51,7 @@
     border: 1px solid var(--main-black);
     box-sizing: border-box;
 }
-.mainVisual .swiper-pagination-bullet-active {
+.mainVisual > .swiper-pagination > .swiper-pagination-bullet-active {
     background-color: var(--main-black);
 }
 
@@ -68,7 +68,6 @@
     position: relative;
     text-align: center;
     color: #667475;
-    z-index: 9;
 }
 .tip-box .title p {
     font-size: 10rem;
@@ -95,14 +94,13 @@
 /* 스타일링 팁 영역 이미지들 */
 .tip-box .hover-area .imgHover {
     position: absolute;
-    transition: all 350ms ease;
+    transition: .6s ease;
     filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, .2));
-    z-index: 9;
 }
 .tip-box .hover-area .tipImg1 {
     width: 354px;
     height: 482px;
-    top: 353px;
+    top: 355px;
     left: 0;
     transform: none;
 }
@@ -112,11 +110,11 @@
 .tip-box .hover-area .tipImg2 {
     width: 567px;
     height: 364px;
-    bottom: 326px;
+    bottom: 325px;
     left: 60px;
 }
 .tip-box .hover-area .tipImg2:hover {
-    bottom: 356px;
+    bottom: 355px;
 }
 .tip-box .hover-area .tipImg3 {
     width: 464px;
@@ -133,17 +131,17 @@
 .tip-box .hover-area .tipImg4 {
     width: 316px;
     height: 385px;
-    top: 513px;
-    right: 331px;
+    top: 515px;
+    right: 330px;
 }
 .tip-box .hover-area .tipImg4:hover {
-    top: 483px;
+    top: 485px;
 }
 .tip-box .hover-area .tipImg5 {
     width: 324px;
     height: 288px;
-    top: 287px;
-    right: -43px;
+    top: 285px;
+    right: -45px;
     filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, .10));
 }
 .tip-box .hover-area .tipImg5:hover {
@@ -162,6 +160,55 @@
 .tip-box .hover-area .imgHover img {
     width: 100%;
 }
+/* 스타일링 팁 영역 문구 */
+.tip-box .txt-box {
+    position: absolute;
+    padding: 30px;
+    box-sizing: border-box;
+    font-weight: 300;
+    z-index: 1;
+    box-shadow: -10px 10px 11px rgba(0,0,0,.1);
+    transition: .6s ease;
+}
+.tip-box .txt-box:hover {
+    transform: scale(1.03);
+}
+.tip-box .txt1 {
+    top: 500px;
+    left: 300px;
+    width: 320px;
+    height: 480px;
+    background-color: #D3B887;
+    color: #fff;
+}
+.tip-box .txt1 img {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    width: 136px;
+}
+.tip-box .txt2 {
+    bottom: 375px;
+    right: 405px;
+    width: 425px;
+    padding-top: 170px;
+    background-color: #EEEEE7;
+    color: #555;
+}
+.tip-box .small-box {
+    position: absolute;
+    right: 60px;
+    bottom: 195px;
+}
+.tip-box .small-box p {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    opacity: .5;
+    transition: .2s ease;
+}
+.tip-box .small-box:hover p {
+    opacity: .9;
+}
 /* 스타일링 팁 영역 svg */
 .tip-box svg {
     width: 920px;
@@ -170,18 +217,18 @@
     left: 50%;
     stroke-dasharray: 4780;
     stroke-dashoffset: 0;
-    animation: con4svg 4s ease;
-    animation-fill-mode: forwards;
+    /* animation: con4svg 4s ease; */
+    /* animation-fill-mode: forwards; */
 }
 /* 스타일링 팁 영역 svg 애니메이션 */
-@keyframes con4svg {
+/* @keyframes con4svg {
     0% {
         stroke-dashoffset: -4780;
     }
     100% {
         stroke-dashoffset:0;
     }
-}
+} */
 
 
 /*  뉴스 영역 */

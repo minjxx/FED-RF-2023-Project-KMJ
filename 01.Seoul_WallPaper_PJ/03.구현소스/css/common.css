@@ -22,7 +22,7 @@ html {
     padding: 25px 60px;
     box-sizing: border-box;
     font-size: 1.6rem;
-    z-index: 9;
+    z-index: 999;
 }
 #header .logo {
     width: 183px;
@@ -54,15 +54,19 @@ html {
 }
 #header .right-box .lang {
     width: 45px;
-    height: 20px;
-    line-height: 20px;
+    height: 30px;
+    line-height: 30px;
     font-weight: 500;
+    padding: 10px 0;
     background-image: url("../images/lang-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 9px;
     overflow: hidden;
     cursor: pointer;
+}
+#header .right-box .lang:hover {
+    overflow: initial;
 }
 #header .right-box .wish {
     width: 35px;
