@@ -56,7 +56,7 @@
 }
 
 /* 스타일링 팁 영역 */
-.tip-box {
+.con3 {
     position: relative;
     width: 100%;
     height: 1839px;
@@ -64,16 +64,16 @@
     padding-top: 180px;
     box-sizing: border-box;
 }
-.tip-box .title {
+.con3 .title {
     position: relative;
     text-align: center;
     color: #667475;
 }
-.tip-box .title p {
+.con3 .title p {
     font-size: 10rem;
     text-transform: capitalize;
 }
-.tip-box .title .tipBtn {
+.con3 .title .tipBtn {
     position: absolute;
     bottom: -80px;
     left: 50%;
@@ -87,36 +87,36 @@
     color: #667475;
     background-color: #fff;
 }
-.tip-box .title .tipBtn:hover {
+.con3 .title .tipBtn:hover {
     background-color: #667475;
     color: #fff;
 }
 /* 스타일링 팁 영역 이미지들 */
-.tip-box .hover-area .imgHover {
+.con3 .hover-area .imgHover {
     position: absolute;
     transition: .6s ease;
     filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, .2));
 }
-.tip-box .hover-area .tipImg1 {
+.con3 .hover-area .tipImg1 {
     width: 354px;
     height: 482px;
     top: 355px;
     left: 0;
     transform: none;
 }
-.tip-box .hover-area .tipImg1:hover {
+.con3 .hover-area .tipImg1:hover {
     top: 323px;
 }
-.tip-box .hover-area .tipImg2 {
+.con3 .hover-area .tipImg2 {
     width: 567px;
     height: 364px;
     bottom: 325px;
     left: 60px;
 }
-.tip-box .hover-area .tipImg2:hover {
+.con3 .hover-area .tipImg2:hover {
     bottom: 355px;
 }
-.tip-box .hover-area .tipImg3 {
+.con3 .hover-area .tipImg3 {
     width: 464px;
     height: 593px;
     top: 720px;
@@ -125,43 +125,43 @@
     box-shadow: -1px 1px 10px rgba(0, 0, 0, .4);
     filter: none;
 }
-.tip-box .hover-area .tipImg3:hover {
+.con3 .hover-area .tipImg3:hover {
     top: 690px;
 }
-.tip-box .hover-area .tipImg4 {
+.con3 .hover-area .tipImg4 {
     width: 316px;
     height: 385px;
     top: 515px;
     right: 330px;
 }
-.tip-box .hover-area .tipImg4:hover {
+.con3 .hover-area .tipImg4:hover {
     top: 485px;
 }
-.tip-box .hover-area .tipImg5 {
+.con3 .hover-area .tipImg5 {
     width: 324px;
     height: 288px;
     top: 285px;
     right: -45px;
     filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, .10));
 }
-.tip-box .hover-area .tipImg5:hover {
+.con3 .hover-area .tipImg5:hover {
     top: 257px;
 }
-.tip-box .hover-area .tipImg6 {
+.con3 .hover-area .tipImg6 {
     width: 376px;
     height: 457px;
     top: 670px;
     right: -125px;
     filter: drop-shadow(-10px 7px 5px rgba(0, 0, 0, .10));
 }
-.tip-box .hover-area .tipImg6:hover {
+.con3 .hover-area .tipImg6:hover {
     top: 640px;
 }
-.tip-box .hover-area .imgHover img {
+.con3 .hover-area .imgHover img {
     width: 100%;
 }
 /* 스타일링 팁 영역 문구 */
-.tip-box .txt-box {
+.con3 .txt-box {
     position: absolute;
     padding: 30px;
     box-sizing: border-box;
@@ -170,10 +170,10 @@
     box-shadow: -10px 10px 11px rgba(0,0,0,.1);
     transition: .6s ease;
 }
-.tip-box .txt-box:hover {
+.con3 .txt-box:hover {
     transform: scale(1.03);
 }
-.tip-box .txt1 {
+.con3 .txt1 {
     top: 500px;
     left: 300px;
     width: 320px;
@@ -181,13 +181,13 @@
     background-color: #D3B887;
     color: #fff;
 }
-.tip-box .txt1 img {
+.con3 .txt1 img {
     position: absolute;
     left: 30px;
     bottom: 40px;
     width: 136px;
 }
-.tip-box .txt2 {
+.con3 .txt2 {
     bottom: 375px;
     right: 405px;
     width: 425px;
@@ -195,22 +195,22 @@
     background-color: #EEEEE7;
     color: #555;
 }
-.tip-box .small-box {
+.con3 .small-box {
     position: absolute;
     right: 60px;
     bottom: 195px;
 }
-.tip-box .small-box p {
+.con3 .small-box p {
     margin-top: 30px;
     font-size: 2.5rem;
     opacity: .5;
     transition: .2s ease;
 }
-.tip-box .small-box:hover p {
+.con3 .small-box:hover p {
     opacity: .9;
 }
 /* 스타일링 팁 영역 svg */
-.tip-box svg {
+.con3 svg {
     width: 920px;
     position: absolute;
     top: 0;
@@ -232,22 +232,22 @@
 
 
 /*  뉴스 영역 */
-.news-box {
+.con4 {
     width: 100%;
     background: linear-gradient(180deg, #F7F7F7 25.53%, rgba(246, 246, 246, 0) 60.86%);
     padding-bottom: 10vw;
 }
-.news-box .top-tit {
+.con4 .top-tit {
     position: relative;
     padding: 100px 0;
     text-align: center;
 }
-.news-box .top-tit span {
+.con4 .top-tit span {
     font-size: 2rem;
     text-transform: capitalize;
     color: #ADB4B5;
 }
-.news-box .top-tit p {
+.con4 .top-tit p {
     font-size: 10rem;
     text-transform: uppercase;
     line-height: 1.1;
