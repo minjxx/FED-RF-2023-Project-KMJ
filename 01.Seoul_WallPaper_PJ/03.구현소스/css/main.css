@@ -97,6 +97,11 @@
     transition: .6s ease;
     filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, .2));
 }
+.con3 .hover-area .imgHover img {
+    position: relative;
+    top: 0;
+    transition: .6s ease;
+}
 .con3 .hover-area .tipImg1 {
     width: 354px;
     height: 482px;
@@ -154,8 +159,8 @@
     right: -125px;
     filter: drop-shadow(-10px 7px 5px rgba(0, 0, 0, .10));
 }
-.con3 .hover-area .tipImg6:hover {
-    top: 640px;
+.con3 .hover-area .tipImg6:hover img {
+    top: -10px;
 }
 .con3 .hover-area .imgHover img {
     width: 100%;
