@@ -97,6 +97,7 @@
     position: absolute;
     transition: all 350ms ease;
     filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, .2));
+    z-index: 9;
 }
 .tip-box .hover-area .tipImg1 {
     width: 354px;
