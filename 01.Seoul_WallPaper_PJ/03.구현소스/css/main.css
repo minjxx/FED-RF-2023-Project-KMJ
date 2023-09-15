@@ -105,8 +105,8 @@
 
 }
 .con1 .slidePg ul li:nth-child(4) {
+    position: relative;
     background-image: url(../images/con2-01.png);
-
     transition: all .5s ease, width 1s ease 1s;
 }
 .con1 .slidePg ul li .title {
@@ -133,6 +133,23 @@
     width: 100vw;
     height: 100vh;
     transform: translate(-50%,-50%);
+}
+.con1 .slidePg ul li .txtbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.5);
+    width: 290px;
+    height: 350px;
+}
+.con1 .slidePg ul li .txtbox .desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
 }
 
 /* 스타일링 팁 영역 */

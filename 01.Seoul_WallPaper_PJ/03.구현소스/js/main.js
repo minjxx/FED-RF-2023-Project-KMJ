@@ -45,7 +45,7 @@ const slideLast = domFn.qs(".slidePg>ul>li:last-child");
 // 광휠상태변수(0-허용,1-금지)
 let stsWheel = 0;
 // 휠제어시간
-const TIME_WHEEL = 150;
+const TIME_WHEEL = 160;
 // 휠단위수 (휠할때 증감하는수)
 let numWheel = 0;
 
@@ -76,7 +76,7 @@ function moveSlide() {
         target.style.left = bTop + "px";
     }
     else if (bTop <= -1600 && bTop >= -2500) {
-        // slideLast.classList.add('on');
+        slideLast.classList.add('on');
     }
     // (3) 마지막 한계 이후엔 한계값으로 셋팅!
     else {
