@@ -76,7 +76,7 @@ function moveSlide() {
         target.style.left = bTop + "px";
     }
     else if (bTop <= -1600 && bTop >= -2500) {
-        slideLast.classList.add('on');
+        // slideLast.classList.add('on');
     }
     // (3) 마지막 한계 이후엔 한계값으로 셋팅!
     else {
