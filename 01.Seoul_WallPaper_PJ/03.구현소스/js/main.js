@@ -45,7 +45,7 @@ const slideLast = domFn.qs(".slidePg>ul>li:last-child");
 // 광휠상태변수(0-허용,1-금지)
 let stsWheel = 0;
 // 휠제어시간
-const TIME_WHEEL = 160;
+const TIME_WHEEL = 100;
 // 휠단위수 (휠할때 증감하는수)
 let numWheel = 0;
 
@@ -61,7 +61,7 @@ function moveSlide() {
 
     // 1. 스티키 부모박스 바운딩top값
     let bTop = domFn.getBCR(tpg);
-    console.log('나야나!',bTop);
+    // console.log('나야나!',bTop);
 
     // 2. 바운딩값으로  대상 left위치 변경하기
     // 움직일대상: 스티키박스 -> .slidePg>ul
@@ -71,16 +71,19 @@ function moveSlide() {
         target.style.left = "0px";
     }
     // (2) 움직이기시작은 바운딩값이 0이하일때부터!!!
-    // 한계는 -3000px
+    // 한계는 -1600px
     else if (bTop <= 0 && bTop >= -1600) {
         target.style.left = bTop + "px";
     }
-    else if (bTop <= -1600 && bTop >= -1600) {
-        // slideLast.classList.add('on');
+    else if (bTop < -1600 && bTop > -2000) {
+        slideLast.classList.remove('on');
+    }
+    else if (bTop <= -2000 && bTop >= -3000) {
+        slideLast.classList.add('on');
     }
     // (3) 마지막 한계 이후엔 한계값으로 셋팅!
     else {
-        target.style.left = "-1600px";
+        target.style.left = "-3000px";
     }
     
 } //////////// moveSlide 함수 //////////////

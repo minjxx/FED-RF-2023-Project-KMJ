@@ -85,3 +85,18 @@ select {
     bottom: 0;
     z-index: 1;
 }
+.hide {
+    position: absolute;
+    left: -99999px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: .3s ease;
+    font-size: 1.4rem;
+}
