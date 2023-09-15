@@ -245,6 +245,10 @@ html {
 #footer .foot-list ul li a {
     opacity: .5;
 }
+#footer .foot-list ul li a:hover {
+    opacity: 1;
+    transition: .5s;
+}
 #footer .copyright {
     display: flex;
     margin-top: 4.9vw;
