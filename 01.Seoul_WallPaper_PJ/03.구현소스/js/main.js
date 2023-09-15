@@ -27,7 +27,8 @@ scrTopBtn.addEventListener("click", (e) => {
     e.preventDefault();
     // 페이지 이동하기 : scrollTo()
     window.scrollTo({ top: 0, behavior: "smooth" });
-});
+}); 
+//////////////// scrTopBtn ///////////////////
 
 
 
@@ -41,10 +42,23 @@ const target = domFn.qs(".slidePg>ul");
 // 고정시키는 마지막대상 : .slidePg>ul>li:last-child
 const slideLast = domFn.qs(".slidePg>ul>li:last-child");
 
+// 광휠상태변수(0-허용,1-금지)
+let stsWheel = 0;
+// 휠제어시간
+const TIME_WHEEL = 150;
+// 휠단위수 (휠할때 증감하는수)
+let numWheel = 0;
+
 // 윈도우 이벤트 걸기
 domFn.addEvt(window, "scroll", moveSlide);
 
 function moveSlide() {
+
+    // 0. 휠이벤트 발생수 조절하기(광휠금지)
+    if(stsWheel) return; // 막기
+    stsWheel = 1; // 잠금!
+    setTimeout(()=>stsWheel=0,TIME_WHEEL); // 해제
+
     // 1. 스티키 부모박스 바운딩top값
     let bTop = domFn.getBCR(tpg);
     console.log('나야나!',bTop);
@@ -68,4 +82,5 @@ function moveSlide() {
     else {
         target.style.left = "-1600px";
     }
+    
 } //////////// moveSlide 함수 //////////////
