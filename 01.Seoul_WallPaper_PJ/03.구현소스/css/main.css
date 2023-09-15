@@ -106,6 +106,8 @@
 }
 .con1 .slidePg ul li:nth-child(4) {
     background-image: url(../images/con2-01.png);
+
+    transition: all .5s ease, width 1s ease 1s;
 }
 .con1 .slidePg ul li .title {
 
@@ -121,10 +123,11 @@
 }
 .con1 .slidePg ul li:last-child.on {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%,-50%);
 }
 
 /* 스타일링 팁 영역 */
