@@ -92,11 +92,11 @@ select {
 
 .btn {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 20px 64px;
     border: 1px solid #fff;
     color: #fff;
     background-color: transparent;
     border-radius: 50%;
-    transition: .3s ease;
+    transition: .5s ease;
     font-size: 1.4rem;
 }

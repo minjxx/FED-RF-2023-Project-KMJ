@@ -58,7 +58,7 @@
 /* 벽지 살펴보기 영역 */
 .con1 {
     width: 100%;
-    height: calc(100vh + 3000px);
+    height: calc(100vh + 2500px);
     background-color: #f6f5f3;
 }
 .con1 .slidePg {
@@ -107,7 +107,7 @@
 .con1 .slidePg ul li:nth-child(4) {
     position: relative;
     background-image: url(../images/con2-01.png);
-    transition: all .5s ease, width .5s ease .5s;
+    transition: width .5s ease-out;
 }
 .con1 .slidePg ul li .title {
     font-size: 22px;
@@ -126,7 +126,7 @@
     font-size: 16px;
     opacity: .8;
 }
-.con1 .slidePg ul li:last-child.on {
+.con1 .slidePg .search-card.on {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -134,7 +134,7 @@
     height: 100vh;
     transform: translate(-50%,-50%);
 }
-.con1 .slidePg ul li .txtbox {
+.con1 .slidePg .search-card .txtbox {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -144,22 +144,87 @@
     width: 290px;
     height: 350px;
 }
-.con1 .slidePg ul li .txtbox .desc {
+.con1 .slidePg .search-card.on .txtbox {
+    display: none;
+}
+.con1 .slidePg .search-card .txtbox .desc {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 2rem;
 }
-.con1 .slidePg ul li:last-child.on .txtbox {
+.con1 .slidePg .search-card .txtbox2 {
     display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    transition: .3s;
+    opacity: 0;
+    animation: fadeInput 1s .5s ease-out forwards;
 }
-.con1 .slidePg ul li .txtbox2 {
-    display: none;
-}
-.con1 .slidePg ul li:last-child.on .txtbox2 {
+.con1 .slidePg .search-card.on .txtbox2 {
     display: block;
 }
+.con1 .slidePg .search-card .txtbox2 .toptxt {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.con1 .slidePg .search-card .txtbox2 .subtxt {
+    font-size: 1.6rem;
+    opacity: .8;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.con1 .slidePg .search-card .txtbox2 .schInput {
+    position: relative;
+    width: 680px;
+}
+.con1 .slidePg .search-card .txtbox2 .schInput input {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(13, 13, 13, .2);
+    border: none;
+    font-size: 1.6rem;
+    padding: 0 80px 0 40px;
+    box-sizing: border-box;
+    border-radius: 60px;
+    outline: none;
+    color: #fff;
+}
+.con1 .slidePg .search-card .txtbox2 .schInput input::placeholder {
+    color: #ddd;
+}
+.con1 .slidePg .search-card .txtbox2 .schInput .srch-btn {
+    position: absolute;
+    top: 21px;
+    right: 45px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    background-image: url('../images/search-box-iconW.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.con1 .slidePg .search-card .txtbox2 .btn {
+    margin-top: 80px;
+}
+.con1 .slidePg .search-card .txtbox2 .btn:hover {
+    background-color: #fff;
+    color: var(--main-black);
+}
+@keyframes fadeInput {
+    100% {
+        opacity: 1;
+    }
+} 
+
 
 /* 스타일링 팁 영역 */
 .con3 {

@@ -39,8 +39,8 @@ scrTopBtn.addEventListener("click", (e) => {
 const tpg = domFn.qs(".con1");
 // 움직일대상: .slidePg>ul
 const target = domFn.qs(".slidePg>ul");
-// 고정시키는 마지막대상 : .slidePg>ul>li:last-child
-const slideLast = domFn.qs(".slidePg>ul>li:last-child");
+// 고정시키는 마지막대상 : .slidePg .search-wrap
+const searchSlide = domFn.qs(".slidePg .search-card");
 
 // 광휠상태변수(0-허용,1-금지)
 let stsWheel = 0;
@@ -76,14 +76,14 @@ function moveSlide() {
         target.style.left = bTop + "px";
     }
     else if (bTop < -1600 && bTop > -2000) {
-        slideLast.classList.remove('on');
+        searchSlide.classList.remove('on');
     }
-    else if (bTop <= -2000 && bTop >= -3000) {
-        slideLast.classList.add('on');
+    else if (bTop <= -2000 && bTop >= -2500) {
+        searchSlide.classList.add('on');
     }
     // (3) 마지막 한계 이후엔 한계값으로 셋팅!
     else {
-        target.style.left = "-3000px";
+        target.style.left = "-2500px";
     }
     
 } //////////// moveSlide 함수 //////////////
