@@ -164,7 +164,9 @@ html {
 #footer .footer-top ul li span {
     font-size: min(1.6rem, 0.85vw);
 }
-
+#footer .footer-area {
+    background-color: var(--main-black);
+}
 #footer .footer-wrap {
     position: relative;
     padding: 3.1vw 3.1vw 0;

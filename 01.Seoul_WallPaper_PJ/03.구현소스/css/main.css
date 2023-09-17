@@ -6,28 +6,8 @@
 @import url(./core.css);
 @import url(./common.css);
 
-/* 더보기 버튼 */
-#main .moreBtn {
-    position: absolute;
-    right: 3.1vw;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    color: #667475;
-    font-weight: 500;
-    background-image: url(../images/moreBtn.png);
-    background-repeat: no-repeat;
-    padding-right: 50px;
-    background-position: right 7px center;
-    transition: .3s;
-    opacity: .7;
-}
-#main .moreBtn:hover {
-    opacity: 1;
-    background-position: right 0 center;
-}
 
-/* 비주얼영역 */
+/**************************** 비주얼영역 ****************************/
 .mainVisual {
     width: 100%;
     height: 100vh;
@@ -42,20 +22,8 @@
     bottom: 80px;
     width: auto;
 }
-.mainVisual > .swiper-pagination > .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    opacity: 1;
-    background-color: transparent;
-    border: 1px solid var(--main-black);
-    box-sizing: border-box;
-}
-.mainVisual > .swiper-pagination > .swiper-pagination-bullet-active {
-    background-color: var(--main-black);
-}
 
-/* 벽지 살펴보기 영역 */
+/**************************** 벽지 살펴보기 영역 ****************************/
 .con1 {
     width: 100%;
     height: calc(100vh + 2500px);
@@ -80,7 +48,6 @@
     display: flex;
     gap: 0 60px;
     width: calc(100vw + 1600px);
-    height: 100%;
     padding-left: 30vw;
     transition: 0.4s ease-out;
 }
@@ -189,7 +156,7 @@
     background-color: rgba(13, 13, 13, .2);
     border: none;
     font-size: 1.6rem;
-    padding: 0 80px 0 40px;
+    padding: 0 80px 0 45px;
     box-sizing: border-box;
     border-radius: 60px;
     outline: none;
@@ -223,10 +190,235 @@
     100% {
         opacity: 1;
     }
-} 
+}
 
+/**************************** 벽지컬렉션 영역 ****************************/
+.con2 {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-color: #fff;
+}
+.con2 .title {
+    position: absolute;
+    top: 6vw;
+    left: 3.1vw;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #adb4b5;
+    z-index: 9;
+}
+.con2 .sample-list {
+    position: absolute;
+    top: 10vw;
+    left: 3.1vw;
+    z-index: 9;
+}
+.con2 .sample-list li {
+    position: relative;
+    margin-bottom: 24px;
+}
+.con2 .sample-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 16px;
+    height: 1px;
+    background-color: var(--main-black);
+    opacity: .7;
+}
+.con2 .sample-list li button {
+    opacity: .7;
+    font-size: 1.6rem;
+    background-color: transparent;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.con2 .sample-list li.on button {
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 1;
+}
+.con2 .con2-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.con2 .con2-slide .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.con2 .con2-slide .bg .left {
+    width: 50%;
+    background-color: #f4f4f4;
+}
+.con2 .con2-slide .bg .right {
+    width: 50%;
+    background-color: #F5E8DF;
+}
+.con2 .con2-slide .title-box {
+    position: absolute;
+    top: 50%;
+    left: 8.8vw;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.con2 .con2-slide .title-box .txt1 {
+    font-size: 20rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.con2 .con2-slide .title-box .txt2 {
+    font-size: 5rem;
+    font-style: italic;
+    line-height: 1;
+}
+.con2 .con2-slide .title-box .txt3 {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #667475;
+    opacity: 0.6;
+}
+.con2 .con2-slide .side-text {
+    position: absolute;
+    top: 50%;
+    right: 6vw;
+    transform: translateY(-50%);
+    width: 370px;
+    font-size: 1.6rem;
+}
+.con2 .con2-slide .side-text p {
+    color: #666;
+}
+.con2 .con2-slide .side-text p:first-child {
+    margin-bottom: 10px;
+}
+.con2 .con2-slide .side-text p strong {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-black);
+}
+.con2 .con2-slide .side-text .btn {
+    border-radius: 50%;
+    border: 1px solid rgba(13, 13, 13,0.5);
+    color: var(--main-black);
+    padding: 13.5px 55px;
+    display: inline-block;
+    margin-top: 4vw;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.con2 .con2-slide .side-text .btn:hover {
+    background-color: var(--main-black);
+    color: #fff;
+}
+.con2 .con2-slide .img-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 44vw;
+    height: 33vw;
+    filter: drop-shadow(0 5px 8px rgba(4, 4, 4, 0.2));
+    z-index: 1;
+}
+.con2 .con2-slide .img-area .top-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #F6F5F3;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    z-index: 9;
+}
+.con2 .con2-slide .img-area .top-text li:first-child {
+    position: relative;
+    padding-right: 30px;
+}
+.con2 .con2-slide .img-area .top-text li:first-child::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 14px;
+    background-color: var(--main-black);
+    opacity: 0.3;
+}
+.con2 .con2-slide .img-area .top-text .code {
+    position: relative;
+    margin: 0 0 0 auto;
+    padding-left: 20px;
+}
+.con2 .con2-slide .img-area .top-text .code::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--main-black);
+}
+.con2 .con2-slide .img-area .imgwrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* clip-path:; */
+}
+.con2 .con2-slide .img-area .imgwrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.con2 .con2-slide .swiper-pagination {
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    width: auto;
+}
+.con2 .con2-slide .arrowbtn {
+    position: absolute;
+    top: auto;
+    bottom: 153px;
+    transform: translateX(-50%);
+    width: 11px;
+    height: 15px;
+    margin-top: 0;
+    z-index: 10;
+}
+.con2 .con2-slide .arrowbtn::after {
+    display: none;
+}
+.con2 .con2-slide .swiper-button-prev {
+    background-image: url(../images/button-prev.svg);
+    left: calc(50% - 90px);
+}
+.con2 .con2-slide .swiper-button-next {
+    background-image: url(../images/button-next.svg);
+    left: calc(50% + 90px);
+}
 
-/* 스타일링 팁 영역 */
+/**************************** 스타일링 팁 영역 ****************************/
 .con3 {
     position: relative;
     width: 100%;
@@ -384,7 +576,7 @@
 } */
 
 
-/*  뉴스 영역 */
+/****************************  뉴스 영역 ****************************/
 .con4 {
     position: relative;
     width: 100%;

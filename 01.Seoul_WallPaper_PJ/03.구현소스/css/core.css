@@ -100,3 +100,38 @@ select {
     transition: .5s ease;
     font-size: 1.4rem;
 }
+
+/* 더보기 버튼 */
+#main .moreBtn {
+    position: absolute;
+    right: 3.1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #667475;
+    font-weight: 500;
+    background-image: url(../images/moreBtn.png);
+    background-repeat: no-repeat;
+    padding-right: 50px;
+    background-position: right 7px center;
+    transition: .3s;
+    opacity: .7;
+}
+#main .moreBtn:hover {
+    opacity: 1;
+    background-position: right 0 center;
+}
+
+/* 슬라이드 페이지네이션 */
+.pagebtn.swiper-pagination-bullets > .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid var(--main-black);
+    box-sizing: border-box;
+}
+.pagebtn.swiper-pagination-bullets > .swiper-pagination-bullet-active {
+    background-color: var(--main-black);
+}
