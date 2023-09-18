@@ -44,6 +44,32 @@ domFn.addEvt(gnbHover,'mouseleave',()=>{
 //////////////////////////////////////////////////////
 
 
+// [ 메인 검색 버튼 클릭시 검색영역 input 넓어지게하기 ]
+const topSrchBtn = domFn.qs(".serach-icon");
+const srchWidth = domFn.qs(".area");
+domFn.addEvt(topSrchBtn,'click',()=>{
+    srchWidth.classList.add('on');
+});
+//////////////////////////////////////////////////////
+
+
+// allMenuWrap
+// [ 햄버거버튼 클릭시 오른쪽에서 메뉴 노출 ]
+const allMenuBtn = domFn.qs(".allMenuBtn");
+const allMenuWrap = domFn.qs(".allMenuWrap");
+const layerBg = domFn.qs(".allMenuWrap .layerBg");
+const rightBox = domFn.qs(".right-box");
+domFn.addEvt(allMenuBtn,'click',()=>{
+    allMenuWrap.classList.add('on');
+    allMenuBtn.classList.add('on');
+    rightBox.classList.add('on');
+});
+domFn.addEvt(layerBg,'click',()=>{
+    allMenuWrap.classList.remove('on');
+    allMenuBtn.classList.remove('on');
+    rightBox.classList.remove('on');
+});
+
 // [ 4번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
 // 이벤트 대상: window
 // 이벤트 종류: scroll
