@@ -31,8 +31,22 @@ scrTopBtn.addEventListener("click", (e) => {
 //////////////// scrTopBtn ///////////////////
 
 
+// [ gnb메뉴에 마우스 오버시 header에 흰색배경 나오게하기 ]
+const gnbHover = domFn.qs("#gnb");
+const headerBgChg = domFn.qs("#header");
 
-// [ 3번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
+domFn.addEvt(gnbHover,'mouseover',()=>{
+    headerBgChg.classList.add('bgWhite');
+});
+domFn.addEvt(gnbHover,'mouseleave',()=>{
+    headerBgChg.classList.remove('bgWhite');
+});
+//////////////////////////////////////////////////////
+
+
+
+
+// [ 4번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
 // 이벤트 대상: window
 // 이벤트 종류: scroll
 // 위치대상: .tpg -> 스티키박스를 싸고있는 부모박스
