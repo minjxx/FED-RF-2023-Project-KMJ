@@ -73,10 +73,37 @@ domFn.addEvt(layerBg,'click',()=>{
 /////////////////////////////////////////////
 
 
-// .allMenuWrap .allMenu > li
-// .allMenuWrap .allMenu .dep2
+// [ 오른쪽 메뉴에 하위메뉴 노출 ]
 const allMenuList = domFn.qsa(".allMenuWrap .allMenu > li");
-const depList = domFn.qsa(".allMenuWrap .allMenu .dep2");
+
+for (let x of allMenuList) {
+    // console.log('x:',x);
+
+    // 오버시 //////////////
+    x.onmouseover = () => {
+        // console.log('오버:',x);
+        // 1. 대상: 하위의 div
+        let depthMenu = x.querySelector("div");
+
+        // 2. 하위 ol요소의 높이값 알아오기
+        let hv = depthMenu.querySelector("ul").offsetHeight;
+        // console.log('높이값:',hv);
+
+        // 3. 높이값 변경
+        depthMenu.style.height = hv + "px";
+        depthMenu.style.transition = "height .4s ease-out";
+    }; ///////// mouseover ///////
+
+    // 아웃시 ///////////////
+    x.onmouseout = () => {
+        // console.log('아웃:',x);
+        // 1. 대상: 하위의 div
+        let depthMenu = x.querySelector(".dep2");
+        // 2. 높이값 변경
+        depthMenu.style.height = "0";
+    }; ///////// mouseout ///////
+} /////////// for of ///////////
+//////////////////////////////////////////////
 
 
 

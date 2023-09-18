@@ -14,6 +14,8 @@
         <script src="./js/swiper.min.js"></script>
         <!-- 메인 JS, defer 설정으로 html로딩후 실행함! -->
         <script src="./js/main.js" defer></script>
+        <!-- 부드러운 스크롤JS -->
+        <!-- <script src="./js/smoothScroll23.js"></script> -->
     </head>
     <body>
         <!-- 상단영역 시작 -->
@@ -25,36 +27,138 @@
                 <ul>
                     <li>
                         <span>컬렉션</span>
-                        <div class="gnb-dropdown"></div>
+                        <div class="gnb-dropdown">
+                            <div class="slide-menu">
+                                <ul>
+                                    <li class="title">
+                                        <span>컬렉션</span>
+                                    </li>
+                                    <li class="line">
+                                        <a href="./sub01.html">제품군 모아보기</a>
+                                    </li>
+                                    <li class="line">
+                                        <span>실크벽지</span>
+                                        <div class="dethMenu">
+                                            <a href="javascript:void(0)">카라</a>
+                                            <a href="javascript:void(0)">플레인</a>
+                                        </div>
+                                    </li>
+                                    <li class="line">
+                                        <span>합지벽지</span>
+                                        <div class="dethMenu">
+                                            <a href="javascript:void(0)">데이지</a>
+                                            <a href="javascript:void(0)">아이비</a>
+                                            <a href="javascript:void(0)">코지</a>
+                                        </div>
+                                    </li>
+                                    <li class="line">
+                                        <span>방염벽지</span>
+                                        <div class="dethMenu">
+                                            <a href="javascript:void(0)">방염</a>
+                                        </div>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">나만의 제품찾기</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">다운로드</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom-txt crimson">
+                                <img src="./images/talk-icon.svg" alt="따옴표이미지">
+                                <p>collection</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <span>고객서비스</span>
-                        <div class="gnb-dropdown"></div>
+                        <div class="gnb-dropdown">
+                            <div class="slide-menu">
+                                <ul>
+                                    <li class="title">
+                                        <span>고객서비스</span>
+                                    </li>
+                                    <li class="line">
+                                        <a href="./sub01.html">스타일링 팁</a>
+                                    </li>
+                                    <li class="line">
+                                        <a href="./sub01.html">고객상담</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom-txt crimson">
+                                <img src="./images/talk-icon.svg" alt="따옴표이미지">
+                                <p>customer<br>service</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <span>홍보</span>
-                        <div class="gnb-dropdown"></div>
+                        <div class="gnb-dropdown">
+                            <div class="slide-menu">
+                                <ul>
+                                    <li class="title">
+                                        <span>홍보</span>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">홍보</a>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">공지사항</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom-txt crimson">
+                                <img src="./images/talk-icon.svg" alt="따옴표이미지">
+                                <p>pr center</p>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <span>서울벽지소개</span>
-                        <div class="gnb-dropdown"></div>
+                        <div class="gnb-dropdown">
+                            <div class="slide-menu">
+                                <ul>
+                                    <li class="title">
+                                        <span>서울벽지소개</span>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">기업소개</a>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">혁신연구 &amp; 디자인개발</a>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">위치안내</a>
+                                    </li>
+                                    <li class="line">
+                                        <a href="javascript:void(0)">고객기업 / 해외수출</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom-txt crimson">
+                                <img src="./images/talk-icon.svg" alt="따옴표이미지">
+                                <p>company</p>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
             <div class="right-box">
                 <div class="lang">
                     <ul>
-                        <li class="on"><a href="index.html">KO</a></li>
-                        <li><a href="javascript:void(0);">EN</a></li>
+                        <li class="on"><a href="./index.html">KO</a></li>
+                        <li><a href="javascript:void(0)">EN</a></li>
                     </ul>
                 </div>
                 <button type="button" class="wish"><span class="wish-cnt">0</span></button>
                 <div class="search-box pc">
-                    <button type="button" class="serachIcon"></button>
-                    <form action="/" method="get">
+                    <button type="button" class="serach-icon searchBtn"></button>
+                    <div class="area">
                         <input type="text" class="search-input" placeholder="제품번호 / 컬렉션" />
-                        <input type="submit" class="search-btn" />
-                    </form>
+                        <button type="submit" class="search-btn searchBtn"></button>
+                    </div>
                 </div>
             </div>
             <div class="allMenuBtn">
@@ -63,7 +167,58 @@
             </div>
             <div class="allMenuWrap">
                 <div class="layerBg"></div>
-                <div class="menu-box"></div>
+                <div class="menuBox">
+                    <div class="inner">
+                        <ul class="allMenu">
+                            <li>
+                                <span class="k">컬렉션</span>
+                                <span class="e crimson">COLLECTION</span>
+                                <div class="dep2">
+                                    <ul>
+                                        <li><a href="javascript:void(0)">제품군 모아보기</a></li>
+                                        <li><a href="javascript:void(0)">실크벽지</a></li>
+                                        <li><a href="javascript:void(0)">합지벽지</a></li>
+                                        <li><a href="javascript:void(0)">방염벽지</a></li>
+                                        <li><a href="javascript:void(0)">나만의 제품 찾기</a></li>
+                                        <li><a href="javascript:void(0)">다운로드</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="k">고객서비스</span>
+                                <span class="e crimson">CUSTOMER SERVICE</span>
+                                <div class="dep2">
+                                    <ul>
+                                        <li><a href="javascript:void(0)">스타일링 팁</a></li>
+                                        <li><a href="javascript:void(0)">고객 상담</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="k">홍보</span>
+                                <span class="e crimson">PR CENTER</span>
+                                <div class="dep2">
+                                    <ul>
+                                        <li><a href="javascript:void(0)">홍보</a></li>
+                                        <li><a href="javascript:void(0)">공지사항</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="k">서울벽지</span>
+                                <span class="e crimson">COMPANY</span>
+                                <div class="dep2">
+                                    <ul>
+                                        <li><a href="javascript:void(0)">기업소개</a></li>
+                                        <li><a href="javascript:void(0)">혁신연구 &amp; 디자인개발</a></li>
+                                        <li><a href="javascript:void(0)">위치안내</a></li>
+                                        <li><a href="javascript:void(0)">고객기업 / 해외수출</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 상단영역 끝 -->

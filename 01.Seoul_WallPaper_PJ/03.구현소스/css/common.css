@@ -310,16 +310,25 @@ html {
     position: absolute;
     left: 0;
 }
+.allMenuWrap .allMenu > li:hover .k {
+    opacity: 0;
+}
+.allMenuWrap .allMenu > li:hover .e {
+    opacity: 1;
+}
 .allMenuWrap .allMenu .dep2 {
-    display: none;
+    height: 0;
+    overflow: hidden;
+}
+.allMenuWrap .allMenu .dep2 ul {
+    display: flex;
+    overflow: hidden;
     font-size: 1.8rem;
     flex-wrap: wrap;
-    margin-top: 33px;
+    padding-top: 33px;
     font-weight: 300;
 }
-.allMenuWrap .allMenu .dep2.on {
-    display: flex;
-}
+
 .allMenuWrap .allMenu .dep2 li {
     position: relative;
     margin-bottom: 12px;
