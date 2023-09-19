@@ -6,7 +6,14 @@
 @media screen and (max-width: 1500px) {
     /* 메인-벽지컬렉션 */
     #main .con2 .con2-slide .side-text {
-        right: 2vw;
+        font-size:1vw;
+    }
+    #main .con2 .con2-slide .side-text.pc p strong {
+        font-size: 1.3vw;
+    }
+    #main .con2 .con2-slide .side-text .btn {
+        padding: 1vw 3vw;
+        font-size: 1.2vw;
     }
 
     /* 푸터 */
@@ -50,6 +57,27 @@
     .allMenuWrap .allMenu li span {
         font-size: 3.5rem;
     }
+    
+    /* 메인-콘텐츠2 */
+    #main .con2 .title {
+        top: 4vw;
+        font-size: 2.3vw;
+    }
+    #main .con2 .sample-list {
+        top: 8vw;
+    }
+    #main .con2 .sample-list li {
+        margin-bottom: .5vw;
+    }
+    #main .con2 .sample-list li button {
+        font-size: 1.3vw;
+    }
+    #main .con2 .sample-list li.on button {
+        font-size: 1.5vw;
+    }
+    #main .con2 .sample-list li:not(:last-child)::after {
+        bottom: -7px;
+    }
 }
 /* 1320px 이하 사이즈 종료 */
 
@@ -61,7 +89,7 @@
     #header .right-box {
         right: 9vw;
     }
-    /* 메인-컨텐츠4 */
+    /* 메인-콘텐츠4 */
     #main .con4 .top-tit span {
         font-size: 1.7rem;
     }
@@ -142,6 +170,120 @@
     #main .mainVisual > .swiper-pagination {
         bottom: 40px;
     }
+    /* 메인-콘텐츠2 */
+    #main .con2 {
+        height: 650px;
+    }
+    #main .con2 .con2-slide .bg {
+        display: block;
+    }
+    #main .con2 .con2-slide .bg .left {
+        width: 100%;
+        height: 50%;
+    }
+    #main .con2 .con2-slide .bg .right {
+        width: 100%;
+        height: 50%;
+    }
+    #main .con2 .title {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 30px 20px 8px;
+        font-size: 20px;
+    }
+    #main .con2 .sample-list {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: flex;
+        padding: 0 20px;
+    }
+    #main .con2 .sample-list li {
+        margin-bottom: 0;
+        margin-right: 38px;
+    }
+    #main .con2 .sample-list li:last-child {
+        margin-right: 0;
+    }
+    #main .con2 .sample-list li button, #main .con2 .sample-list li.on button{
+        font-size: 16px;
+    }
+    #main .con2 .sample-list li:not(:last-child)::after {
+        right: -20px;
+        left: auto;
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 13px;
+        margin-top: 3px;
+        background-color: #999;
+    }
+    #main .con2 .con2-slide .img-area {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        width: calc(100% - 40px);
+        height: 260px;
+        margin: 115px auto 0;
+    }
+    #main .con2 .con2-slide .title-box {
+        top: 353px;
+        left: 20px;
+        transform: none;
+    }
+    #main .con2 .con2-slide .title-box .txt1 {
+        display: inline-block;
+        font-size:5rem;
+    }
+    #main .con2 .con2-slide .title-box.fire {
+        top: 305px;
+    }
+    #main .con2 .con2-slide .title-box .txt2 {
+        font-size: 1.5rem;
+    }
+    #main .con2 .con2-slide .title-box .txt3 {
+        display: none;
+    }
+    #main .con2 .con2-slide .side-text.pc {
+        display: none;
+    }
+    #main .con2 .con2-slide .side-text.mo {
+        display: block;
+    }
+    #main .con2 .con2-slide .swiper-pagination {
+        left: 45px;
+        bottom: 210px;
+        transform: none;
+    }
+    #main .con2 .con2-slide .arrowbtn {
+        bottom: 213px;
+        transform: none;
+    }
+    #main .con2 .con2-slide .swiper-button-prev {
+        left: 20px;
+    }
+    #main .con2 .con2-slide .swiper-button-next {
+        left:200px;
+    }
+    #main .con2 .con2-slide .img-area .top-text {
+        padding: 12px 15px;
+        font-size: 1.4rem;
+    }
+    #main .con2 .con2-slide .img-area .top-text li:first-child {
+        padding-right: 20px;
+    }
+    #main .con2 .con2-slide .img-area .top-text li:first-child::after {
+        right: 10px;
+    }
+    #main .con2 .con2-slide .img-area .top-text .code::after {
+        left: 5px;
+        width: 8px;
+        height: 8px;
+    }
+    
     /* 서브페이지 */
     .subContBox .subContBox {
         padding: 0 20px;
@@ -308,7 +450,7 @@
     .allMenuWrap.on .schBox {
         display: block;
     }
-    /* 메인-컨텐츠4 */
+    /* 메인-콘텐츠4 */
     #main .con4 {
         padding-bottom: 80px;
     }
@@ -413,6 +555,10 @@
     .allMenuWrap .menuBox .mlogo {
         top: 25px;
         width: 120px;
+    }
+    /* 메인-콘텐츠2 */
+    #main .con2 .sample-list li button, #main .con2 .sample-list li.on button{
+        font-size: 14px;
     }
 
     /* 푸터 */

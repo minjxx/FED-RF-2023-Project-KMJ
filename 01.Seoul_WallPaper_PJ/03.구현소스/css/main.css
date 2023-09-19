@@ -200,7 +200,7 @@
 .con2 {
     position: relative;
     width: 100%;
-    height: 1080px;
+    height: 56vw;
     background-color: #fff;
 }
 .con2 .title {
@@ -208,7 +208,7 @@
     top: 6vw;
     left: 3.1vw;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #adb4b5;
     z-index: 9;
 }
@@ -281,30 +281,57 @@
     line-height: 1;
 }
 .con2 .con2-slide .title-box .txt2 {
-    font-size: 5rem;
+    font-size: 2.6vw;
     font-style: italic;
     line-height: 1;
 }
 .con2 .con2-slide .title-box .txt3 {
     margin-left: 20px;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 1.5vw;
     color: #667475;
     opacity: 0.6;
 }
 .con2 .con2-slide .side-text {
     position: absolute;
     top: 50%;
-    right: 5vw;
+    right: 3vw;
     transform: translateY(-50%);
-    width: 370px;
+    width: 22vw;
     font-size: 1.6rem;
     z-index: 9;
+}
+.con2 .con2-slide .side-text.mo {
+    display: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 90px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.con2 .con2-slide .side-text.mo p {
+    font-size: 14px;
+}
+.con2 .con2-slide .side-text.mo p strong {
+    font-size: 17px;
+}
+.con2 .con2-slide .side-text.mo .arrowLink {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 14px;
+    padding-right: 32px;
+    background-image: url(../images/moreBtn.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 .con2 .con2-slide .side-text p {
     color: #666;
 }
-.con2 .con2-slide .side-text p:first-child {
+.con2 .con2-slide .side-text.pc p:first-child {
     margin-bottom: 10px;
 }
 .con2 .con2-slide .side-text p strong {
@@ -342,11 +369,11 @@
     left: 0;
     display: flex;
     width: 100%;
-    padding: 20px 30px;
+    padding: 1.3vw 1.7vw;
     box-sizing: border-box;
     background-color: #f6f5f3;
     box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
-    font-size: 1.5rem;
+    font-size: .8vw;
     z-index: 9;
 }
 .con2 .con2-slide .img-area .top-text li:first-child {
@@ -397,14 +424,14 @@
 }
 .con2 .con2-slide .swiper-pagination {
     left: 50%;
-    bottom: 150px;
+    bottom: 6.7vw;
     transform: translateX(-50%);
     width: auto;
 }
 .con2 .con2-slide .arrowbtn {
     position: absolute;
     top: auto;
-    bottom: 153px;
+    bottom: 6.9vw;
     transform: translateX(-50%);
     width: 11px;
     height: 15px;
