@@ -124,6 +124,8 @@ const TIME_WHEEL = 100;
 // 휠단위수 (휠할때 증감하는수)
 let numWheel = 0;
 
+let winH = window.innerHeight;
+
 // 윈도우 이벤트 걸기
 domFn.addEvt(window, "scroll", moveSlide);
 
@@ -147,18 +149,18 @@ function moveSlide() {
     }
     // (2) 움직이기시작은 바운딩값이 0이하일때부터!!!
     // 한계는 -1600px
-    else if (bTop <= 0 && bTop >= -1600) {
+    else if (bTop <= 0 && bTop >= -winH*1.6) {
         target.style.left = bTop + "px";
     }
-    else if (bTop < -1600 && bTop > -2000) {
+    else if (bTop < -winH*1.6 && bTop > -winH*2) {
         searchSlide.classList.remove('on');
     }
-    else if (bTop <= -2000 && bTop >= -2500) {
+    else if (bTop <= -winH*2 && bTop >= -winH*2.5) {
         searchSlide.classList.add('on');
     }
     // (3) 마지막 한계 이후엔 한계값으로 셋팅!
     else {
-        target.style.left = "-2500px";
+        target.style.left =  -winH*2.5+"px";
     }
     
 } //////////// moveSlide 함수 //////////////

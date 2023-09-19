@@ -4,6 +4,12 @@
 
 /* 1500px 이하 사이즈 시작 */
 @media screen and (max-width: 1500px) {
+    /* 메인-벽지컬렉션 */
+    #main .con2 .con2-slide .side-text {
+        right: 2vw;
+    }
+
+    /* 푸터 */
     #footer .foot-list .left {
         width: 42%;
     }
@@ -23,7 +29,7 @@
 @media screen and (max-width: 1320px) {
     #header .logo {
         width: 150px;
-        margin-right:3vw;
+        margin-right: 3vw;
     }
     #header #gnb > ul > li {
         padding-right: 25px;
@@ -35,6 +41,9 @@
     #footer .footer-wrap .foot-logo {
         width: 150px;
     }
+    #footer .foot-list {
+        font-size: 1.4rem;
+    }
     .allMenuWrap .menuBox {
         width: 550px;
     }
@@ -44,14 +53,6 @@
 }
 /* 1320px 이하 사이즈 종료 */
 
-
-
-@media screen and (max-width: 1200px) {
-    #footer .foot-list {
-        font-size: 1.4rem;
-    }
-}
-
 /* 1080px 이하 사이즈 시작 */
 @media screen and (max-width: 1080px) {
     #gnb {
@@ -59,6 +60,16 @@
     }
     #header .right-box {
         right: 9vw;
+    }
+    /* 메인-컨텐츠4 */
+    #main .con4 .top-tit span {
+        font-size: 1.7rem;
+    }
+    #main .con4 .top-tit p {
+        font-size: 7rem;
+    }
+    #main .moreBtn {
+        font-size: 1.4rem;
     }
 
     /* 공지사항 */
@@ -82,9 +93,9 @@
         bottom: 20px;
         font-size: 1.4rem;
     }
-    
+
     /* 푸터 */
-    #footer .footer-top li:hover a::before{
+    #footer .footer-top li:hover a::before {
         height: 8.5vw;
     }
     #footer .footer-top li:not(:last-child)::after {
@@ -121,6 +132,17 @@
 
 /* 760px 이하 사이즈 시작 */
 @media screen and (max-width: 760px) {
+    /* 메인비주얼 */
+    .mainVisual .swiper-wrapper .swiper-slide img.pc {
+        display: none;
+    }
+    .mainVisual .swiper-wrapper .swiper-slide img.mo {
+        display: block;
+    }
+    #main .mainVisual > .swiper-pagination {
+        bottom: 40px;
+    }
+    /* 서브페이지 */
     .subContBox .subContBox {
         padding: 0 20px;
     }
@@ -155,7 +177,7 @@
         position: relative;
         bottom: auto;
         display: inline-block;
-        border-bottom:1px solid var(--main-black);
+        border-bottom: 1px solid var(--main-black);
     }
     .subContBox .notiList ul li .viewBtn::after {
         display: none;
@@ -163,7 +185,7 @@
 
     /* 페이징 css */
     body .pageWrap {
-        padding:8vw 0 12vw;
+        padding: 8vw 0 12vw;
     }
     body .pageWrap .pageBox a {
         position: relative;
@@ -196,10 +218,10 @@
         width: 100%;
         margin-right: 0;
     }
-    #footer .footer-top ul li:not(:last-child){
+    #footer .footer-top ul li:not(:last-child) {
         margin-bottom: 40px;
     }
-    #footer .footer-top li:hover a::before{
+    #footer .footer-top li:hover a::before {
         display: none;
     }
     #footer .footer-top ul li p {
@@ -249,7 +271,7 @@
 
 /* 680px 이하 사이즈 시작 */
 @media screen and (max-width: 680px) {
-    #header .right-box .search-box{
+    #header .right-box .search-box {
         display: none;
     }
     #header .logo {
@@ -258,8 +280,8 @@
     .allMenuWrap .menuBox {
         width: 100%;
         padding-top: 100px;
-        padding-left:20px;
-        padding-right:20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .allMenuWrap .menuBox .mlogo {
         display: block;
@@ -270,7 +292,7 @@
     .allMenuWrap .allMenu li span {
         font-size: 2.2rem;
     }
-    .allMenuWrap .allMenu .dep2 li{
+    .allMenuWrap .allMenu .dep2 li {
         margin-top: 6px;
         margin-bottom: 0;
         padding-right: 15px;
@@ -285,6 +307,36 @@
     }
     .allMenuWrap.on .schBox {
         display: block;
+    }
+    /* 메인-컨텐츠4 */
+    #main .con4 {
+        padding-bottom: 80px;
+    }
+    #main .con4 .top-tit span {
+        font-size: 1.5rem;
+    }
+    #main .con4 .top-tit p {
+        font-size: 5rem;
+    }
+    #main .moreBtn {
+        top: auto;
+        transform: none;
+        bottom: 15px;
+        font-size: 1.3rem;
+    }
+    #main .news-slide {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    #main .news-slide .img-box {
+        padding-top: 56%;
+    }
+    #main .news-slide .swiper-slide:nth-child(2n) .img-box {
+        padding-top: 56%;
+    }
+    #main .con4 .swiper-pagination {
+        opacity: 1;
+        visibility: visible;
     }
 
     /* 공지사항 */
@@ -324,7 +376,21 @@
 }
 /* 680px 이하 사이즈 끝 */
 
-/* 340px 이하 사이즈 시작 */
+/* 580px 이하 사이즈 시작 */
+@media screen and (max-width: 550px) {
+    #main .con4 .top-tit {
+        padding: 35px 0;
+    }
+    #main .con4 .top-tit p {
+        font-size: 3rem;
+    }
+    #main .moreBtn {
+        bottom: 8px;
+    }
+}
+/* 580px 이하 사이즈 시작 */
+
+/* 360px 이하 사이즈 시작 */
 @media screen and (max-width: 360px) {
     #header {
         height: auto;
@@ -360,4 +426,4 @@
         font-size: 1.3rem;
     }
 }
-/* 340px 이하 사이즈 끝 */
+/* 360px 이하 사이즈 끝 */
