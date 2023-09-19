@@ -20,7 +20,7 @@ html {
     width: 100%;
     height: 97px;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 3.1vw;
     box-sizing: border-box;
     font-size: 1.6rem;
     z-index: 999;
@@ -135,7 +135,7 @@ html {
 /* 헤더 오른쪽메뉴들 */
 #header .right-box {
     position: absolute;
-    right: 122px;
+    right: 6.5vw;
     display: flex;
     align-items: center;
     z-index: 999;
@@ -159,6 +159,9 @@ html {
 #header .right-box .lang:hover {
     overflow: initial;
 }
+#header .right-box.on .lang {
+    filter: invert();
+}
 #header .right-box .wish {
     width: 35px;
     height: 32px;
@@ -173,7 +176,10 @@ html {
     font-weight: 500;
     cursor: pointer;
 }
-#header .right-box .search-box .searchBtn {
+#header .right-box.on .wish {
+    filter: invert();
+}
+#header .searchBtn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -184,11 +190,17 @@ html {
     padding: 0;
     background-color: transparent;
     background-image: url(../images/search-box-icon.png);
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     z-index: 9;
+}
+#header .right-box.on .searchBtn {
+    filter: invert();
+}
+#header .right-box.on .search-box .area.on .search-btn{
+    filter: invert();
 }
 #header .right-box .search-box .serach-icon.on {
     display: none;
@@ -230,7 +242,7 @@ html {
 }
 #header .allMenuBtn {
     position: absolute;
-    right: 60px;
+    right: 3.1vw;
     width: 30px;
     height: 15px;
     cursor: pointer;
@@ -283,7 +295,7 @@ html {
     position: fixed;
     right: -120%;
     top: 0;
-    width: 36%;
+    width: 694px;
     height: 100%;
     background-color: #667475;
     padding-top: 170px;
@@ -296,6 +308,12 @@ html {
 }
 .allMenuWrap.on .menuBox {
     right: 0;
+}
+.allMenuWrap .menuBox .mlogo {
+    display: none;
+}
+.allMenuWrap .menuBox .mlogo img {
+    width: 100%;
 }
 .allMenuWrap .allMenu > li {
     position: relative;
@@ -354,12 +372,36 @@ html {
     opacity: 1;
 }
 
+.allMenuWrap .schBox {
+    display: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+.allMenuWrap.on .schBox input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(229, 229, 229, 0.15);
+    height: 39px;
+    border-radius: 50px;
+    padding: 0 40px 0 20px;
+    color: #fff;
+    outline: none;
+}
+.allMenuWrap.on .schBox input::placeholder {
+    color: #fff;
+    opacity: .7;
+    font-size: 1.4rem;
+}
+.allMenuWrap.on .schBox .searchBtn {
+    filter: invert(1);
+}
 /************* 하단영역 *************/
 #footer {
     position: relative;
 }
 #footer .footer-top {
-    padding: 80px 0;
+    padding: 4.1vw 0;
     background-image: url(../images/footer-top-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -524,7 +566,7 @@ html {
 
 #footer .flow-text {
     display: flex;
-    padding: 10px 0;
+    padding: 16px 0 10px;
     white-space: nowrap;
     overflow: hidden;
     transition: 0.2s;
@@ -546,44 +588,6 @@ html {
     padding-right: 2.2vw;
 }
 
-@media screen and (max-width: 1500px) {
-    #footer .foot-list .left {
-        width: 42%;
-    }
-    #footer .foot-list .left ul {
-        width: 100%;
-    }
-    #footer .foot-list .left ul:not(:last-child) {
-        margin-right: 0;
-    }
-    #footer .foot-list .left ul .list-title {
-        margin-bottom: 0;
-    }
-}
-@media screen and (max-width: 1200px) {
-    #footer .foot-list {
-        font-size: 1.4rem;
-    }
-}
-@media screen and (max-width: 1000px) {
-    #footer .foot-list {
-        font-size: 1.3rem;
-    }
-    #footer .foot-list .right ul:not(:last-child) {
-        margin-right: 1.5vw;
-    }
-}
-@media screen and (max-width: 850px) {
-    #footer .foot-list .left {
-        width: 100%;
-    }
-    #footer .foot-list .left ul:last-child {
-        margin-top: 25px;
-    }
-    #footer .foot-list .right {
-        display: none;
-    }
-}
 /* 하단 움직이는 텍스트 애니메이션 */
 @keyframes textLoop {
     0% {

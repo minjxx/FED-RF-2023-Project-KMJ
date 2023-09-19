@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+/* 미디어쿼리 CSS - media.css */
+
+/* 1500px 이하 사이즈 시작 */
+@media screen and (max-width: 1500px) {
+    #footer .foot-list .left {
+        width: 42%;
+    }
+    #footer .foot-list .left ul {
+        width: 100%;
+    }
+    #footer .foot-list .left ul:not(:last-child) {
+        margin-right: 0;
+    }
+    #footer .foot-list .left ul .list-title {
+        margin-bottom: 0;
+    }
+}
+/* 1500px 이하 사이즈 끝 */
+
+/* 1320px 이하 사이즈 시작 */
+@media screen and (max-width: 1320px) {
+    #header .logo {
+        width: 150px;
+        margin-right:3vw;
+    }
+    #header #gnb > ul > li {
+        padding-right: 25px;
+        font-size: 1.5rem;
+    }
+    #header .right-box .search-box .area.on .search-input {
+        width: 250px;
+    }
+    #footer .footer-wrap .foot-logo {
+        width: 150px;
+    }
+    .allMenuWrap .menuBox {
+        width: 550px;
+    }
+    .allMenuWrap .allMenu li span {
+        font-size: 3.5rem;
+    }
+}
+/* 1320px 이하 사이즈 종료 */
+
+
+
+@media screen and (max-width: 1200px) {
+    #footer .foot-list {
+        font-size: 1.4rem;
+    }
+}
+
+/* 1080px 이하 사이즈 시작 */
+@media screen and (max-width: 1080px) {
+    #gnb {
+        display: none;
+    }
+    #header .right-box {
+        right: 9vw;
+    }
+
+    /* 공지사항 */
+    .subContWrap .subContBox {
+        padding: 0 5vw;
+    }
+    .subContBox .notiList ul li {
+        padding: 16px 0;
+    }
+    .subContBox .notiList ul li .txtBox {
+        margin-top: 0;
+    }
+    .subContBox .notiList ul li .txtBox .date {
+        font-size: 1.5rem;
+    }
+    .subContBox .notiList ul li .txtBox .title {
+        margin-top: 5px;
+        font-size: 1.6rem;
+    }
+    .subContBox .notiList ul li .viewBtn {
+        bottom: 20px;
+        font-size: 1.4rem;
+    }
+    
+    /* 푸터 */
+    #footer .footer-top li:hover a::before{
+        height: 8.5vw;
+    }
+    #footer .footer-top li:not(:last-child)::after {
+        width: 6px;
+        height: 6px;
+    }
+}
+/* 1080px 이하 사이즈 끝 */
+
+/* 1000px 이하 사이즈 시작 */
+@media screen and (max-width: 1000px) {
+    #footer .foot-list {
+        font-size: 1.3rem;
+    }
+    #footer .foot-list .right ul:not(:last-child) {
+        margin-right: 1.5vw;
+    }
+}
+/* 1000px 이하 사이즈 끝 */
+
+/* 850px 이하 사이즈 시작 */
+@media screen and (max-width: 850px) {
+    #footer .foot-list .left {
+        width: 100%;
+    }
+    #footer .foot-list .left ul:last-child {
+        margin-top: 25px;
+    }
+    #footer .foot-list .right {
+        display: none;
+    }
+}
+/* 850px 이하 사이즈 끝 */
+
+/* 760px 이하 사이즈 시작 */
+@media screen and (max-width: 760px) {
+    .subContBox .subContBox {
+        padding: 0 20px;
+    }
+    .subContBox .boardSearchWrap {
+        flex-direction: column;
+    }
+    .subContBox .boardSearchWrap .boardList {
+        margin: 30px 0 10px;
+        display: none;
+    }
+    .subContBox .boardSearchWrap .selectBox {
+        display: block;
+    }
+    .subContBox .boardSearchWrap .srchInput {
+        width: 100%;
+        margin: 20px 0 30px;
+    }
+    .subContBox .notiList ul li .linkArea {
+        flex-wrap: wrap;
+    }
+    .subContBox .notiList ul li .txtBox {
+        width: 100%;
+        order: 2;
+        margin-bottom: 4vw;
+    }
+    .subContBox .notiList ul li .imgBox {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .subContBox .notiList ul li .viewBtn {
+        position: relative;
+        bottom: auto;
+        display: inline-block;
+        border-bottom:1px solid var(--main-black);
+    }
+    .subContBox .notiList ul li .viewBtn::after {
+        display: none;
+    }
+
+    /* 페이징 css */
+    body .pageWrap {
+        padding:8vw 0 12vw;
+    }
+    body .pageWrap .pageBox a {
+        position: relative;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        line-height: 27px;
+        margin: 0 3px;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #4b4b4b;
+        vertical-align: middle;
+    }
+    body .pageWrap .pageBox .pageBtn.prev {
+        margin-right: 15px;
+    }
+    body .pageWrap .pageBox .pageBtn.next {
+        margin-left: 15px;
+    }
+    /* 푸터 */
+    #footer .footer-top {
+        padding: 30px 0;
+        background-color: #d5e5e5;
+        background-image: none;
+    }
+    #footer .footer-top ul {
+        flex-wrap: wrap;
+    }
+    #footer .footer-top ul li {
+        width: 100%;
+        margin-right: 0;
+    }
+    #footer .footer-top ul li:not(:last-child){
+        margin-bottom: 40px;
+    }
+    #footer .footer-top li:hover a::before{
+        display: none;
+    }
+    #footer .footer-top ul li p {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+    #footer .footer-top ul li span {
+        font-size: 1.4rem;
+    }
+    #footer .footer-top li:not(:last-child)::after {
+        width: 6px;
+        height: 6px;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+        bottom: -26px;
+    }
+    #footer .footer-wrap {
+        padding: 30px 20px 0;
+    }
+    #footer #topBtn {
+        top: 30px;
+        right: 20px;
+    }
+    #footer .foot-list {
+        margin-top: 45px;
+    }
+    #footer .foot-list .left ul:last-child {
+        margin-top: 35px;
+    }
+    #footer .foot-list .left ul .list-title {
+        text-decoration: underline;
+    }
+    #footer .foot-list ul li:not(.list-title) {
+        flex-wrap: wrap;
+    }
+    #footer .foot-list .left ul li span {
+        width: 100%;
+    }
+    #footer .flow-text {
+        margin-top: 20px;
+        border-top: 1px solid #666;
+    }
+}
+/* 760px 이하 사이즈 끝 */
+
+/* 680px 이하 사이즈 시작 */
+@media screen and (max-width: 680px) {
+    #header .right-box .search-box{
+        display: none;
+    }
+    #header .logo {
+        width: 140px;
+    }
+    .allMenuWrap .menuBox {
+        width: 100%;
+        padding-top: 100px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .allMenuWrap .menuBox .mlogo {
+        display: block;
+        position: absolute;
+        top: 30px;
+        width: 140px;
+    }
+    .allMenuWrap .allMenu li span {
+        font-size: 2.2rem;
+    }
+    .allMenuWrap .allMenu .dep2 li{
+        margin-top: 6px;
+        margin-bottom: 0;
+        padding-right: 15px;
+    }
+    .allMenuWrap .allMenu .dep2 ul {
+        padding-top: 0;
+        font-size: 1.5rem;
+    }
+    .allMenuWrap .allMenu .dep2 li:not(:last-child):after {
+        right: 8px;
+        height: 10px;
+    }
+    .allMenuWrap.on .schBox {
+        display: block;
+    }
+
+    /* 공지사항 */
+    /* 공지사항-비주얼이미지 */
+    .subContainer .subVisual {
+        height: 100vh;
+    }
+    .subContainer .subVisual .txtBox dt {
+        font-size: 3.5rem;
+    }
+    .subContainer .subVisual .txtBox dd {
+        font-size: 1.5rem;
+    }
+
+    /* 푸터 */
+    #footer .footer-wrap .foot-logo {
+        width: 140px;
+    }
+    #footer .copyright {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    #footer .copyright p {
+        padding: 0;
+    }
+    #footer .copyright p::after {
+        display: none;
+    }
+    #footer .footer-wrap .copyright a {
+        margin-bottom: 5px;
+        text-decoration: underline;
+    }
+    #footer .flow-text {
+        font-size: 2.2rem;
+    }
+}
+/* 680px 이하 사이즈 끝 */
+
+/* 340px 이하 사이즈 시작 */
+@media screen and (max-width: 360px) {
+    #header {
+        height: auto;
+        line-height: normal;
+    }
+    #header .logo {
+        margin-top: 20px;
+        width: 120px;
+    }
+    #header .right-box {
+        top: 13px;
+    }
+    #header .right-box .lang {
+        margin-right: 12px;
+    }
+    #header .allMenuBtn {
+        top: 30px;
+        width: 26px;
+    }
+    .allMenuWrap .menuBox .mlogo {
+        top: 25px;
+        width: 120px;
+    }
+
+    /* 푸터 */
+    #footer .footer-wrap .foot-logo {
+        width: 120px;
+    }
+    #footer #topBtn {
+        width: 85px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 1.3rem;
+    }
+}
+/* 340px 이하 사이즈 끝 */
