@@ -251,6 +251,7 @@
 
             <!-- 서울벽지 살펴보기 영역 시작 -->
             <div class="con1">
+                <!-- pc 마우스 휠 영역 -->
                 <div class="slidePg">
                     <div class="top-txt">
                         <p>서울벽지</p>
@@ -287,6 +288,44 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+
+                <!-- 모바일 영역 -->
+                <div class="moArea">
+                    <div class="product-list swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide wallBg1">
+                                <p class="title">실크벽지</p>
+                                <div class="img-box"><img src="./images/con1-01.png" alt="실크벽지 이미지" /></div>
+                                <div class="txt">종이 위에 PVC를 코팅하여 컬러 인쇄와<br />엠보싱 작업을 통해 다양한 색상과 무늬를 표현한<br />벽지로 대중적으로 가장 널리 쓰이는 벽지 입니다.</div>
+                                <a href="javascript:void(0)" class="viewBtn">view more</a>
+                            </li>
+                            <li class="swiper-slide wallBg2">
+                                <p class="title">합지벽지</p>
+                                <div class="img-box"><img src="./images/con1-02.png" alt="합지벽지 이미지" /></div>
+                                <div class="txt">원지 두장을 접착하여 만드는 종이벽지로<br />엠보싱이나 인쇄, 코팅 등으로<br />다양한 디자인을 표현합니다.</div>
+                                <a href="javascript:void(0)" class="viewBtn">view more</a>
+                            </li>
+                            <li class="swiper-slide wallBg3">
+                                <p class="title">방염벽지</p>
+                                <div class="img-box"><img src="./images/con1-03.png" alt="방염벽지 이미지" /></div>
+                                <div class="txt">화재 발생시 쉽게 불에 타지 않으며,<br />종이와 PVC에서 방출되는 다량의 매연과<br />유독가스를 억제시키는 기능성 벽지 입니다.</div>
+                                <a href="javascript:void(0)" class="viewBtn">view more</a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination pagebtn"></div>
+                    </div>
+                    <div class="searchArea">
+                        <div class="txtbox2">
+                            <p class="toptxt">나만의 벽지를 찾아보세요.</p>
+                            <div class="subtxt">서울벽지는 감각적인 디자인과 컬러, 환경까지 생각하는 다양한 벽지를 디자인합니다.<br />나만의 공간을 꾸며줄 제품을 찾아보세요.</div>
+                            <div class="schInput">
+                                <input type="text" placeholder="제품번호 / 컬렉션" />
+                                <button type="button" class="srch-btn"></button>
+                            </div>
+                            <a href="javascript:void(0)" class="btn">서울벽지에 물어보세요</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 서울벽지 살펴보기 영역 끝 -->
@@ -510,13 +549,30 @@
                     <p class="crimson">styling<br />tip</p>
                     <a href="javascript:void(0)" class="tipBtn btn">스타일링 팁 둘러보기</a>
                 </div>
-                <div class="hover-area">
+                <div class="hover-area pc">
                     <div class="imgHover tipImg1"><img src="./images/tip_01.png" alt="스타일링 이미지1" /></div>
                     <div class="imgHover tipImg2"><img src="./images/tip_02.png" alt="스타일링 이미지2" /></div>
                     <div class="imgHover tipImg3"><img src="./images/tip_03.png" alt="스타일링 이미지3" /></div>
                     <div class="imgHover tipImg4"><img src="./images/tip_04.png" alt="스타일링 이미지4" /></div>
                     <div class="imgHover tipImg5"><img src="./images/tip_05.png" alt="스타일링 이미지5" /></div>
                     <div class="imgHover tipImg6"><img src="./images/tip_06.png" alt="스타일링 이미지6" /></div>
+                </div>
+                <div class="mImgBox">
+                    <div class="moImg1"><img src="./images/tip_01_m.png" alt="벽지 팁 이미지1"></div>
+                    <div class="subTxt mtxt1">
+                        <p>더 건강하고 아름답게,<br />고객의 더 나은 공간을 위해<br /><b>서울벽지가 만들어 갑니다.</b></p>
+                        <img src="./images/logo_w.svg" alt="서울벽지 로고" />
+                    </div>
+                    <div class="moImg2"><img src="./images/tip_02_m.png" alt="벽지 팁 이미지2"></div>
+                    <div class="moImg3"><img src="./images/tip_03_m.png" alt="벽지 팁 이미지3"></div>
+                    <div class="subTxt etcTxt">
+                        <img src="./images/talk-icon.svg" alt="따옴표 이미지" />
+                        <p>내 집만큼은 안락하고<br />더 행복한 공간으로</p>
+                    </div>
+                    <div class="moImg4"><img src="./images/tip_04_m.png" alt="벽지 팁 이미지4"></div>
+                    <div class="subTxt mtxt2">
+                        <p>디자이너가 추천하는<br /><b>서울벽지 인테리어 스타일링 팁</b></p>
+                    </div>
                 </div>
                 <div class="txt-area">
                     <div class="txt-box txt1">
@@ -748,6 +804,17 @@
                 slidesPerView: 1,
                 pagination: {
                     el: ".mainVisual .swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            // 콘텐츠1 모바일 슬라이드
+            const productSwiper = new Swiper(".product-list", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: ".product-list .swiper-pagination",
                     clickable: true,
                 },
             });

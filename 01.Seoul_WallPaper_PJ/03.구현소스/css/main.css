@@ -139,22 +139,22 @@
 .con1 .slidePg .search-card.on .txtbox2 {
     display: block;
 }
-.con1 .slidePg .search-card .txtbox2 .toptxt {
+.con1 .txtbox2 .toptxt {
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 20px;
 }
-.con1 .slidePg .search-card .txtbox2 .subtxt {
+.con1 .txtbox2 .subtxt {
     font-size: 1.6rem;
     opacity: 0.8;
     font-weight: 300;
     margin-bottom: 40px;
 }
-.con1 .slidePg .search-card .txtbox2 .schInput {
+.con1 .txtbox2 .schInput {
     position: relative;
     width: 680px;
 }
-.con1 .slidePg .search-card .txtbox2 .schInput input {
+.con1 .txtbox2 .schInput input {
     width: 100%;
     height: 60px;
     background-color: rgba(13, 13, 13, 0.2);
@@ -166,10 +166,10 @@
     outline: none;
     color: #fff;
 }
-.con1 .slidePg .search-card .txtbox2 .schInput input::placeholder {
+.con1 .txtbox2 .schInput input::placeholder {
     color: #ddd;
 }
-.con1 .slidePg .search-card .txtbox2 .schInput .srch-btn {
+.con1 .txtbox2 .schInput .srch-btn {
     position: absolute;
     top: 21px;
     right: 45px;
@@ -183,10 +183,10 @@
     background-color: transparent;
     cursor: pointer;
 }
-.con1 .slidePg .search-card .txtbox2 .btn {
+.con1 .txtbox2 .btn {
     margin-top: 80px;
 }
-.con1 .slidePg .search-card .txtbox2 .btn:hover {
+.con1 .txtbox2 .btn:hover {
     background-color: #fff;
     color: var(--main-black);
 }
@@ -195,6 +195,71 @@
         opacity: 1;
     }
 }
+.con1 .moArea {
+    display: none;
+}
+.con1 .product-list {
+    padding:0 20px 80px;
+}
+.con1 .product-list li {
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+}
+.con1 .product-list li.wallBg1 {
+    background-image: url(../images/con1-01-bg.png);
+}
+.con1 .product-list li.wallBg2 {
+    background-image: url(../images/con1-02-bg.png);
+}
+.con1 .product-list li.wallBg3 {
+    background-image: url(../images/con1-03-bg.png);
+}
+.con1 .product-list li .title {
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.con1 .product-list li .img-box {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+.con1 .product-list li .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.con1 .product-list li .txt {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    opacity: .8;
+}
+.con1 .product-list li .viewBtn {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.con1 .product-list .swiper-pagination {
+    bottom: 40px;
+}
+.con1 .searchArea {
+    padding: 23.5vw 20px;
+    background-image: url(../images/con2-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.con1 .searchArea .txtbox2 {
+    color: #fff;
+    text-align: center;
+}
+
 
 /**************************** 벽지컬렉션 영역 ****************************/
 .con2 {
@@ -454,9 +519,9 @@
 .con3 {
     position: relative;
     width: 100%;
-    height: 1839px;
+    height: 95.7vw;
     background-color: #fff;
-    padding-top: 180px;
+    padding-top: 9.3vw;
     box-sizing: border-box;
 }
 .con3 .title {
@@ -465,73 +530,79 @@
     color: #667475;
 }
 .con3 .title p {
-    font-size: 10rem;
+    font-size: 5.2vw;
     text-transform: capitalize;
 }
 .con3 .title .tipBtn {
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 3vw;
+    padding: 1vw 3vw;
     border: 1px solid rgba(102, 116, 117, 0.5);
     color: #667475;
     background-color: #fff;
-    font-size: 1.6rem;
+    font-size: 1vw;
 }
 .con3 .title .tipBtn:hover {
     background-color: #667475;
     color: #fff;
 }
 /* 스타일링 팁 영역 이미지들 */
+/* m이미지 */
+.con3 .mImgBox {
+    display: none;
+}
+.con3 .mImgBox .subTxt {
+    display: none;
+}
+/* pc이미지 */
 .con3 .hover-area .imgHover {
     position: absolute;
-    transition: 0.6s ease;
+    transition: 0.3s ease;
     filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, 0.2));
 }
 .con3 .hover-area .tipImg1 {
-    width: 354px;
-    height: 482px;
-    top: 355px;
+    width: 18vw;
+    height: 25vw;
+    top: 18vw;
     left: 0;
     transform: none;
 }
 .con3 .hover-area .tipImg2 {
-    width: 567px;
-    height: 364px;
-    bottom: 325px;
-    left: 60px;
+    width: 29vw;
+    height: 18vw;
+    top: 58vw;
+    left: 3.1vw;
 }
 .con3 .hover-area .tipImg3 {
-    width: 464px;
-    height: 593px;
-    top: 720px;
+    width: 24vw;
+    height: 30vw;
+    top: 37vw;
     left: 50%;
     transform: translateX(-50%);
 }
 .con3 .hover-area .tipImg4 {
-    width: 316px;
-    height: 385px;
-    top: 515px;
-    right: 330px;
+    width: 16.4vw;
+    height: 20vw;
+    top: 26.8vw;
+    right: 17.1vw;
 }
 .con3 .hover-area .tipImg5 {
-    width: 324px;
-    height: 288px;
-    top: 285px;
-    right: -45px;
+    width: 16vw;
+    height: 15vw;
+    top: 14.8vw;
+    right: -2vw;
     filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, 0.1));
 }
 .con3 .hover-area .tipImg6 {
-    width: 376px;
-    height: 457px;
-    top: 670px;
-    right: -125px;
+    width: 19vw;
+    height: 23vw;
+    top: 34vw;
+    right: -6.5vw;
     filter: drop-shadow(-10px 7px 5px rgba(0, 0, 0, 0.1));
 }
 .con3 .hover-area .imgHover img {
     position: relative;
     top: 0;
-    transition: 0.6s ease;
+    transition: 0.3s ease;
     width: 100%;
 }
 .con3 .hover-area .imgHover:hover img {
@@ -540,46 +611,47 @@
 /* 스타일링 팁 영역 문구 */
 .con3 .txt-box {
     position: absolute;
-    padding: 30px;
+    padding: 1.56vw;
     box-sizing: border-box;
     font-weight: 300;
     z-index: 1;
     box-shadow: -10px 10px 11px rgba(0, 0, 0, 0.1);
     transition: 0.6s ease;
+    font-size: .9vw;
 }
 .con3 .txt-box:hover {
     transform: scale(1.03);
 }
 .con3 .txt1 {
-    top: 500px;
-    left: 300px;
-    width: 320px;
-    height: 480px;
+    top: 26vw;
+    left: 15vw;
+    width: 16.5vw;
+    height: 25vw;
     background-color: #d3b887;
     color: #fff;
 }
 .con3 .txt1 img {
     position: absolute;
-    left: 30px;
-    bottom: 40px;
-    width: 136px;
+    left: 1.56vw;
+    bottom: 2vw;
+    width: 7vw;
 }
 .con3 .txt2 {
-    bottom: 375px;
-    right: 405px;
-    width: 425px;
-    padding-top: 170px;
+    top: 61vw;
+    right: 21vw;
+    width: 22vw;
+    padding-top: 8.8vw;
     background-color: #eeeee7;
     color: #555;
 }
 .con3 .small-box {
     position: absolute;
-    right: 60px;
-    bottom: 195px;
+    right: 3.1vw;
+    top: 78vw;
 }
 .con3 .small-box p {
     margin-top: 30px;
-    font-size: 2.5rem;
+    font-size: 1.3vw;
     opacity: 0.5;
     transition: 0.2s ease;
 }

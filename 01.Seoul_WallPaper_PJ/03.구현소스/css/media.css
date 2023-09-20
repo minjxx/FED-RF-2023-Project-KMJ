@@ -6,7 +6,7 @@
 @media screen and (max-width: 1500px) {
     /* 메인-벽지컬렉션 */
     #main .con2 .con2-slide .side-text {
-        font-size:1vw;
+        font-size: 1vw;
     }
     #main .con2 .con2-slide .side-text.pc p strong {
         font-size: 1.3vw;
@@ -57,7 +57,7 @@
     .allMenuWrap .allMenu li span {
         font-size: 3.5rem;
     }
-    
+
     /* 메인-콘텐츠2 */
     #main .con2 .title {
         top: 4vw;
@@ -67,7 +67,7 @@
         top: 8vw;
     }
     #main .con2 .sample-list li {
-        margin-bottom: .5vw;
+        margin-bottom: 0.5vw;
     }
     #main .con2 .sample-list li button {
         font-size: 1.3vw;
@@ -170,6 +170,52 @@
     #main .mainVisual > .swiper-pagination {
         bottom: 40px;
     }
+
+    /* 메인-콘텐츠1 */
+    #main .con1 {
+        height: auto;
+    }
+    #main .con1 .slidePg {
+        position: static;
+        height: auto;
+    }
+    #main .con1 .top-txt{
+        padding: 40px 20px 30px;
+    }
+    #main .con1 .slidePg ul {
+        display: none;
+    }
+    #main .con1 .moArea {
+        display: block;
+    }
+    .con1 .searchArea .txtbox2 {
+        color: #fff;
+        text-align: center;
+    }
+    #main .con1 .searchArea .txtbox2 .toptxt {
+        font-size: 2.5rem;
+    }
+    #main .con1 .searchArea .txtbox2 .subtxt {
+        font-size: 1.4rem;
+    }
+    #main .con1 .searchArea .txtbox2 .schInput {
+        width: 100%;
+    }
+    #main .con1 .searchArea .txtbox2 .schInput input {
+        height: 45px;
+        font-size: 1.5rem;
+        padding: 0 50px 0 20px;
+    }
+    #main .con1 .searchArea .txtbox2 .schInput .srch-btn {
+        top: 12px;
+        right: 20px;
+    }
+    #main .con1 .searchArea .txtbox2 .btn {
+        margin-top: 50px;
+        padding: 14px 35px;
+        font-size: 1.3rem;
+    }
+
     /* 메인-콘텐츠2 */
     #main .con2 {
         height: 650px;
@@ -189,7 +235,7 @@
         position: relative;
         top: auto;
         left: auto;
-        padding: 30px 20px 8px;
+        padding: 40px 20px 8px;
         font-size: 20px;
     }
     #main .con2 .sample-list {
@@ -206,7 +252,8 @@
     #main .con2 .sample-list li:last-child {
         margin-right: 0;
     }
-    #main .con2 .sample-list li button, #main .con2 .sample-list li.on button{
+    #main .con2 .sample-list li button,
+    #main .con2 .sample-list li.on button {
         font-size: 16px;
     }
     #main .con2 .sample-list li:not(:last-child)::after {
@@ -236,7 +283,7 @@
     }
     #main .con2 .con2-slide .title-box .txt1 {
         display: inline-block;
-        font-size:5rem;
+        font-size: 5rem;
     }
     #main .con2 .con2-slide .title-box.fire {
         top: 305px;
@@ -266,7 +313,7 @@
         left: 20px;
     }
     #main .con2 .con2-slide .swiper-button-next {
-        left:200px;
+        left: 200px;
     }
     #main .con2 .con2-slide .img-area .top-text {
         padding: 12px 15px;
@@ -283,7 +330,91 @@
         width: 8px;
         height: 8px;
     }
-    
+    /* 메인-콘텐츠3 */
+    #main .con3 {
+        height: auto;
+        padding-bottom: 12vw;
+    }
+    #main .con3 .title p {
+        font-size: 4.5rem;
+    }
+    #main .con3 .title .tipBtn {
+        padding: 13px 28px;
+        font-size: 1.4rem;
+    }
+    #main .con3 .mImgBox {
+        position: relative;
+        display: block;
+        margin-top: 50px;
+    }
+    #main .con3 .mImgBox .moImg1 {
+        width: 100%;
+    }
+    #main .con3 .mImgBox .moImg2 {
+        width: 141px;
+        margin: 40px 0 0 auto;
+    }
+    #main .con3 .mImgBox .moImg3 {
+        width: 180px;
+        margin: 11vw 0 0;
+    }
+    #main .con3 .mImgBox .moImg4 {
+        width: 100%;
+        box-shadow: -1px 1px 9px rgba(0, 0, 0, 0.3);
+    }
+    #main .con3 .mImgBox img {
+        width: 100%;
+    }
+    #main .con3 .mImgBox .subTxt {
+        display: block;
+        position: relative;
+    }
+    #main .con3 .mImgBox .mtxt1 {
+        width: 225px;
+        height: 252px;
+        margin: -120px 20px 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        background-color: #d3b887;
+        color: #fff;
+        box-shadow: -7px 7px 25px rgba(0, 0, 0, 0.14);
+    }
+    #main .con3 .mImgBox .mtxt1 img {
+        position: absolute;
+        bottom: 20px;
+        width: 110px;
+    }
+    #main .con3 .mImgBox .mtxt2 {
+        width: 250px;
+        height: 115px;
+        margin: -45px 0 0 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        background-color: #eeeee7;
+        color: #555;
+        box-shadow: -7px 7px 25px rgba(0, 0, 0, 0.14);
+    }
+    #main .con3 .mImgBox .mtxt2 p {
+        margin-top: 35px;
+    }
+    #main .con3 .mImgBox .etcTxt {
+        width: 145px;
+        margin: 66px 20px 53px auto;
+        font-size: 1.5rem;
+        color: #777;
+    }
+    #main .con3 .mImgBox .etcTxt img {
+        width: 18px;
+    }
+    #main .con3 .hover-area.pc {
+        display: none;
+    }
+    #main .con3 .txt-area {
+        display: none;
+    }
+
     /* 서브페이지 */
     .subContBox .subContBox {
         padding: 0 20px;
@@ -460,7 +591,7 @@
     #main .con4 .top-tit p {
         font-size: 5rem;
     }
-    #main .moreBtn {
+    #main .con4 .moreBtn {
         top: auto;
         transform: none;
         bottom: 15px;
@@ -526,7 +657,7 @@
     #main .con4 .top-tit p {
         font-size: 3rem;
     }
-    #main .moreBtn {
+    #main .con4 .moreBtn {
         bottom: 8px;
     }
 }
@@ -557,7 +688,8 @@
         width: 120px;
     }
     /* 메인-콘텐츠2 */
-    #main .con2 .sample-list li button, #main .con2 .sample-list li.on button{
+    #main .con2 .sample-list li button,
+    #main .con2 .sample-list li.on button {
         font-size: 14px;
     }
 
