@@ -15,7 +15,7 @@
         <!-- 메인 JS, defer 설정으로 html로딩후 실행함! -->
         <script src="./js/main.js" defer></script>
         <!-- 부드러운 스크롤JS -->
-        <!-- <script src="./js/smoothScroll23.js"></script> -->
+        <script src="./js/smoothScroll23.js"></script>
     </head>
     <body>
         <!-- 상단영역 시작 -->
@@ -236,14 +236,26 @@
                     <li class="swiper-slide">
                         <img src="./images/main_visual01.jpg" alt="서울벽지 메인배너1" class="pc" />
                         <img src="./images/m_main_01.jpg" alt="서울벽지 메인배너1" class="mo" />
+                        <div class="circleTxt">
+							<img src="./images/circleTxt_black.svg" alt="회전하는 텍스트" class="rotate">
+							<a href="javascript:void(0)" style="background-color:#FAECC8" class="circleBg"></a>
+						</div>
                     </li>
                     <li class="swiper-slide">
                         <img src="./images/main_visual02.jpg" alt="서울벽지 메인배너2" class="pc" />
                         <img src="./images/m_main_02.jpg" alt="서울벽지 메인배너2" class="mo" />
+                        <div class="circleTxt">
+							<img src="./images/circleTxt_black.svg" alt="회전하는 텍스트" class="rotate">
+							<a href="javascript:void(0)" style="background-color:#99D959" class="circleBg"></a>
+						</div>
                     </li>
                     <li class="swiper-slide">
                         <img src="./images/main_visual03.jpg" alt="서울벽지 메인배너3" class="pc" />
                         <img src="./images/m_main_03.jpg" alt="서울벽지 메인배너3" class="mo" />
+                        <div class="circleTxt">
+							<img src="./images/circleTxt_black.svg" alt="회전하는 텍스트" class="rotate">
+							<a href="javascript:void(0)" style="background-color:#A0B9BB" class="circleBg"></a>
+						</div>
                     </li>
                 </ul>
                 <div class="swiper-pagination pagebtn"></div>
@@ -792,13 +804,16 @@
         </div>
         <!-- 하단영역 끝 -->
 
+        <!-- 따라다니는 마우스 커서 -->
+        <div class="cuser-mover"></div>
+
         <script>
             // 메인 비주얼 슬라이드
             const mainVisualSwiper = new Swiper(".mainVisual", {
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
+                // autoplay: {
+                //     delay: 4000,
+                //     disableOnInteraction: false,
+                // },
                 effect: "fade",
                 loop: true,
                 slidesPerView: 1,
@@ -860,6 +875,8 @@
                     }
                 }
             });
+
+            startSS();
         </script>
     </body>
 </html>

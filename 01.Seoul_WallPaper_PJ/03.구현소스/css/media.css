@@ -170,6 +170,18 @@
     #main .mainVisual > .swiper-pagination {
         bottom: 40px;
     }
+    #main .mainVisual .circleTxt {
+        right: 20px;
+        bottom: 40px;
+        width: 150px;
+    }
+    #main .mainVisual .circleTxt .circleBg {
+        width: 60px;
+        height: 60px;
+    }
+    #main .mainVisual .circleTxt .circleBg::after {
+        width: 25px;
+    }
 
     /* 메인-콘텐츠1 */
     #main .con1 {

@@ -599,3 +599,25 @@ html {
         transform: translate3d(-100%, 0, 0);
     }
 }
+
+/* 따라다니는 마우스 커서 */
+.cuser-mover{
+    position: absolute;
+    /* position:fixed; -> JS에서 clientY사용 */
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--main-black);
+
+    /* 자기자신요소는 이벤트가 무시되게 셋팅해야
+    아래쪽 요소를 만질 수 있음 */
+    pointer-events: none;
+    /* 트랜지션 : 이징은 ease-out */
+    transition: 0.3s ease-out;
+    
+    /* 처음에 안보임 */
+    opacity: 0;
+    z-index: 999;
+}

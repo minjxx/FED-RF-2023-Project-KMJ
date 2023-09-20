@@ -12,7 +12,7 @@
     width: 100%;
     height: 100vh;
 }
-.mainVisual .swiper-slide img {
+.mainVisual .swiper-slide > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -27,6 +27,45 @@
     left: 3.1vw;
     bottom: 80px;
     width: auto;
+}
+.mainVisual .circleTxt {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    width: 220px;
+}
+.mainVisual .circleTxt .rotate {
+    width: 100%;
+    animation: rotateCircle 10s linear infinite;
+}
+.mainVisual .circleTxt .circleBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.mainVisual .circleTxt .circleBg::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url(../images/circleTxt-arrow.svg) no-repeat center center;
+    width: 30px;
+    height: 10px;
+    background-size: cover;
+}
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /**************************** 벽지 살펴보기 영역 ****************************/

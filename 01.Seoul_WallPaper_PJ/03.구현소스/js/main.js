@@ -15,6 +15,7 @@ const domFn = {
     getBCR: (ele) => ele.getBoundingClientRect().top,
 }; /////// domFn 객체 /////////////
 
+
 /********************************************* 
     함수 : scrTopBtn
     기능 : 사이트 탑버튼 (클릭시 페이지 최상단으로 이동)
@@ -31,7 +32,7 @@ scrTopBtn.addEventListener("click", (e) => {
 //////////////// scrTopBtn ///////////////////
 
 
-// [ gnb메뉴에 마우스 오버시 header에 흰색배경 나오게하기 ]
+// [ gnb메뉴에 마우스 오버시 header에 .bgWhite 클래스 넣어서 흰색배경 나오게하기 ]
 const gnbHover = domFn.qs("#gnb");
 const headerBgChg = domFn.qs("#header");
 
@@ -44,7 +45,7 @@ domFn.addEvt(gnbHover,'mouseleave',()=>{
 //////////////////////////////////////////////////////
 
 
-// [ 메인 검색 버튼 클릭시 검색영역 input 넓어지게하기 ]
+// [ 메인 검색 버튼 클릭시 .on 클래스 넣어서 검색영역 input 넓어지게하기 ]
 const topSrchBtn = domFn.qs(".serach-icon");
 const srchWidth = domFn.qs(".search-box .area");
 domFn.addEvt(topSrchBtn,'click',()=>{
@@ -107,7 +108,7 @@ for (let x of allMenuList) {
 
 
 
-// [ 4번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
+// [ 메인페이지 콘텐츠1 4번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
 // 이벤트 대상: window
 // 이벤트 종류: scroll
 // 위치대상: .tpg -> 스티키박스를 싸고있는 부모박스
@@ -164,3 +165,66 @@ function moveSlide() {
     }
     
 } //////////// moveSlide 함수 //////////////
+///////////////////////////////////////////////////////////
+
+
+// [ 따라다니는 마우스커서 ] ///////////////////////////////
+// 1. 대상선정 : 
+// (1) 움직일 대상 : .cuser-mover
+const mover = domFn.qs('.cuser-mover');
+// (2) 이벤트 대상 : document.body
+const myBody = document.body;
+// 무버 크기의 절반계산
+let gap = mover.clientWidth/2;
+//선택요소의 크기 JS
+//width 는 clientWidth, height는 clientHeight
+// console.log('무버width:',gap);
+
+// 2. 이벤트 대상에 마우스 무드 이벤트가 적용될때 
+// 무버가 따라다니게 기능구현
+myBody.onmousemove = e => { // e - 이벤트 전달변수
+    // 1. 위치값 가져오기 (박스중앙위치로 보정)
+    let posx = e.pageX - gap;
+    let posy = e.pageY - gap;
+    // let posy = e.clientY - gap;
+    // -> 만약 .cuser-mover가 fixed 포지션이면 브라우저 화면에서의 위치인 clientY를 사용한다!
+
+    // 2. 무버에 위치값 적용하기
+    mover.style.top = posy + 'px';
+    mover.style.left = posx + 'px';
+
+    // console.log('pageX:',e.pageX,'/ pageY:',e.pageY);
+    // console.log('screenX:',e.screenX,'/ screenY:',e.screenY);
+    // console.log('offsetX:',e.offsetX,'/ offsetY:',e.offsetY);
+    // console.log('clientX:',e.clientX,'/ clientY:',e.clientY);
+
+}; //onmousemove
+
+// 이벤트 구역을 들어올때만 보이기 / 나가면 숨기기
+myBody.onmouseenter = () => {
+    mover.style.opacity = .5;
+}; // mouseenter
+myBody.onmouseleave = () => {
+    mover.style.opacity = 0;
+}; // mouseleave
+
+// [3] a요소에 오버시 원 크게만들기
+// 대상 : .link
+const link = domFn.qsa('a');
+
+// 한번에 셋팅하기
+link.forEach(ele=>{
+    // a요소에 마우스 들어올때
+    ele.onmouseenter = () => mover.style.transform = 'scale(1.5)';
+    // a요소에 마우스 나갈때
+    ele.onmouseleave = () => mover.style.transform = 'scale(1)';
+}); // forEach
+
+// 푸터 영역만 마우스 커서 색상 변경
+const footCursor = domFn.qsa('.footer-area');
+// 한번에 셋팅하기
+footCursor.forEach(ele=>{
+    ele.onmouseenter = () => mover.style.backgroundColor = '#fff';
+    ele.onmouseleave = () => mover.style.backgroundColor = 'var(--main-black)';
+}); // forEach
+//////////////////////////////////////////////////////////////////
