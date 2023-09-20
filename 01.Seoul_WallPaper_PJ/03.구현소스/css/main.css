@@ -202,7 +202,7 @@
     padding:0 20px 80px;
 }
 .con1 .product-list li {
-    padding: 40px 20px;
+    padding: 40px 0;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -523,6 +523,7 @@
     background-color: #fff;
     padding-top: 9.3vw;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .con3 .title {
     position: relative;
@@ -666,8 +667,9 @@
     left: 50%;
     stroke-dasharray: 4780;
     stroke-dashoffset: 0;
-    /* animation: con4svg 4s ease; */
-    /* animation-fill-mode: forwards; */
+    opacity: .7;
+    /* animation: con4svg 4s ease;
+    animation-fill-mode: forwards; */
 }
 /* 스타일링 팁 영역 svg 애니메이션 */
 /* @keyframes con4svg {
