@@ -1,6 +1,7 @@
 // 모듈 불러오기 ///////
 // DOM함수 모듈
 import dFn from "./dom.js";
+
 // 부드러운 스크롤 모듈
 import { startSS, setPos } from "./smoothScroll23.js";
 
