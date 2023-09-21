@@ -14,7 +14,7 @@ let pos;
 // 전역변수 pos를 셋팅하는 함수(외부에서 이것사용!)
 function setPos(val){ // val - 위치값 전달변수
     pos = val;
-    console.log('pos:',pos);
+    // console.log('pos:',pos);
 }
 
 

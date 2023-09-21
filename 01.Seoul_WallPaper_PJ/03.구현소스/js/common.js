@@ -38,7 +38,6 @@ scrTopBtn.addEventListener("click", (e) => {
     // 페이지 이동하기 : scrollTo()
     // window.scrollTo({ top: 0, behavior: "smooth" });
     setPos(0);
-    console.log(333);
 }); 
 //////////////// scrTopBtn ///////////////////
 

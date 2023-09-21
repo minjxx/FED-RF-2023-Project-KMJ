@@ -135,7 +135,7 @@ const newsImgSwiper = new Swiper(".news-slide", {
     }
 });
 
-const samData = {"실크벽지":2,"합지벽지":3,"방염벽지":6}
+const samData = {"실크벽지":1,"합지벽지":3,"방염벽지":6}
 
 const samList = dFn.qsa(".sample-list button");
 samList.forEach((ele)=>{
