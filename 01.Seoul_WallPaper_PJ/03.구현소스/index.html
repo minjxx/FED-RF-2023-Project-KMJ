@@ -877,6 +877,30 @@
                 }
             });
 
+            const samData = {"실크벽지":3,"방염벽지":6,"합지벽지":4}
+
+            const samList = document.querySelectorAll(".sample-list button");
+            samList.forEach((ele)=>{
+                ele.onclick=()=>{
+                    let txt = ele.innerText;
+                    console.log(txt);
+
+                    // 스와이퍼 슬라이드 이동 메서드 slideTo(인데스번호)
+                    collectionSlide.slideTo(samData[txt]);
+
+                    // on 넣기
+                    ele.parentElement.classList.add('on');
+                    // console.log(ele.parentElement.parentElement.querySelectorAll('li'));
+                    ele.parentElement.parentElement.querySelectorAll('li')
+                    .forEach(el=>{
+                        console.log(el.isSameNode(ele.parentElement));
+                        if(!el.isSameNode(ele.parentElement))
+                            el.classList.remove('on')
+                    })
+                    
+                }
+            })
+
         </script>
     </body>
 </html>

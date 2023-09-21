@@ -602,7 +602,7 @@ html {
 
 /* 따라다니는 마우스 커서 */
 .cuser-mover{
-    position: absolute;
+    position: fixed;
     /* position:fixed; -> JS에서 clientY사용 */
     top: 0;
     left: 0;

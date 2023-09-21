@@ -36,7 +36,9 @@ scrTopBtn.addEventListener("click", (e) => {
     // 기본기능 막기 : preventDefault()
     e.preventDefault();
     // 페이지 이동하기 : scrollTo()
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
+    setPos(0);
+    console.log(333);
 }); 
 //////////////// scrTopBtn ///////////////////
 
@@ -132,7 +134,7 @@ let gap = mover.clientWidth/2;
 myBody.onmousemove = e => { // e - 이벤트 전달변수
     // 1. 위치값 가져오기 (박스중앙위치로 보정)
     let posx = e.pageX - gap;
-    let posy = e.pageY - gap;
+    let posy = e.clientY - gap;
     // let posy = e.clientY - gap;
     // -> 만약 .cuser-mover가 fixed 포지션이면 브라우저 화면에서의 위치인 clientY를 사용한다!
 
@@ -140,7 +142,7 @@ myBody.onmousemove = e => { // e - 이벤트 전달변수
     mover.style.top = posy + 'px';
     mover.style.left = posx + 'px';
 
-    // console.log('pageX:',e.pageX,'/ pageY:',e.pageY);
+    // console.log('pageX:',e.pageX,'/ clientY:',e.clientY);
     // console.log('screenX:',e.screenX,'/ screenY:',e.screenY);
     // console.log('offsetX:',e.offsetX,'/ offsetY:',e.offsetY);
     // console.log('clientX:',e.clientX,'/ clientY:',e.clientY);
