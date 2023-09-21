@@ -160,6 +160,10 @@
 
 /* 760px 이하 사이즈 시작 */
 @media screen and (max-width: 760px) {
+    /* 마우스 커서 모바일에서 숨김 */
+    .cuser-mover {
+        display: none;
+    }
     /* 메인비주얼 */
     .mainVisual .swiper-wrapper .swiper-slide img.pc {
         display: none;
