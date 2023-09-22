@@ -67,11 +67,11 @@ function moveSlide() {
 
 // 메인에 탑버튼 누르면 컨텐츠1에 마지막 확대되는 영역 on 제거
 // 함수 common.js랑 똑같은거 가져옴
-let scrTopBtn = dFn.qs("#topBtn");
-const schSlide = dFn.qs(".slidePg .search-card");
-scrTopBtn.addEventListener("click", (e) => {
-    schSlide.classList.remove('on');
-}); 
+// let scrTopBtn = dFn.qs("#topBtn");
+// const schSlide = dFn.qs(".slidePg .search-card");
+// scrTopBtn.addEventListener("click", (e) => {
+//     schSlide.classList.remove('on');
+// }); 
 
 
 
