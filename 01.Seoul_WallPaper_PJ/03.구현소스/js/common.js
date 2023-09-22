@@ -30,7 +30,6 @@ dFn.addEvt(window, "keyup", () => setPos(window.scrollY));
     기능 : 사이트 탑버튼 (클릭시 페이지 최상단으로 이동)
 *********************************************/
 let scrTopBtn = dFn.qs("#topBtn");
-const schSlide = dFn.qs(".slidePg .search-card");
 // console.log('탑버튼:',scrTopBtn);
 
 scrTopBtn.addEventListener("click", (e) => {
@@ -39,7 +38,6 @@ scrTopBtn.addEventListener("click", (e) => {
     // 페이지 이동하기 : scrollTo()
     // window.scrollTo({ top: 0, behavior: "smooth" });
     setPos(0);
-    schSlide.classList.remove('on');
 }); 
 //////////////// scrTopBtn ///////////////////
 
