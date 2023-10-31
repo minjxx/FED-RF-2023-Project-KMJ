@@ -3,8 +3,6 @@
 // 모듈 불러오기 ///////
 // DOM함수 모듈
 import dFn from "./dom.js";
-// 부드러운 스크롤 모듈
-import { startSS, setPos } from "./smoothScroll23.js";
 
 // [ 메인페이지 콘텐츠1 4번째 영역에 도달한 경우 내용을 가로방향 이동하기 ]
 // 이벤트 대상: window
@@ -66,24 +64,6 @@ function moveSlide() {
 ///////////////////////////////////////////////////////////
 
 
-/********************************************* 
-    함수 : scrTopBtn
-    기능 : 사이트 탑버튼 (클릭시 페이지 최상단으로 이동)
-*********************************************/
-let scrTopBtn = dFn.qs("#topBtn");
-const schSlide = dFn.qs(".slidePg .search-card");
-// console.log('탑버튼:',scrTopBtn);
-
-scrTopBtn.addEventListener("click", (e) => {
-    // 기본기능 막기 : preventDefault()
-    e.preventDefault();
-    // 페이지 이동하기 : scrollTo()
-    // window.scrollTo({ top: 0, behavior: "smooth" });
-    setPos(0);
-    schSlide.classList.remove('on');
-}); 
-//////////////// scrTopBtn ///////////////////
-
 
 // 메인 비주얼 슬라이드
 const mainVisualSwiper = new Swiper(".mainVisual", {
@@ -108,21 +88,6 @@ const productSwiper = new Swiper(".product-list", {
     pagination: {
         el: ".product-list .swiper-pagination",
         clickable: true,
-    },
-});
-
-// 벽지컬렉션 슬라이드
-const collectionSlide = new Swiper(".con2-slide", {
-    effect: "fade",
-    loop: true,
-    slidesPerView: 1,
-    pagination: {
-        el: ".con2-slide .swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        prevEl: ".swiper-button-prev",
-        nextEl: ".swiper-button-next",
     },
 });
 
@@ -154,9 +119,29 @@ const newsImgSwiper = new Swiper(".news-slide", {
     }
 });
 
+
+
+// 벽지컬렉션 슬라이드
+const collectionSlide = new Swiper(".con2-slide", {
+    effect: "fade",
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+        el: ".con2-slide .swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+});
+
+// 벽지컬렉션 탭버튼
 const samData = {"실크벽지":1,"합지벽지":3,"방염벽지":6}
 
 const samList = dFn.qsa(".sample-list button");
+// let pgBullet = dFn.qsa(".con2-slide .swiper-pagination-bullet");
+
 samList.forEach((ele)=>{
     ele.onclick=()=>{
         let txt = ele.innerText;
