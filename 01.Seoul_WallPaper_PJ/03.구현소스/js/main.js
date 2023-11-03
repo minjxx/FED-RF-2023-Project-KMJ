@@ -138,6 +138,7 @@ const collectionSlide = new Swiper(".con2-slide", {
 
 // 벽지컬렉션 탭버튼
 const samData = {"실크벽지":1,"합지벽지":3,"방염벽지":6}
+const seqSam = Object.keys(samData);
 
 const samList = dFn.qsa(".sample-list button");
 // let pgBullet = dFn.qsa(".con2-slide .swiper-pagination-bullet");
