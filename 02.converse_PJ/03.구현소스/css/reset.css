@@ -10,10 +10,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li,footer, header, bu
 	border: 0;
 	font-size: 100%;
 }
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-} */
 body {
 	color: var(--main-black);
 	line-height: 1.45;
@@ -60,8 +56,8 @@ body::-webkit-scrollbar-track {
 ::-moz-selection {
 	background: #333;
 	color: #fff;
- }
+}
  ::selection {
 	background: #333;
 	color: #fff;
- }
+}
