@@ -9,3 +9,6 @@
 
 <스포티파이>
 https://dw-spotify-react.netlify.app/
+
+작업폴더 정리 참고
+https://github.com/seolhee313/PORTFOLIO/tree/main

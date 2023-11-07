@@ -1,7 +1,8 @@
 @charset "utf-8";
-/* 메인페이지 CSS - main.css */
 
-/* 리셋,공통 외부 CSS 합치기 */
+/* setting */
 @import url(./reset.css);
-@import url(./core.css);
+
+/* commons */
 @import url(./common.css);
+/* @import url(./core.css); -> 이거 없어도 될것같아서 일단...common에 넣음 */

@@ -8,3 +8,10 @@
 html {
     font-size: 10px;
 }
+
+.hide {
+    position: absolute !important;
+    left: -99999px !important;
+    opacity: 0;
+    visibility: hidden;
+}
