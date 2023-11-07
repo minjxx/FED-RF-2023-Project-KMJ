@@ -4,7 +4,7 @@
 /* 리셋,공통 외부 CSS 합치기 */
 @import url(./style.css);
 
-
+#intro {}
 
 
 /* .flow-wrap {
