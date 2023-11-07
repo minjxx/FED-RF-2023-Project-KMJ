@@ -6,53 +6,188 @@
 @import url(./core.css);
 @import url(./common.css);
 
-
-.wrapper{
-
-  }
-  .welcome-section{
+.wrapper {
+}
+.welcome-section {
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: #000;
     overflow: hidden;
     z-index: 9;
-  }
-  .content-wrap{
+}
+.content-wrap {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  .fly-in-text{
+    transform: translate(-50%, -50%);
+}
+.content-wrap span {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+}
+.fly-in-text {
     list-style: none;
-  }
-  .fly-in-text li{
+}
+.fly-in-text li {
     display: inline-block;
     margin-right: 20px;
     font-size: 5em;
     color: #fff;
     opacity: 1;
     transition: all 3s ease;
-  }
-  .fly-in-text li:nth-child(5){
+}
+.fly-in-text li:nth-child(5) {
     margin-right: 0;
-  }
-  .enter-button{
+}
+.enter-button {
     display: block;
     text-align: center;
     font-size: 1em;
     text-decoration: none;
-    color: #adff2f;
     opacity: 1;
     transition: all 1s ease 3s;
-  }
-  .content-hidden .fly-in-text li, .content-hidden .enter-button{opacity: 0;}
-  .content-hidden .fly-in-text li:nth-child(1) { transform: translate3d(-60px, 0, 0); }
-  .content-hidden .fly-in-text li:nth-child(2) { transform: translate3d(-30px, 0, 0); }
-  .content-hidden .fly-in-text li:nth-child(3) { transform: translate3d(0px, 0, 0); }
-  .content-hidden .fly-in-text li:nth-child(4) { transform: translate3d(30px, 0, 0); }
-  .content-hidden .fly-in-text li:nth-child(5) { transform: translate3d(60px, 0, 0); }
-  .content-hidden .enter-button{ transform: translate3d(0, -30px, 0); }
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+}
+
+.content-hidden .fly-in-text li,
+.content-hidden .enter-button {
+    opacity: 0;
+}
+/************************************  ************************************/
+.intro__overlay-first {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+}
+
+.intro__overlay-second {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #222;
+}
+.intro__logo__wrapper {
+    display: flex;
+    z-index: 10001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.intro__logo {
+    position: relative;
+    width: 160px;
+    height: 24px;
+    overflow: hidden
+}
+
+.intro__logo__image {
+    fill: #222;
+    -webkit-transform: translateY(100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%)
+}
+
+
+
+/*  */
+#loading {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+  
+#loading .port {
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      color: #fff;
+      font-size: 1.2vw;
+      font-family: 'Squada One';
+      text-transform: uppercase;
+    }
+  
+    #loading .loading {
+      position: absolute;
+      top: 4%;
+      color: #fff;
+      font-size: 1.2vw;
+      font-family: 'Squada One';
+      text-transform: uppercase;
+    }
+  
+    #loading-text {
+      position: absolute;
+      top: 4%;
+      right: 4%;
+      color: #C7FF61;
+      font-size: 7vw;
+      font-weight: 100;
+      font-family: 'Squada One';
+    }
+  
+    #loading .bgText {
+      position: absolute;
+      bottom: 2%;
+      display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-weight:bold;
+      font-family: 'Squada One';
+      text-transform: uppercase;
+      font-size: 14vw;
+      color: #fff;
+      line-height: 0.8;
+      letter-spacing: -0.3vw;
+    }
+      #loading .bgText:hover .flow-wrap {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+
+      .flow-wrap {
+        z-index: 1000;
+        animation: textLoop 25s linear infinite;
+        padding-right: 1.4881vw;
+      }
+    @keyframes textLoop {
+      0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
