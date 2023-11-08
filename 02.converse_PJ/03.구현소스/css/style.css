@@ -2,7 +2,7 @@
 
 /* setting */
 @import url(./reset.css);
+@import url(./font.css);
 
 /* commons */
 @import url(./common.css);
-/* @import url(./core.css); -> 이거 없어도 될것같아서 일단...common에 넣음 */

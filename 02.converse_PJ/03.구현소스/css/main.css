@@ -4,7 +4,48 @@
 /* 리셋,공통 외부 CSS 합치기 */
 @import url(./style.css);
 
-#intro {}
+#intro .intro-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#intro .intro-logo {
+    width: 350px;
+}
+#intro .intro-logo img {
+    width: 100%;
+}
+#intro .intro-box {
+    text-align: center;
+    font-family: "Rajdhani";
+}
+#intro .intro-text {
+    line-height: 1.2;
+    font-size: 2.2rem;
+    letter-spacing: -.5px;
+}
+#intro .intro-text span {
+    font-size: 6.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+#intro .intro-percent {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-top: 25px;
+    color: #888;
+    font-size: 2.2rem;
+    font-weight: 600;
+    border: 3px solid #000;
+    border-radius: 100%;  
+}
 
 
 /* .flow-wrap {
