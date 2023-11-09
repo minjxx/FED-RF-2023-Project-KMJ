@@ -15,3 +15,14 @@ https://github.com/seolhee313/PORTFOLIO/tree/main
 
 <인트로 부분 참고 사이트>
 https://openlands.lvmh.com/
+
+
+기타사이트
+https://font.co.kr/
+https://openlands.lvmh.com/
+https://github.com/seolhee313/PORTFOLIO/tree/main
+https://port2023-react.netlify.app/
+
+https://juni-official.tistory.com/149   <<로딩효과
+https://solo5star.tistory.com/24    << 3d 회전효과
+https://junia3.github.io/blog/intro     << 타이핑 js
