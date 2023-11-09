@@ -35,14 +35,15 @@
 }
 #intro .intro-percent {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%,-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 90px;
     height: 90px;
-    margin-top: 25px;
+    margin-top: 240px;
     color: #888;
     font-size: 2.2rem;
     font-weight: 600;
