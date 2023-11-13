@@ -22,7 +22,15 @@ https://font.co.kr/
 https://openlands.lvmh.com/
 https://github.com/seolhee313/PORTFOLIO/tree/main
 https://port2023-react.netlify.app/
-
+----------------------------------------------
 https://juni-official.tistory.com/149   <<로딩효과
 https://solo5star.tistory.com/24    << 3d 회전효과
 https://junia3.github.io/blog/intro     << 타이핑 js
+https://do-dam.tistory.com/145 << 텍스트에 물결이 차오름
+----------------------------------------------
+https://www.jbrix.co.kr/ << 탑버튼
+https://hdactech.com/ << 하단푸터
+https://bythem.net/ << 햄버거버튼, 메인, 중간에 fixed걸리는부분
+https://www.nightingale.world/ << 햄버거메뉴에 글씨 오버하면 색 나오는거
+https://www.greats.com/collections/all-mens-collection << 탑메뉴 카테고리명 참고, 
+상품리스트에 필터 영역 참고
