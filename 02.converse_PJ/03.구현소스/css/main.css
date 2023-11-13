@@ -4,3 +4,85 @@
 /* 리셋,공통 외부 CSS 합치기 */
 @import url(./style.css);
 
+/******************** 인트로  ********************/
+#intro .intro-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#intro .intro-logo {
+  width: 350px;
+}
+#intro .intro-logo img {
+  width: 100%;
+}
+#intro .intro-box {
+  text-align: center;
+  font-family: "Rajdhani";
+}
+#intro .intro-fade {
+  display: none;
+}
+#intro .intro-text {
+  line-height: 1.2;
+  font-size: 2.2rem;
+  letter-spacing: -.5px;
+}
+#intro .intro-text span {
+  font-size: 6.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#intro .intro-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-top: 240px;
+  color: #888;
+  font-size: 2.2rem;
+  font-weight: 600;
+  border: 3px solid #000;
+  border-radius: 100%;  
+}
+/* .flow-wrap {
+  z-index: 1000;
+  animation: textLoop 5s linear infinite;
+  padding-right: 1.4881vw;
+}
+@keyframes textLoop {
+  0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+  100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+  }
+} */
+
+/* 메인비주얼 css */
+.main {
+  /* padding-top: 90px; */
+}
+.main-visual {
+  position: relative;
+  background-color: #f5f5f5;
+  height: 100vh;
+}
+.main-visual .shoes-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+}
+.main-visual .shoes-img img {
+  width: 100%;
+}
