@@ -22,7 +22,7 @@
   font-family: "Rajdhani";
 }
 #intro .intro-fade {
-  display: none;
+  /* display: none; */
 }
 #intro .intro-text {
   line-height: 1.2;
