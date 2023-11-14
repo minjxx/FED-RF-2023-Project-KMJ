@@ -3,6 +3,7 @@
 
 :root {
     --main-black: #111;
+    --container-width:1580px;
 }
 
 html {
@@ -16,7 +17,7 @@ html {
     visibility: hidden;
 }
 
-/* 헤더 css */
+/* 헤더 영역 */
 .header {
     position: fixed;
     top: 0;
@@ -26,45 +27,45 @@ html {
     /* background-color: #fff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .1); */
 }
-.header .header-inner {
+.header .header-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1580px;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 25px 0;
 }
-.header .header-inner .logo {
+.header .header-wrap .logo {
     width: 132px;
 }
-.header .header-inner .logo img {
+.header .header-wrap .logo img {
     width: 100%;
 }
-.header .header-inner .pc-nav {
+.header .header-wrap .pc-nav {
     margin-left: 90px;
 }
-.header .header-inner .pc-nav .menu-list-wrap {
+.header .header-wrap .pc-nav .menu-list-wrap {
     display: flex;
 }
-.header .header-inner .pc-nav .menu-list-wrap .menu-list > a {
+.header .header-wrap .pc-nav .menu-list-wrap .menu-list > a {
     padding: 0 30px;
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase;
 }
-.header .header-inner .pc-nav .menu-list-wrap .menu-list:hover > a {
+.header .header-wrap .pc-nav .menu-list-wrap .menu-list:hover > a {
     color: #999;
     transition: .3s;
 }
-.header .header-inner .top-icon {
+.header .header-wrap .top-icon {
     
 }
-.header .header-inner .top-search {
+.header .header-wrap .top-search {
     position: relative;
     display: inline-block;
     width: 220px;
 }
-.header .header-inner .top-search .top-input-box {
+.header .header-wrap .top-search .top-input-box {
     width: 100%;
     height: 40px;
     padding: 0 25px;
@@ -75,10 +76,10 @@ html {
     background-color: #fff;
     font-size: 1.5rem;
 }
-.header .header-inner .top-search .top-input-box::placeholder {
+.header .header-wrap .top-search .top-input-box::placeholder {
     color: #999;
 }
-.header .header-inner .top-search .search-icon {
+.header .header-wrap .top-search .search-icon {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -92,7 +93,7 @@ html {
     font-size: 0;
     cursor: pointer;
 }
-.header .header-inner .top-icon a {
+.header .header-wrap .top-icon a {
     position: relative;
     display: inline-block;
     width: 24px;
@@ -102,13 +103,13 @@ html {
     background-repeat: no-repeat;
     vertical-align: middle;
 }
-.header .header-inner .top-icon a.user {
+.header .header-wrap .top-icon a.user {
     background-image: url(../images/icon_user.png);
 }
-.header .header-inner .top-icon a.cart {
+.header .header-wrap .top-icon a.cart {
     background-image: url(../images/icon_cart.png);
 }
-.header .header-inner .top-icon .cart-cnt {
+.header .header-wrap .top-icon .cart-cnt {
     position: absolute;
     right: -3px;
     top: -1px;
@@ -121,4 +122,40 @@ html {
     color: #fff;
     text-align: center;
     z-index: 9;
+}
+
+/* 푸터영역 */
+.footer {
+    padding: 50px 0;
+    background-color: var(--main-black);
+}
+.footer .footer-wrap {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+.footer .footer-wrap .footer-logo {
+    width: 155px;
+    margin-bottom: 50px;
+}
+.footer .footer-wrap .footer-logo img {
+    width: 100%;
+}
+.footer .footer-wrap .sitemap {
+    display: flex;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+.footer .footer-wrap .sitemap dl {
+    margin-right: 40px;
+}
+.footer .footer-wrap .sitemap dt {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.footer .footer-wrap .sitemap dd a {
+    line-height: 2;
+    font-weight: 500;
+    color: #666;
 }

@@ -15,7 +15,7 @@ body {
 	line-height: 1;
 	overflow-x: hidden;
 	font-size: 1.8rem;
-	font-family: 'Roboto',"Nanum Gothic", sans-serif;
+	font-family: 'Roboto','Noto Sans KR', sans-serif;
 	font-weight: 400;
 }
 ol, ul {
@@ -23,7 +23,7 @@ ol, ul {
 }
 button, input, select, textarea {
     color: inherit;
-    font-family: 'Roboto','Nanum Gothic', sans-serif;
+    font-family: 'Roboto','Noto Sans KR', sans-serif;
     vertical-align: middle;
 }
 /* a요소 리셋 */
