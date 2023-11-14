@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>컨버스 온라인 스토어</title>
         <link rel="shortcut icon" href="./images/favicon.ico" />
+        <!-- 폰트어썸 아이콘CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+        <!-- swiper CSS -->
+        <link rel="stylesheet" href="./css/swiper.min.css" />
         <!-- 메인 CSS -->
         <link rel="stylesheet" href="./css/main.css" />
         <!-- 미디어쿼리 CSS -->
@@ -13,6 +18,8 @@
         <script src="./js/jquery-3.7.1.min.js"></script>
         <!-- 제이쿼리 UI -->
         <script src="./js/jquery-ui.min.js"></script>
+        <!-- swiper JS -->
+        <script src="./js/swiper.min.js"></script>
         <!-- 공통모듈 JS -->
         <script type="module" src="./js/common.js"></script>
         <script type="module" src="./js/main.js"></script>
@@ -21,7 +28,7 @@
         <!-- 인트로 -->
         <div id="intro" class="">
             <div class="intro-wrap">
-                <div class="intro-logo intro-fade"><img src="./images/intro_simbol_01.png" alt="인트로로고"></div>
+                <div class="intro-logo intro-fade"><img src="./images/main/intro_simbol_01.png" alt="인트로로고"></div>
                 <div class="intro-box">
                     <div class="intro-text intro-fade">
                         You're about to enter<br />
@@ -38,7 +45,7 @@
         <header class="header">
             <div class="header-wrap">
                 <h1 class="logo">
-                    <a href="/" class="logo-img"><img src="./images/logo_black.png" alt="컨버스"></a>
+                    <a href="/" class="logo-img"><img src="./images/common/logo_black.png" alt="컨버스"></a>
                 </h1>
                 <nav class="pc-nav">
                     <ul class="menu-list-wrap">
@@ -80,39 +87,52 @@
         <!-- 메인 -->
         <main class="main">
             <div class="main-visual">
-                <ul>
-                    <li>
-                        <span class="bg-circle"></span>
-                        <span class="main-txt">all star</span>
-                        <div class="shoes-img">
-                            <img src="./images/shoe02_1.png" alt="신발">
-                        </div>
-                    </li>
-                </ul>
-
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <span class="bg-circle hide"></span>
+                            <div class="main-title">
+                                <p>chuck taylor all star</p>
+                                <span class="bg-txt">all star</span>
+                            </div>
+                            <div class="shoes-img">
+                                <img src="./images/main/shoe01.png" alt="올스타">
+                            </div>
+                            <a href="#" class="main-btn">shop now</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
 
         <!-- 푸터 -->
         <footer class="footer">
-            <div class="footer-wrap clfix">
-                <div class="left">
-                    <div class="footer-logo"><img src="./images/logo_white.png" alt="컨버스"></div>
+            <div class="footer-wrap">
+                <div class="footer-left">
+                    <div class="footer-logo"><img src="./images/common/logo_white.png" alt="컨버스"></div>
                     <address>
-                        사업자명 : (유)컨버스코리아<br /> 
-                        대표자명 : 이명재<br />
-                        사업자등록번호 : 220-88-74818<br />
-                        통신판매업 : 제2016-서울강남-00478호<br />
-                        주소 : 서울특별시 강남구 테헤란로 152 (역삼동) 강남파이낸스센터 32층
+                        <p>
+                            <span>사업자명 : (유)컨버스코리아</span>
+                            <span>대표자명 : 이명재</span>
+                            <span>사업자등록번호 : 220-88-74818</span>
+                        </p>
+                        <p>
+                            <span>통신판매업 : 제2016-서울강남-00478호</span>
+                        </p>
+                        <p>
+                            <span>주소 : 서울특별시 강남구 테헤란로 152 (역삼동) 강남파이낸스센터 32층</span>
+                        </p>
+                        <p>
+                            <span>TEL : 080-987-0182</span>
+                            <span>이용문의 : conversekorea@converse.co.kr</span>
+                        </p>
                     </address>
                     <p class="copyright">2020 Converse Korea LLC. All Rights Reserved.</p>
                 </div>
-                <div class="right">
-                    <div class="cs-box">
-                        <dl>
-                            <dt>CS Center</dt>
-                            <dd>080-987-0182<br /><span>평일 AM 09:00 - PM 05:30 / 주말,공휴일 휴무</span></dd>
-                        </dl>
+                <div class="footer-right">
+                    <div class="social">
+                        <a href="https://www.facebook.com/converse.kr" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/converse_kr" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="sitemap">
                         <dl>
@@ -136,11 +156,24 @@
                         <dl>
                             <dt>family sites</dt>
                             <dd><a href="#">nike</a></dd>
-                            <dd><a href="#">jordan</a></dd>
+                            <dd><a href="#" class="cap">jordan</a></dd>
                         </dl>
                     </div>
                 </div>
             </div>
         </footer>
+        <script>
+            // 메인 비주얼 슬라이드
+            const mainVisualSwiper = new Swiper(".main-visual .swiper-container", {
+                autoplay: false,
+                effect: "fade",
+                loop: false,
+                slidesPerView: 1,
+                // pagination: {
+                //     el: ".mainVisual .swiper-pagination",
+                //     clickable: true,
+                // },
+            });
+        </script>
     </body>
 </html>
