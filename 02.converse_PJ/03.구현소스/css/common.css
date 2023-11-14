@@ -10,6 +10,12 @@ html {
     font-size: 10px;
 }
 
+.clfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
 .hide {
     position: absolute !important;
     left: -99999px !important;
@@ -130,8 +136,18 @@ html {
     background-color: var(--main-black);
 }
 .footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
     width: var(--container-width);
     margin: 0 auto;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.footer .footer-wrap .left {
+    width: 50%;
+}
+.footer .footer-wrap .right {
+    width: 50%;
 }
 .footer .footer-wrap .footer-logo {
     width: 155px;
@@ -140,14 +156,22 @@ html {
 .footer .footer-wrap .footer-logo img {
     width: 100%;
 }
+.footer .footer-wrap address {
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.footer .footer-wrap .cs-box {
+    text-align: right;
+}
 .footer .footer-wrap .sitemap {
     display: flex;
-    color: #fff;
-    font-size: 1.4rem;
+    justify-content: flex-end;
+    margin-bottom: 50px;
     text-transform: uppercase;
 }
 .footer .footer-wrap .sitemap dl {
-    margin-right: 40px;
+    margin-right: 50px;
 }
 .footer .footer-wrap .sitemap dt {
     margin-bottom: 10px;
@@ -157,5 +181,12 @@ html {
 .footer .footer-wrap .sitemap dd a {
     line-height: 2;
     font-weight: 500;
-    color: #666;
+    color: #777;
+    transition: .3s;
 }
+.footer .footer-wrap .sitemap dd:hover a {
+    color: #ccc;
+}
+.footer .footer-wrap .copyright {
+    color: #777;
+} 

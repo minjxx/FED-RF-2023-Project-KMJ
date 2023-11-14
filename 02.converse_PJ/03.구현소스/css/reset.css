@@ -35,6 +35,10 @@ a{
 img {
 	vertical-align: middle;
 }
+/* address태그 normal로 변경 */
+address {
+	font-style: normal;
+}
 
 /* 스크롤바 전체 기본 꾸미기 */
 body::-webkit-scrollbar {
