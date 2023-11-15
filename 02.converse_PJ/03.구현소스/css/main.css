@@ -68,35 +68,27 @@
 } */
 
 /* 메인비주얼 css */
-.main {
-  /* padding-top: 90px; */
-}
-.main-visual {
+.main-visual.swiper-container {
   position: relative;
-  background-color: #f0f0f0;
   height: 100vh;
 }
-.main-visual .shoes-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 800px;
+.main-visual li {
+  background-color: #f0f0f0;
 }
-.main-visual .shoes-img img {
-  width: 100%;
+.main-visual li.pf {
+  background-color: #d7cec5;
 }
 .main-visual .bg-circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 500px;
-  height: 500px;
+  width: 80vw;
+  max-width: 80%;
+  height: 80vw;
   border-radius: 100%;
   background-color: var(--main-black);
-  filter: blur(25px);
-    opacity: 0.4;
+  opacity: 0.2;
 }
 .main-visual .main-title {
   position: absolute;
@@ -104,24 +96,46 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
-  margin-top: -160px;
+  margin-top: -175px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
+.main-visual .swiper-slide .main-title {
+  opacity: 0;
+}
+.main-visual .swiper-slide-active .main-title {
+  animation: visualTxtTop .8s .5s ease-in-out forwards;
+}
 .main-visual .main-title p {
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
-.main-visual .bg-txt {
+.main-visual .main-title .bg-txt {
   font-size: 22rem;
-  color: #bbb;
-  /* text-shadow: 0 2px 15px rgba(0,0,0,.2); */
+  color: #fff;
+}
+.main-visual .shoes-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 800px;
+  margin-top: 45px;
+}
+.main-visual .shoes-img img {
+  width: 100%;
+}
+.main-visual .swiper-slide .shoes-img {
+  opacity: 0;
+}
+.main-visual .swiper-slide-active .shoes-img {
+  animation: visualImgTop .8s 1.5s ease-in-out forwards;
 }
 .main-visual .main-btn {
   position: absolute;
-  bottom: 12%;
+  bottom: 11%;
   left: 50%;
   transform: translateX(-50%);
   width: 150px;
@@ -133,6 +147,49 @@
   border-radius: 50px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.5);
   background-color: var(--main-black);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   z-index: 1;
+}
+.main-visual .swiper-slide .main-btn {
+  opacity: 0;
+}
+.main-visual .swiper-slide-active .main-btn {
+  animation: visualBtn .8s 1.5s ease-in-out forwards;
+}
+.main-visual .swiper-button-prev{
+
+}
+.main-visual .swiper-button-next{
+    
+}
+/* 메인비주얼 애니메이션 */
+@keyframes visualTxtTop {
+  0% {
+    transform: translate(-50%,-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%,-50%);
+    opacity: 1;
+  }
+}
+@keyframes visualImgTop {
+  0% {
+    transform: translate(-50%,-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%,-50%);
+    opacity: 1;
+  }
+}
+@keyframes visualBtn {
+  0% {
+    transform: translate(-50%,50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%,0%);
+    opacity: 1;
+  }
 }

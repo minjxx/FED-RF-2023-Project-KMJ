@@ -2,8 +2,8 @@
 /* 공통모듈 CSS - common.css */
 
 :root {
-    --main-black: #111;
     --container-width:1580px;
+    --main-black: #111;
 }
 
 html {
@@ -60,17 +60,16 @@ html {
     display: flex;
 }
 .header .header-wrap .pc-nav .menu-list-wrap .menu-list > a {
+    position: relative;
     padding: 0 30px;
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase;
+    transition: .3s;
 }
 .header .header-wrap .pc-nav .menu-list-wrap .menu-list:hover > a {
     color: #999;
     transition: .3s;
-}
-.header .header-wrap .top-icon {
-    
 }
 .header .header-wrap .top-search {
     position: relative;

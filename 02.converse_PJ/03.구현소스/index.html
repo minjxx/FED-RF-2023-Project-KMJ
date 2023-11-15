@@ -86,22 +86,33 @@
 
         <!-- 메인 -->
         <main class="main">
-            <div class="main-visual">
-                <div class="swiper-container">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <span class="bg-circle hide"></span>
-                            <div class="main-title">
-                                <p>chuck taylor all star</p>
-                                <span class="bg-txt">all star</span>
-                            </div>
-                            <div class="shoes-img">
-                                <img src="./images/main/shoe01.png" alt="올스타">
-                            </div>
-                            <a href="#" class="main-btn">shop now</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="main-visual swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide pf">
+                        <span class="bg-circle"></span>
+                        <div class="main-title">
+                            <p>platform sneakers</p>
+                            <span class="bg-txt">run star</span>
+                        </div>
+                        <div class="shoes-img">
+                            <img src="./images/main/shoe02.png" alt="런스타">
+                        </div>
+                        <a href="#" class="main-btn">Shop now</a>
+                    </li>
+                    <li class="swiper-slide">
+                        <span class="bg-circle"></span>
+                        <div class="main-title">
+                            <p>chuck taylor all star</p>
+                            <span class="bg-txt">all star</span>
+                        </div>
+                        <div class="shoes-img">
+                            <img src="./images/main/shoe01.png" alt="올스타">
+                        </div>
+                        <a href="#" class="main-btn">Shop now</a>
+                    </li>
+                </ul>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </main>
 
@@ -164,11 +175,18 @@
         </footer>
         <script>
             // 메인 비주얼 슬라이드
-            const mainVisualSwiper = new Swiper(".main-visual .swiper-container", {
-                autoplay: false,
+            const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
                 effect: "fade",
-                loop: false,
+                loop: true,
                 slidesPerView: 1,
+                navigation:{
+                    nextEl:".main-visual .swiper-button-next", 
+                    prevEl:".main-visual .swiper-button-prev",
+                },
                 // pagination: {
                 //     el: ".mainVisual .swiper-pagination",
                 //     clickable: true,
