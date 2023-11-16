@@ -117,7 +117,7 @@
 }
 .main-visual .main-title .bg-txt {
   font-size: 22rem;
-  color: #fff;
+  color: rgba(255,255,255,.9);
 }
 .main-visual .shoes-img {
   position: absolute;
@@ -160,13 +160,23 @@
   animation: visualBtn .8s 1.5s ease-in-out forwards;
 }
 .main-visual .swiper-button-prev, .main-visual .swiper-button-next{
-  background-image: url(../images/main/arrow_right.png);
+  width: 80px;
+  height: 80px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.main-visual .swiper-button-prev::after, .main-visual .swiper-button-next::after {
+  display: none;
 }
 .main-visual .swiper-button-prev{
-
+  left: 8%;
+  background-image: url(../images/main/arrow_left.png);
+  animation: visualArrowLeft .6s ease-in-out infinite alternate;
 }
 .main-visual .swiper-button-next{
-    
+  right: 8%;
+  background-image: url(../images/main/arrow_right.png);
+  animation: visualArrowRight .6s ease-in-out infinite alternate;
 }
 /* 메인비주얼 애니메이션 */
 @keyframes visualTxtTop {
@@ -197,5 +207,21 @@
   100% {
     transform: translate(-50%,0%);
     opacity: 1;
+  }
+}
+@keyframes visualArrowLeft {
+  0% {
+    left: 8.5%;
+  }
+  100% {
+    left: 7.5%;
+  }
+}
+@keyframes visualArrowRight {
+  0% {
+    right: 8.5%;
+  }
+  100% {
+    right: 7.5%;
   }
 }
