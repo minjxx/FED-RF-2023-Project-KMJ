@@ -68,6 +68,9 @@
 } */
 
 /* 메인비주얼 css */
+.main-visual {
+  /* padding-top: 90px; */
+}
 .main-visual.swiper-container {
   position: relative;
   height: 100vh;
@@ -155,6 +158,9 @@
 }
 .main-visual .swiper-slide-active .main-btn {
   animation: visualBtn .8s 1.5s ease-in-out forwards;
+}
+.main-visual .swiper-button-prev, .main-visual .swiper-button-next{
+  background-image: url(../images/main/arrow_right.png);
 }
 .main-visual .swiper-button-prev{
 
