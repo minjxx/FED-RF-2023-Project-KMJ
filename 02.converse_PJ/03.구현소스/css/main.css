@@ -225,3 +225,14 @@
     right: 7.5%;
   }
 }
+
+/* 혜택 영역 */
+.main-benefit {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 120px auto 0;
+  background-color: #fff;
+}
+.main-benefit li img {
+  width: 100%;
+}

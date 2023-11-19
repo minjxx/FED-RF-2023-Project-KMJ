@@ -2,7 +2,7 @@
 /* 공통모듈 CSS - common.css */
 
 :root {
-    --container-width:1580px;
+    --container-width: 1580px;
     --main-black: #111;
 }
 
@@ -90,10 +90,10 @@ html {
     background-color: #fff;
     font-size: 1.5rem;
 }
-.header.bgWhite .header-wrap .top-search .top-input-box {
+#header.bgWhite .header-wrap .top-search .top-input-box {
     background-color: #e8e8e8;
 }
-.header.on .header-wrap .top-search .top-input-box {
+#header.on .header-wrap .top-search .top-input-box {
     background-color: #e8e8e8;
 }
 #header .header-wrap .top-search .top-input-box::placeholder {
@@ -252,6 +252,7 @@ html {
 
 /* 푸터영역 */
 #footer {
+    margin-top: 120px;
     padding: 50px 0;
     background-color: var(--main-black);
 }
