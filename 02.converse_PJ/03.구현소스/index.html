@@ -135,7 +135,8 @@
 
         <!-- 메인 -->
         <main class="main">
-            <div class="main-visual swiper-container">
+            <section class="main-visual swiper-container">
+                <h2 class="section-title invisible">메인배너</h2>
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide pf">
                         <span class="bg-circle"></span>
@@ -162,7 +163,7 @@
                 </ul>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
+            </section>
         </main>
 
         <!-- 푸터 -->
@@ -222,21 +223,5 @@
                 </div>
             </div>
         </footer>
-        <script>
-            // 메인 비주얼 슬라이드
-            const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false,
-                },
-                effect: "fade",
-                loop: true,
-                slidesPerView: 1,
-                navigation:{
-                    nextEl:".main-visual .swiper-button-next", 
-                    prevEl:".main-visual .swiper-button-prev",
-                },
-            });
-        </script>
     </body>
 </html>

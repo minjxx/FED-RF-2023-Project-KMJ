@@ -157,7 +157,7 @@
   opacity: 0;
 }
 .main-visual .swiper-slide-active .main-btn {
-  animation: visualBtn .8s 1.5s ease-in-out forwards;
+  animation: visualBtn .6s 1.3s ease-in-out forwards;
 }
 .main-visual .swiper-button-prev, .main-visual .swiper-button-next{
   width: 80px;

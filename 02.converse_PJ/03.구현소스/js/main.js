@@ -27,4 +27,19 @@ dFn.addEvt(header, "mouseover", () => {
 dFn.addEvt(header, "mouseleave", () => {
     header.classList.remove("on");
 });
+
+// 메인 비주얼 슬라이드
+const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+    effect: "fade",
+    loop: true,
+    slidesPerView: 1,
+    navigation:{
+        nextEl:".main-visual .swiper-button-next", 
+        prevEl:".main-visual .swiper-button-prev",
+    },
+});
 //////////////////////////////////////////////////////
