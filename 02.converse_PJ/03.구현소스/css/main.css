@@ -6,50 +6,50 @@
 
 /******************** 인트로  ********************/
 #intro .intro-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #intro .intro-logo {
-  width: 350px;
+    width: 350px;
 }
 #intro .intro-logo img {
-  width: 100%;
+    width: 100%;
 }
 #intro .intro-box {
-  text-align: center;
-  font-family: "Rajdhani";
+    text-align: center;
+    font-family: "Rajdhani";
 }
 #intro .intro-fade {
-  /* display: none; */
+    /* display: none; */
 }
 #intro .intro-text {
-  line-height: 1.2;
-  font-size: 2.2rem;
-  letter-spacing: -.5px;
+    line-height: 1.2;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
 }
 #intro .intro-text span {
-  font-size: 6.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+    font-size: 6.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 #intro .intro-percent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90px;
-  height: 90px;
-  margin-top: 240px;
-  color: #888;
-  font-size: 2.2rem;
-  font-weight: 600;
-  border: 3px solid #000;
-  border-radius: 100%;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-top: 240px;
+    color: #888;
+    font-size: 2.2rem;
+    font-weight: 600;
+    border: 3px solid #000;
+    border-radius: 100%;
 }
 /* .flow-wrap {
   z-index: 1000;
@@ -69,170 +69,208 @@
 
 /* 메인비주얼 css */
 .main-visual {
-  /* padding-top: 90px; */
+    /* padding-top: 90px; */
 }
 .main-visual.swiper-container {
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 100vh;
 }
 .main-visual li {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 .main-visual li.pf {
-  background-color: #d7cec5;
+    background-color: #d7cec5;
 }
 .main-visual .bg-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 80vw;
-  max-width: 80%;
-  height: 80vw;
-  border-radius: 100%;
-  background-color: var(--main-black);
-  opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 80%;
+    height: 80vw;
+    border-radius: 100%;
+    background-color: var(--main-black);
+    opacity: 0.2;
 }
 .main-visual .main-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 100%;
-  margin-top: -175px;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-top: -175px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 .main-visual .swiper-slide .main-title {
-  opacity: 0;
+    opacity: 0;
 }
 .main-visual .swiper-slide-active .main-title {
-  animation: visualTxtTop .8s .5s ease-in-out forwards;
+    animation: visualTxtTop 0.8s 0.5s ease-in-out forwards;
 }
 .main-visual .main-title p {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 .main-visual .main-title .bg-txt {
-  font-size: 22rem;
-  color: rgba(255,255,255,.9);
+    font-size: 22rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 .main-visual .shoes-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 800px;
-  margin-top: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    margin-top: 45px;
 }
 .main-visual .shoes-img img {
-  width: 100%;
+    width: 100%;
 }
 .main-visual .swiper-slide .shoes-img {
-  opacity: 0;
+    opacity: 0;
 }
 .main-visual .swiper-slide-active .shoes-img {
-  animation: visualImgTop .6s 1.3s ease-in-out forwards;
+    animation: visualImgTop 0.6s 1.3s ease-in-out forwards;
 }
 .main-visual .shop-btn {
-  position: absolute;
-  bottom: 11%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #fff;
-  border-radius: 50px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
-  background-color: var(--main-black);
-  /* text-transform: uppercase; */
-  z-index: 1;
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--main-black);
+    /* text-transform: uppercase; */
+    z-index: 1;
 }
 .main-visual .swiper-slide .shop-btn {
-  opacity: 0;
+    opacity: 0;
 }
 .main-visual .swiper-slide-active .shop-btn {
-  animation: visualBtn .6s 1.3s ease-in-out forwards;
+    animation: visualBtn 0.6s 1.3s ease-in-out forwards;
 }
-.main-visual .swiper-button-prev, .main-visual .swiper-button-next{
-  width: 80px;
-  height: 80px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+.main-visual .swiper-button-prev,
+.main-visual .swiper-button-next {
+    width: 80px;
+    height: 80px;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
-.main-visual .swiper-button-prev::after, .main-visual .swiper-button-next::after {
-  display: none;
+.main-visual .swiper-button-prev::after,
+.main-visual .swiper-button-next::after {
+    display: none;
 }
-.main-visual .swiper-button-prev{
-  left: 8%;
-  background-image: url(../images/main/arrow_left.png);
-  animation: visualArrowLeft .6s ease-in-out infinite alternate;
+.main-visual .swiper-button-prev {
+    left: 8%;
+    background-image: url(../images/main/arrow_left.png);
+    animation: visualArrowLeft 0.6s ease-in-out infinite alternate;
 }
-.main-visual .swiper-button-next{
-  right: 8%;
-  background-image: url(../images/main/arrow_right.png);
-  animation: visualArrowRight .6s ease-in-out infinite alternate;
+.main-visual .swiper-button-next {
+    right: 8%;
+    background-image: url(../images/main/arrow_right.png);
+    animation: visualArrowRight 0.6s ease-in-out infinite alternate;
 }
 /* 메인비주얼 애니메이션 */
 @keyframes visualTxtTop {
-  0% {
-    transform: translate(-50%,-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%,-50%);
-    opacity: 1;
-  }
+    0% {
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 @keyframes visualImgTop {
-  0% {
-    transform: translate(-50%,-40%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%,-50%);
-    opacity: 1;
-  }
+    0% {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 @keyframes visualBtn {
-  0% {
-    transform: translate(-50%,50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%,0%);
-    opacity: 1;
-  }
+    0% {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
 }
 @keyframes visualArrowLeft {
-  0% {
-    left: 8.5%;
-  }
-  100% {
-    left: 7.5%;
-  }
+    0% {
+        left: 8.5%;
+    }
+    100% {
+        left: 7.5%;
+    }
 }
 @keyframes visualArrowRight {
-  0% {
-    right: 8.5%;
-  }
-  100% {
-    right: 7.5%;
-  }
+    0% {
+        right: 8.5%;
+    }
+    100% {
+        right: 7.5%;
+    }
 }
 
-/* 혜택 영역 */
-.main-benefit {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 120px auto 0;
-  background-color: #fff;
+/* 섹션 영역 */
+#main .section-title {
+    margin-bottom: 28px;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1.34;
+    text-transform: uppercase;
 }
+#main .section-title.invisible {
+    overflow: hidden;
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.main_sec {
+    position: relative;
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 120px auto 0;
+    background-color: #fff;
+}
+/* 브랜드 영역 */
+.main-brand li {
+}
+.main-brand li .imgSet {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    overflow: hidden;
+}
+.main-brand li .imgSet img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 혜택 영역 */
 .main-benefit li img {
-  width: 100%;
+    width: 100%;
 }

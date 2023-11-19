@@ -42,6 +42,22 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
         prevEl:".main-visual .swiper-button-prev",
     },
 });
+// 브랜드 배너 슬라이드
+const brandSwiper = new Swiper(".main-brand .swiper-container", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: ".main-brand .swiper-pagination",
+        clickable: true,
+    },
+    navigation:{
+        nextEl:".main-brand .swiper-button-next", 
+        prevEl:".main-brand .swiper-button-prev",
+    },
+
+});
 // 혜택 배너 슬라이드
 const benefitSwiper = new Swiper(".main-benefit .swiper-container", {
     autoplay: {
@@ -51,4 +67,5 @@ const benefitSwiper = new Swiper(".main-benefit .swiper-container", {
     loop: true,
     slidesPerView: 1,
 });
+
 //////////////////////////////////////////////////////
