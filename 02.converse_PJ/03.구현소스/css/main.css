@@ -134,9 +134,9 @@
   opacity: 0;
 }
 .main-visual .swiper-slide-active .shoes-img {
-  animation: visualImgTop .8s 1.5s ease-in-out forwards;
+  animation: visualImgTop .6s 1.3s ease-in-out forwards;
 }
-.main-visual .main-btn {
+.main-visual .shop-btn {
   position: absolute;
   bottom: 11%;
   left: 50%;
@@ -153,10 +153,10 @@
   /* text-transform: uppercase; */
   z-index: 1;
 }
-.main-visual .swiper-slide .main-btn {
+.main-visual .swiper-slide .shop-btn {
   opacity: 0;
 }
-.main-visual .swiper-slide-active .main-btn {
+.main-visual .swiper-slide-active .shop-btn {
   animation: visualBtn .6s 1.3s ease-in-out forwards;
 }
 .main-visual .swiper-button-prev, .main-visual .swiper-button-next{

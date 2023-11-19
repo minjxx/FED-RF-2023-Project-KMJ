@@ -5,7 +5,7 @@
 import dFn from "./dom.js";
 
 // [ 대상 : header ] //////////////////////////////////////
-const header = dFn.qs(".header");
+const header = dFn.qs("#header");
 // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기]
 let headerHeight = header.offsetHeight;
 // console.log(headerHeight);
