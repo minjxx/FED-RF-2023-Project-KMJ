@@ -42,4 +42,13 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
         prevEl:".main-visual .swiper-button-prev",
     },
 });
+// 혜택 배너 슬라이드
+const benefitSwiper = new Swiper(".main-benefit .swiper-container", {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    slidesPerView: 1,
+});
 //////////////////////////////////////////////////////
