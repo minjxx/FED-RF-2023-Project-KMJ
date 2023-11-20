@@ -27,6 +27,15 @@ html {
     visibility: hidden;
 }
 
+.infoLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 /* 헤더 영역 */
 #header {
     position: fixed;
