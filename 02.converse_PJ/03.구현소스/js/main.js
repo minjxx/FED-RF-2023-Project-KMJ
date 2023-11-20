@@ -19,7 +19,6 @@ window.onscroll = function(){
         header.classList.remove('bgWhite');
     }
 }
-
 // 2. gnb메뉴에 마우스 오버시 header에 .on 클래스 넣어서 흰색배경 나오게하기 ]
 dFn.addEvt(header, "mouseover", () => {
     header.classList.add("on");
@@ -27,6 +26,37 @@ dFn.addEvt(header, "mouseover", () => {
 dFn.addEvt(header, "mouseleave", () => {
     header.classList.remove("on");
 });
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////
+/// 인트로 동영상 클릭시 플레이하기 ////
+// 대상: .intro-mv-img
+// 이벤트: click
+// -> 가상요소 플레이버튼 클릭시
+// 이벤트 버블링으로 본 박스가 반응함!
+// 1. 대상 선정하기
+const mvBox = dFn.qs(".intro-mv-img");
+
+// 2. 이벤트 설정하기
+dFn.addEvt(mvBox, "click", showMv);
+
+// 이벤트연결 상태변수(한번만 실행키위한 변수)
+let stsShowMv = 0;
+
+// 3. 함수만들기
+function showMv() {
+  if (stsShowMv) return; 
+  stsShowMv = 1;
+
+  // 동영상 넣기
+  // 대상: 나자신(.intro-mv-img)
+  this.innerHTML = `
+    <video src='./images/main/main_video.mp4' autoplay controls></video>
+  `;
+
+  // 가상요소 플레이버튼 없애기위해 .off지우기
+  this.classList.remove("off");
+} ///////// showMv 함수 ///////////
 
 // 메인 비주얼 슬라이드
 const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
