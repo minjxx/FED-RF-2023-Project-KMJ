@@ -38,23 +38,23 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
     loop: true,
     slidesPerView: 1,
     navigation:{
-        nextEl:".main-visual .swiper-button-next", 
-        prevEl:".main-visual .swiper-button-prev",
+        nextEl:".main-visual .next-btn", 
+        prevEl:".main-visual .prev-btn",
     },
 });
 // 브랜드 배너 슬라이드
 const brandSwiper = new Swiper(".main-brand .swiper-container", {
     slidesPerView: 2,
     slidesPerGroup: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     loop: true,
     pagination: {
         el: ".main-brand .swiper-pagination",
         clickable: true,
     },
     navigation:{
-        nextEl:".main-brand .swiper-button-next", 
-        prevEl:".main-brand .swiper-button-prev",
+        nextEl:".main-brand .next-btn", 
+        prevEl:".main-brand .prev-btn",
     },
 
 });
