@@ -261,11 +261,14 @@
 }
 
 /* 배너 감싸는 영역 css */
-#main .banner-wrap {
+.banner-wrap {
     position: relative;
 }
 
 /* 브랜드 영역 */
+.main-brand .banner-wrap {
+    padding-bottom: 100px;
+}
 .main-brand li .imgSet {
     position: relative;
     width: 100%;
@@ -293,6 +296,17 @@
     right: -60px;
     background-image: url(../images/main/ico_arrow_next.png);
 }
+.main-brand .swiper-pagination {
+    bottom: 40px;
+    width: 100%;
+}
+.main-brand .swiper-pagination-bullet {
+
+}
+.main-brand .swiper-pagination-bullet.swiper-pagination-bullet-active {
+
+}
+
 /* 혜택 영역 */
 .main-benefit li img {
     width: 100%;
