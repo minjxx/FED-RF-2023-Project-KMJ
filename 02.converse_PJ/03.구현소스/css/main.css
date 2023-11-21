@@ -265,10 +265,11 @@
 .banner-wrap {
     position: relative;
 }
-/* .main_sec.main-video {
-    max-width: 100%;
-} */
+
 /* 비디오 영역 */
+.main_sec.main-video {
+    max-width: 100%;
+}
 .main-video .intro-mv-img {
     position: relative;
     width: 100%;
@@ -327,6 +328,9 @@
     margin: 0 25px;
     font-style: italic;
 }
+.loop-group.reverse .text-loop {
+    animation: textLoopRe 20s linear 0s infinite;
+}
 
 /* 하단 움직이는 텍스트 애니메이션 */
 @keyframes textLoop {
@@ -335,6 +339,15 @@
     }
     100% {
         transform: translate(-100%, 0);
+    }
+}
+/* 하단 움직이는 텍스트 애니메이션 */
+@keyframes textLoopRe {
+    0% {
+        transform: translate(-100%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
     }
 }
 
