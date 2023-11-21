@@ -309,7 +309,6 @@
 }
 .loop-group {
     white-space: nowrap;
-    overflow: hidden;
     background-color: var(--main-black);
 }
 .loop-group .text-loop {
@@ -321,7 +320,7 @@
     color: #fff;
     white-space: nowrap;
     line-height: 40px;
-    animation: textLoop 20s linear 0s infinite;
+    animation: textLoop 20s linear infinite;
 }
 .loop-group .text-loop span {
     display: inline-block;
@@ -329,7 +328,7 @@
     font-style: italic;
 }
 .loop-group.reverse .text-loop {
-    animation: textLoopRe 20s linear 0s infinite;
+    animation: textLoopRe 20s linear infinite;
 }
 
 /* 하단 움직이는 텍스트 애니메이션 */

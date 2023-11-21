@@ -12,7 +12,7 @@ let headerHeight = header.offsetHeight;
 window.onscroll = function(){
     let windowTop = window.scrollY;
     // console.log(windowTop);
-    if(windowTop >= headerHeight){ // 세로 스크롤값이 헤더높이값보다 크거나 같으면
+    if(windowTop > headerHeight){ // 세로 스크롤값이 헤더높이값보다 크거나 같으면
         header.classList.add('bgWhite'); // 헤더에 on 을 추가
     }
     else{ // 아니면 헤더에 on 을 제거
