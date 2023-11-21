@@ -47,11 +47,11 @@ html {
 }
 #header.bgWhite {
     background-color: #fff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
 #header.on {
     background-color: #fff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
 #header .header-wrap {
     display: flex;
@@ -74,8 +74,9 @@ html {
 }
 #header .header-wrap .pc-nav .menu-list-wrap .menu-list > a {
     position: relative;
+    display: block;
     padding: 0 30px;
-    line-height: 90px;
+    line-height: 80px;
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase;

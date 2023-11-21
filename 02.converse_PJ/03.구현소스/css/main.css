@@ -307,47 +307,31 @@
     border: 2px solid var(--main-black);
     cursor: pointer;
 }
-.loop-group {
+.main-video .flow-text {
+    display: flex;
     white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.7rem;
+    font-weight:bold;
+    font-style: italic;
+    color: #fff;
+    padding: 10px;
     background-color: var(--main-black);
 }
-.loop-group .text-loop {
-    position: relative;
-    display: inline-block;
-    height: 40px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #fff;
-    white-space: nowrap;
-    line-height: 40px;
-    animation: textLoop 20s linear infinite;
+.main-video .flow-wrap {
+  animation: marquee 3s linear infinite;
+  padding-right: 70px;
 }
-.loop-group .text-loop span {
-    display: inline-block;
-    margin: 0 25px;
-    font-style: italic;
+.flow-container.reverse .flow-wrap {
+    animation: marquee-r 3s linear infinite;
 }
-.loop-group.reverse .text-loop {
-    animation: textLoopRe 20s linear infinite;
+@keyframes marquee {
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
 }
-
-/* 하단 움직이는 텍스트 애니메이션 */
-@keyframes textLoop {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
-}
-/* 하단 움직이는 텍스트 애니메이션 */
-@keyframes textLoopRe {
-    0% {
-        transform: translate(-100%, 0);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
+@keyframes marquee-r {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
 }
 
 /* 브랜드 영역 */
