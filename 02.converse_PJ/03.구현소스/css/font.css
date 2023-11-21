@@ -44,3 +44,9 @@
   font-weight: 700;
   src: url(./fonts/Roboto-Bold.woff) format("woff");
 }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./fonts/Montserrat-Bold.woff) format("woff");
+}

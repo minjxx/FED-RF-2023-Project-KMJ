@@ -4,6 +4,7 @@
 :root {
     --container-width: 1540px;
     --main-black: #111;
+    --point-color: #3b00fe;
 }
 
 html {

@@ -240,9 +240,11 @@
 #main .section-title {
     margin-bottom: 28px;
     font-size: 5.5rem;
-    font-weight: 900;
+    font-weight: bold;
     line-height: 1.34;
     text-transform: uppercase;
+    font-family: 'Montserrat','Noto Sans KR', sans-serif;
+    letter-spacing: -.8px;
 }
 #main .section-title.invisible {
     overflow: hidden;
@@ -253,7 +255,7 @@
     font-size: 0;
     line-height: 0;
 }
-.main_sec {
+.main-sec {
     position: relative;
     width: 100%;
     max-width: var(--container-width);
@@ -266,8 +268,76 @@
     position: relative;
 }
 
+/* 트렌드 스타일 */
+.main-sec .tab-wrap .tab-btn ul {
+    display: flex;
+    margin-bottom: 40px;
+}
+.main-sec .tab-wrap .tab-btn li a {
+    display: block;
+    margin-right: 16px;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #ccc;
+}
+.main-sec .tab-wrap .tab-btn li.active a {
+    background-color: var(--main-black);
+}
+.tab-box ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tab-box ul li {
+    width: 23.5%;
+    margin-right: 2%;
+    margin-top: 30px;
+}
+.tab-box ul li:nth-child(-n+4) {
+    margin-top: 0;
+}
+.tab-box ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.tab-box ul li .img-wrap {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+.tab-box ul li .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tab-box ul li:hover .img-wrap img {
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+.tab-box ul li .prod-info-box {
+
+}
+.tab-box ul li .prod-info-box .prod-name {
+
+}
+.tab-box ul li .prod-info-box .prod-price {
+
+}
+.tab-box ul li .prod-info-box .price-unit {
+
+}
+.tab-box ul li .prod-info-box .colortag {
+
+}
+
 /* 비디오 영역 */
-.main_sec.main-video {
+.main-sec.main-video {
     max-width: 100%;
 }
 .main-video .intro-mv-img {
