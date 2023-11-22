@@ -2,39 +2,49 @@
 /* 공통모듈 CSS - common.css */
 
 :root {
-    --container-width: 1480px;
-    --main-black: #111;
+    --container-width: 1440px;
+    --main-black: #101010;
     --point-color: #3b00fe;
+    --gray-color: #d8d8d8;
 }
-
 html {
     font-size: 10px;
 }
-
 .clfix::after {
     display: block;
     content: '';
     clear: both;
 }
-
-.cap {
-    text-transform: capitalize;
-}
-
 .hide {
     position: absolute !important;
     left: -99999px !important;
     opacity: 0;
     visibility: hidden;
 }
-
-.infoLink {
+.info-link {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+.bottom-btn {
+    margin-top: 50px;
+    text-align: center;
+}
+.morebtn {
+    display: inline-block;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    background-color: var(--main-black);
+    text-transform: uppercase;
 }
 
 /* 헤더 영역 */
@@ -102,13 +112,13 @@ html {
     font-size: 1.5rem;
 }
 #header.bgWhite .header-wrap .top-search .top-input-box {
-    background-color: #e8e8e8;
+    background-color: var(--gray-color);
 }
 #header.on .header-wrap .top-search .top-input-box {
-    background-color: #e8e8e8;
+    background-color: var(--gray-color);
 }
 #header .header-wrap .top-search .top-input-box::placeholder {
-    color: #999;
+    color: #888;
 }
 #header .header-wrap .top-search .search-icon {
     position: absolute;

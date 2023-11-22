@@ -4,9 +4,10 @@
 // DOM함수 모듈
 import dFn from "./dom.js";
 
+// trend 탭 상품 영역
 $(function() {
-    let tabBtn = $(".tab-btn > ul > li"); //버튼 설정
-    let tabCont = $(".tab-cont > div"); //콘텐츠 설정
+    let tabBtn = $(".main-trend .tab-btn > ul > li"); //버튼 설정
+    let tabCont = $(".main-trend .tab-cont .tab-box"); //콘텐츠 설정
     tabCont.hide().eq(0).show(); //첫번째 콘텐츠만 보이게 설정
 
     tabBtn.click(function(){
@@ -61,6 +62,13 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
         prevEl:".main-visual .prev-btn",
     },
 });
+
+// 트렌드 영역 카테고리 슬라이드
+const trCateSwiper = new Swiper(".main-trend .swiper-container", {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+});
+
 // 브랜드 배너 슬라이드
 const brandSwiper = new Swiper(".main-brand .swiper-container", {
     slidesPerView: 2,
