@@ -321,7 +321,7 @@
     transition: all 0.4s;
 }
 .tab-box ul li .prod-info-box {
-
+    margin-top: 20px;
 }
 .tab-box ul li .prod-info-box .prod-name {
 
