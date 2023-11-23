@@ -213,10 +213,10 @@
 
 /* 섹션 영역 */
 #main .section-title {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     font-size: 5.5rem;
     font-weight: bold;
-    line-height: 1.34;
+    line-height: 1.2;
     text-transform: uppercase;
     font-family: 'Montserrat';
     letter-spacing: -.8px;
@@ -236,11 +236,57 @@
     max-width: var(--container-width);
     margin: 120px auto 0;
     background-color: #fff;
+    overflow: hidden;
 }
 
 /* 배너 감싸는 영역 css */
 .banner-wrap {
     position: relative;
+}
+
+/* 베스트 영역 */
+.main-sec.main-best {
+    max-width: 100%;
+    width: calc(100% - ((100% - var(--container-width))/2));
+    margin-left: calc((100% - var(--container-width))/2);
+}
+.main-best .swiper-container {
+    padding-right: 40px;
+    padding-bottom: 35px;
+}
+.main-best .swiper-pagination {
+    top: auto;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--gray-color);
+}
+.main-best .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: var(--main-black);
+}
+.main-best .next-btn {
+    background-image: url(../images/main/ico_arrow_next_b.png);
+}
+.main-best .prev-btn {
+    background-image: url(../images/main/ico_arrow_next_b.png);
+}
+
+/* 텍스트 배너 */
+.main-loop {
+    margin-top: 120px;
+}
+.main-loop .loop-wrap {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 5.2rem;
+    font-weight:bold;
+    color: #fff;
+    padding: 55px 0;
+    background-color: var(--main-black);
+}
+.main-loop .loop-text {
+  animation: marquee 9s linear infinite;
+  padding-right: 70px;
 }
 
 /* 트렌드 스타일 */
@@ -258,7 +304,7 @@
     font-size: 1.7rem;
     font-weight: 500;
     color: #fff;
-    background-color: #ccc;
+    background-color: var(--gray-color);
 }
 .main-sec .tab-wrap .tab-btn li.active a {
     background-color: var(--main-black);
@@ -278,12 +324,12 @@
 .col-4 ul li:nth-child(4n) {
     margin-right: 0;
 }
-.col-4 ul li .img-wrap {
+.img-wrap {
     position: relative;
     padding-top: 100%;
     overflow: hidden;
 }
-.col-4 ul li .img-wrap img {
+.img-wrap img {
     position: absolute;
     top: 0;
     left: 0;
@@ -291,26 +337,26 @@
     height: 100%;
     object-fit: cover;
 }
-.col-4 ul li .img-wrap:hover img {
+.img-wrap:hover img {
     transform: scale(1.05);
     transition: all .5s;
 }
-.col-4 ul li .prod-info-box {
+.prod-info-box {
     margin-top: 20px;
     font-size: 1.6rem;
 }
-.col-4 ul li .prod-info-box .prod-name {
+.prod-info-box .prod-name {
     margin-top: 12px;
     font-size: 1.5rem;
     color: #666;
 }
-.col-4 ul li .prod-info-box .prod-price {
+.prod-info-box .prod-price {
     margin-top: 17px;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: -.8px;
 }
-.col-4 ul li .prod-info-box .price-unit {
+.prod-info-box .price-unit {
     margin-left: 2px;
     font-size: 1.5rem;
     font-style: normal;
@@ -357,7 +403,7 @@
     border: 2px solid var(--main-black);
     cursor: pointer;
 }
-.main-video .flow-text {
+.main-video .flow-wrap {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -368,11 +414,11 @@
     padding: 10px;
     background-color: var(--main-black);
 }
-.main-video .flow-wrap {
+.main-video .flow-text {
   animation: marquee 3s linear infinite;
   padding-right: 70px;
 }
-.flow-container.reverse .flow-wrap {
+.flow-container.reverse .flow-text {
     animation: marquee-r 3s linear infinite;
 }
 @keyframes marquee {

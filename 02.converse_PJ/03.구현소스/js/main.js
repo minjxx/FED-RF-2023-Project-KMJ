@@ -63,6 +63,21 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
     },
 });
 
+// 브랜드 배너 슬라이드
+const bestSwiper = new Swiper(".main-best .swiper-container", {
+    slidesPerView: 3.8,
+    spaceBetween: 40,
+    pagination: {
+        el: ".main-best .swiper-pagination",
+        type:'progressbar',
+    },
+    navigation:{
+        nextEl:".main-best .next-btn", 
+        prevEl:".main-best .prev-btn",
+    },
+
+});
+
 // 트렌드 영역 카테고리 슬라이드
 const trCateSwiper = new Swiper(".main-trend .swiper-container", {
     slidesPerView: 'auto',
