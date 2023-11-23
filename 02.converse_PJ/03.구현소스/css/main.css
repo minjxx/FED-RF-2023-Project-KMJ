@@ -212,7 +212,7 @@
 }
 
 /* 섹션 영역 */
-#main .section-title {
+.section-title {
     margin-bottom: 30px;
     font-size: 5.5rem;
     font-weight: bold;
@@ -221,7 +221,7 @@
     font-family: 'Montserrat';
     letter-spacing: -.8px;
 }
-#main .section-title.invisible {
+.section-title.invisible {
     overflow: hidden;
     visibility: hidden;
     position: absolute;
@@ -236,7 +236,6 @@
     max-width: var(--container-width);
     margin: 120px auto 0;
     background-color: #fff;
-    overflow: hidden;
 }
 
 /* 배너 감싸는 영역 css */
@@ -247,8 +246,15 @@
 /* 베스트 영역 */
 .main-sec.main-best {
     max-width: 100%;
+}
+.main-best .section-title {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+.main-best .best-wrap {
     width: calc(100% - ((100% - var(--container-width))/2));
     margin-left: calc((100% - var(--container-width))/2);
+    overflow: hidden;
 }
 .main-best .swiper-container {
     padding-right: 40px;
@@ -263,10 +269,29 @@
 .main-best .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color: var(--main-black);
 }
-.main-best .next-btn {
-    background-image: url(../images/main/ico_arrow_next_b.png);
+.main-best .btn-box {
+    position: relative;
+    bottom: 45px;
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    text-align: right;
+}
+.main-best .item-btn {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.main-best .item-btn.swiper-button-disabled {
+    opacity: .3;
 }
 .main-best .prev-btn {
+    background-image: url(../images/main/ico_arrow_prev_b.png);
+}
+.main-best .next-btn {
+    margin-left: 20px;
     background-image: url(../images/main/ico_arrow_next_b.png);
 }
 
