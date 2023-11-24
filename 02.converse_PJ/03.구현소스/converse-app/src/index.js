@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+// 컴포넌트 불러오기
+import { Layout } from './components/layout/Layout';
+
 export default function App() {
   return (
     <>
-      
+      <Layout />
     </>
   );
 } ///////////// App 컴포넌트 ///////////////////
