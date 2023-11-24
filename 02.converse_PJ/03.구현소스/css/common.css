@@ -353,3 +353,24 @@ html {
 #footer .footer-wrap .sitemap dd:hover a {
     color: #ccc;
 }
+#footer #topBtn {
+    width: 52px;
+    height: 52px;
+    position: fixed;
+    bottom: -999px;
+    right: 4%;
+    box-shadow: 0 2px 13px rgba(0,0,0,.3);
+    border-radius: 100%;
+    background-image: url(../images/common/top_ico.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    background-color: #fff;
+    transition: .7s ease;
+    opacity: 0;
+    z-index: 9;
+}
+#footer #topBtn.on {
+    opacity: 1;
+    bottom: 5%;
+}

@@ -27,3 +27,18 @@ dFn.addEvt(header, "mouseleave", () => {
     header.classList.remove("on");
 });
 /////////////////////////////////////////////////////////
+
+// 탑버튼
+$(window).scroll(function(){
+    
+    if( $(this).scrollTop() > 200 ){
+      $("#topBtn").addClass("on");
+    }
+    else{
+      $("#topBtn").removeClass("on");
+    }
+    
+  });
+$("#topBtn").click(function(){
+  window.scrollTo({top : 0, behavior: 'smooth'}); 
+});
