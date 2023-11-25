@@ -5,7 +5,7 @@
 @import url(./style.css);
 
 /******************** 인트로  ********************/
-#intro {
+.intro {
     display: none;
     position: absolute;
     z-index: 9999;
@@ -13,33 +13,33 @@
     width: 100%;
     background: #fff;
 }
-#intro .intro-wrap {
+.intro .intro-wrap {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#intro .intro-logo {
+.intro .intro-logo {
     width: 350px;
 }
-#intro .intro-logo img {
+.intro .intro-logo img {
     width: 100%;
 }
-#intro .intro-box {
+.intro .intro-box {
     text-align: center;
     font-family: "Rajdhani";
 }
-#intro .intro-text {
+.intro .intro-text {
     line-height: 1.2;
     font-size: 2.2rem;
     letter-spacing: -0.5px;
 }
-#intro .intro-text span {
+.intro .intro-text span {
     font-size: 6.5rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
-#intro .intro-percent {
+.intro .intro-percent {
     position: absolute;
     top: 50%;
     left: 50%;
