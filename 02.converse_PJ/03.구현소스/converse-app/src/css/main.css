@@ -5,7 +5,7 @@
 @import url(./style.css);
 
 /******************** 인트로  ********************/
-#intro {
+.intro {
     display: none;
     position: absolute;
     z-index: 9999;
@@ -13,33 +13,33 @@
     width: 100%;
     background: #fff;
 }
-#intro .intro-wrap {
+.intro .intro-wrap {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#intro .intro-logo {
+.intro .intro-logo {
     width: 350px;
 }
-#intro .intro-logo img {
+.intro .intro-logo img {
     width: 100%;
 }
-#intro .intro-box {
+.intro .intro-box {
     text-align: center;
     font-family: "Rajdhani";
 }
-#intro .intro-text {
+.intro .intro-text {
     line-height: 1.2;
     font-size: 2.2rem;
     letter-spacing: -0.5px;
 }
-#intro .intro-text span {
+.intro .intro-text span {
     font-size: 6.5rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
-#intro .intro-percent {
+.intro .intro-percent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,13 +71,16 @@
 }
 .controller-btn.next-btn {
     right: 0;
-    background-image: url(../images/main/arrow_next.png);
+    background-image: url(../../public/images/main/arrow_next.png);
 }
 .controller-btn.prev-btn {
     left: 0;
-    background-image: url(../images/main/arrow_prev.png);
+    background-image: url(../../public/images/main/arrow_prev.png);
 }
 
+.main {
+    min-height: calc(100vh - 323px -80px);
+}
 /* 메인비주얼 css */
 /* .main-visual {
     padding-top: 90px;
@@ -293,11 +296,11 @@
     opacity: .3;
 }
 .main-best .prev-btn {
-    background-image: url(../images/main/ico_arrow_prev_b.png);
+    background-image: url(../../public/images/main/ico_arrow_prev_b.png);
 }
 .main-best .next-btn {
     margin-left: 20px;
-    background-image: url(../images/main/ico_arrow_next_b.png);
+    background-image: url(../../public/images/main/ico_arrow_next_b.png);
 }
 
 /* 텍스트 배너 */
@@ -502,17 +505,17 @@
 }
 .main-brand .prev-btn {
     left: -60px;
-    background-image: url(../images/main/ico_arrow_prev.png);
+    background-image: url(../../public/images/main/ico_arrow_prev.png);
 }
 .main-brand .prev-btn:hover {
-    background-image: url(../images/main/ico_arrow_prev_b.png);
+    background-image: url(../../public/images/main/ico_arrow_prev_b.png);
 }
 .main-brand .next-btn {
     right: -60px;
-    background-image: url(../images/main/ico_arrow_next.png);
+    background-image: url(../../public/images/main/ico_arrow_next.png);
 }
 .main-brand .next-btn:hover {
-    background-image: url(../images/main/ico_arrow_next_b.png);
+    background-image: url(../../public/images/main/ico_arrow_next_b.png);
 }
 .main-brand .swiper-pagination {
     bottom: 0px;
