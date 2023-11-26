@@ -353,7 +353,9 @@ html {
 .footer .footer-wrap .sitemap dd:hover a {
     color: #ccc;
 }
-.footer .topBtn {
+
+/* 탑버튼 */
+.topBtn {
     width: 52px;
     height: 52px;
     position: fixed;
@@ -370,7 +372,7 @@ html {
     opacity: 0;
     z-index: 9;
 }
-.footer .topBtn.on {
+.topBtn.on {
     opacity: 1;
     bottom: 7%;
 }

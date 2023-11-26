@@ -79,7 +79,7 @@
 }
 
 .main {
-    min-height: calc(100vh - 323px -80px);
+    min-height: calc(100vh - 323px - 80px);
 }
 /* 메인비주얼 css */
 /* .main-visual {

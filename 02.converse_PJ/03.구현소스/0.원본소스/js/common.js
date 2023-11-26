@@ -5,7 +5,7 @@
 import dFn from "./dom.js";
 
 // [ 대상 : header ] //////////////////////////////////////
-const header = dFn.qs("#header");
+const header = dFn.qs(".header");
 // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기]
 let headerHeight = header.offsetHeight;
 // console.log(headerHeight);
@@ -32,11 +32,11 @@ dFn.addEvt(header, "mouseleave", () => {
 // 탑버튼 ////////////////////////
 $(window).scroll(function () {
   if ($(this).scrollTop() > 200) {
-    $("#topBtn").addClass("on");
+    $(".topBtn").addClass("on");
   } else {
-    $("#topBtn").removeClass("on");
+    $(".topBtn").removeClass("on");
   }
 });
-$("#topBtn").click(function () {
+$(".topBtn").click(function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
