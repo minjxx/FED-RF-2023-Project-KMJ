@@ -1,11 +1,26 @@
 // 제이쿼리
-// import $ from 'jquery';
+import $ from 'jquery';
 
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export function FooterArea(){
+
+  // 탑버튼 ////////////////////////
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $(".topBtn").addClass("on");
+    } else {
+      $(".topBtn").removeClass("on");
+    }
+  });
+  const topBtn = () => {
+    $(".topBtn").click(function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
+
   return(
     <>
       <footer className="footer">
@@ -71,7 +86,7 @@ export function FooterArea(){
         </div>
       </footer>
       {/* 탑버튼 */}
-      <button className="topBtn"></button>
+      <button className="topBtn" onClick={topBtn}></button>
     </>
   );
 }

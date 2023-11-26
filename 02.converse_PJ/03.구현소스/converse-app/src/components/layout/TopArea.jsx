@@ -1,4 +1,33 @@
+// 제이쿼리
+import $ from 'jquery';
+import "jquery-ui-dist/jquery-ui";
+
 export function TopArea() {
+
+  // [ 대상 : header ] //////////////////////////////////////
+  const header = $(".header");
+  // console.log(header);
+  // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기
+  let headerHeight = header.innerHeight();
+  // console.log(headerHeight);
+  $(window).scroll(function(){
+    let windowTop = window.scrollTo();
+    // console.log(windowTop);
+  });
+
+  $(".header").on('mouseover',()=> {
+    console.log('a');
+  })
+
+  $(".header").mouseover(function() {
+    console.log('aaa');
+    $(this).addClass('on');
+  });
+  $(".header").mouseleave(function() {
+    console.log('bbb');
+    $(this).addClass('on');
+  });
+
   return (
     <>
       <header className="header">

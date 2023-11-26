@@ -290,16 +290,16 @@ export function MainArea() {
             <div className="tab-btn swiper-container">
               <ul className="swiper-wrapper">
                 <li className="swiper-slide active">
-                  <a href="javascript:void(0)">런스타</a>
+                  <a href="#">런스타</a>
                 </li>
                 <li className="swiper-slide">
-                  <a href="javascript:void(0)">척 70</a>
+                  <a href="#">척 70</a>
                 </li>
                 <li className="swiper-slide">
-                  <a href="javascript:void(0)">플랫폼</a>
+                  <a href="#">플랫폼</a>
                 </li>
                 <li className="swiper-slide">
-                  <a href="javascript:void(0)">스케이트보딩</a>
+                  <a href="#">스케이트보딩</a>
                 </li>
               </ul>
             </div>
