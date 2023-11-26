@@ -88,6 +88,7 @@
 .main-visual.swiper-container {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 .main-visual li {
     background-color: #f0f0f0;
@@ -464,19 +465,19 @@
 }
 
 /* 브랜드 영역 */
-.main-brand .banner-wrap {
+.main-brand .swiper {
     padding-bottom: 25px;
 }
-.main-brand li {
+.main-brand .swiper-slide {
     position: relative;
 }
-.main-brand li .imgSet {
+.main-brand .swiper-slide .imgSet {
     position: relative;
     width: 100%;
     padding-top: 60%;
     overflow: hidden;
 }
-.main-brand li .imgSet img {
+.main-brand .swiper-slide .imgSet img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -517,6 +518,11 @@
 .main-brand .next-btn:hover {
     background-image: url(../../public/images/main/ico_arrow_next_b.png);
 }
+
+.main-brand .swiper-button-prev,.main-brand .swiper-button-next {
+    margin-top: -90px;
+}
+
 .main-brand .swiper-pagination {
     bottom: 0px;
     width: 100%;
@@ -535,6 +541,6 @@
 }
 
 /* 혜택 영역 */
-.main-benefit li img {
+.main-benefit .swiper-slide img {
     width: 100%;
 }

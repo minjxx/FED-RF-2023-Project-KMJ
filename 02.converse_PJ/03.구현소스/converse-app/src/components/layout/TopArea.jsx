@@ -1,32 +1,35 @@
 // 제이쿼리
-import $ from 'jquery';
-import "jquery-ui-dist/jquery-ui";
+import $ from "jquery";
+
+import { useEffect } from "react";
 
 export function TopArea() {
+  useEffect(() => {
+    // [ 대상 : header ] //////////////////////////////////////
+    const header = document.querySelector(".header");
+    // console.log(header);
+    // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기
+    let headerHeight = header.offsetHeight;
+    // console.log(headerHeight);
+    window.onscroll = function () {
+      let windowTop = window.scrollY;
+      // console.log(windowTop);
+      if (windowTop >= headerHeight) {
+        // 세로 스크롤값이 헤더높이값보다 크거나 같으면
+        header.classList.add("bgWhite"); // 헤더에 on 을 추가
+      } else {
+        // 아니면 헤더에 on 을 제거
+        header.classList.remove("bgWhite");
+      }
+    };
 
-  // [ 대상 : header ] //////////////////////////////////////
-  const header = $(".header");
-  // console.log(header);
-  // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기
-  let headerHeight = header.innerHeight();
-  // console.log(headerHeight);
-  $(window).scroll(function(){
-    let windowTop = window.scrollTo();
-    // console.log(windowTop);
-  });
-
-  $(".header").on('mouseover',()=> {
-    console.log('a');
-  })
-
-  $(".header").mouseover(function() {
-    console.log('aaa');
-    $(this).addClass('on');
-  });
-  $(".header").mouseleave(function() {
-    console.log('bbb');
-    $(this).addClass('on');
-  });
+    $(".header").mouseover(function () {
+      $(this).addClass("on");
+    });
+    $(".header").mouseleave(function () {
+      $(this).removeClass("on");
+    });
+  }, []);
 
   return (
     <>

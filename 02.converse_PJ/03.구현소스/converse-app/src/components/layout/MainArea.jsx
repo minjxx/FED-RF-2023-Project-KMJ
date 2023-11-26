@@ -1,5 +1,8 @@
 // 메인 CSS불러오기
 import "../../css/main.css";
+import { Benefit } from "../modules/Benefit";
+import { BrandDisplay } from "../modules/BrandDisplay";
+import { MainVideo } from "../modules/MainVideo";
 
 export function MainArea() {
   return (
@@ -781,122 +784,13 @@ export function MainArea() {
         </section>
 
         {/* video */}
-        <section className="main-sec main-video">
-          <h2 className="section-title invisible">홍보 영상</h2>
-          <div className="flow-container">
-            <div className="flow-wrap">
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-            </div>
-          </div>
-          <div className="intro-mv-img off">
-            <img src="./images/main/video_thumbnail_img01.jpg" alt="영상 썸네일 이미지" />
-            <button type="button" className="play-btn">
-              <i className="fa-solid fa-play"></i> Play
-            </button>
-          </div>
-          <div className="flow-container reverse">
-            <div className="flow-wrap">
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-              <span className="flow-text">Converse Video</span>
-            </div>
-          </div>
-        </section>
+        <MainVideo />
 
-        {/* brand */}
-        <section className="main-sec main-brand">
-          <h2 className="section-title">what's hot&new</h2>
-          <div className="banner-wrap">
-            <div className="swiper-container">
-              <ul className="swiper-wrapper">
-                <li className="swiper-slide">
-                  <a href="" className="info-link"></a>
-                  <figure className="imgSet">
-                    <img src="./images/main/brand01.jpg" alt="converse" />
-                  </figure>
-                  <dl className="brand-info">
-                    <dt>give all things cozy</dt>
-                    <dd>따뜻한 소재로 겨울 내내 포근한 척 스니커즈</dd>
-                  </dl>
-                </li>
-                <li className="swiper-slide">
-                  <a href="" className="info-link"></a>
-                  <figure className="imgSet">
-                    <img src="./images/main/brand02.jpg" alt="converse" />
-                  </figure>
-                  <dl className="brand-info">
-                    <dt>level up in leather</dt>
-                    <dd>견고한 레더로 럭셔리하게 재해석한 척 스니커즈</dd>
-                  </dl>
-                </li>
-                <li className="swiper-slide">
-                  <a href="" className="info-link"></a>
-                  <figure className="imgSet">
-                    <img src="./images/main/brand03.jpg" alt="converse" />
-                  </figure>
-                  <dl className="brand-info">
-                    <dt>converse for kids</dt>
-                    <dd>포근하고 따뜻한 플리스 이지-온 컨버스 키즈</dd>
-                  </dl>
-                </li>
-                <li className="swiper-slide">
-                  <a href="" className="info-link"></a>
-                  <figure className="imgSet">
-                    <img src="./images/main/brand04.jpg" alt="converse" />
-                  </figure>
-                  <dl className="brand-info">
-                    <dt>converse color</dt>
-                    <dd>가을 룩에 어울리는 나만의 컬러를 찾아보세요</dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
-            <button type="button" className="controller-btn next-btn"></button>
-            <button type="button" className="controller-btn prev-btn"></button>
-            <div className="swiper-pagination"></div>
-          </div>
-        </section>
+        {/* BrandDisplay */}
+        <BrandDisplay />
 
-        {/* benefit */}
-        <section className="main-sec main-benefit">
-          <h2 className="section-title invisible">메인 혜택 배너</h2>
-          <div className="swiper-container">
-            <ul className="swiper-wrapper">
-              <li className="swiper-slide">
-                <img src="./images/main/benefit01.png" alt="앱다운로드 안내" />
-              </li>
-              <li className="swiper-slide">
-                <img src="./images/main/benefit02.png" alt="멤버쉽 안내" />
-              </li>
-            </ul>
-          </div>
-        </section>
+        {/* Benefit */}
+        <Benefit />
       </main>
     </>
   );
