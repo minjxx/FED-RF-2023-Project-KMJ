@@ -7,6 +7,7 @@ import { MainBanner } from "../modules/MainBanner";
 import { MainVideo } from "../modules/MainVideo";
 import { NewItem } from "../modules/NewItem";
 import { Trend } from "../modules/Trend";
+import { LoopText } from "../modules/LoopText";
 
 export function MainArea() {
   return (
@@ -22,17 +23,7 @@ export function MainArea() {
         <NewItem />
 
         {/* loop text */}
-        <section className="main-loop">
-          <h2 className="section-title invisible">텍스트 배너</h2>
-          <div>
-            <a href="" className="loop-wrap">
-              <span className="loop-text">컨버스가 제안하는 따뜻하고 스타일리쉬한 윈터 슈즈 CLICK !</span>
-              <span className="loop-text">컨버스가 제안하는 따뜻하고 스타일리쉬한 윈터 슈즈 CLICK !</span>
-              <span className="loop-text">컨버스가 제안하는 따뜻하고 스타일리쉬한 윈터 슈즈 CLICK !</span>
-              <span className="loop-text">컨버스가 제안하는 따뜻하고 스타일리쉬한 윈터 슈즈 CLICK !</span>
-            </a>
-          </div>
-        </section>
+        <LoopText />
 
         {/* trend style */}
         <Trend />

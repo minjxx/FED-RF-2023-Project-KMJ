@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
@@ -13,11 +13,20 @@ import { Pagination, Navigation } from "swiper/modules";
 export function SwiperBestItem() {
   return (
     <>
+      <h2 className="section-title">
+        on-line
+        <br />
+        best item
+      </h2>
+      <div className="btn-box">
+        <button type="button" className="item-btn prev-btn"></button>
+        <button type="button" className="item-btn next-btn"></button>
+      </div>
       <Swiper
         slidesPerView={3.8}
         spaceBetween={40}
         pagination={{
-          type: 'progressbar',
+          type: "progressbar",
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
