@@ -26,7 +26,7 @@ export function SwiperBrand() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {brandData.map((v, i) => (
+        {brandData.map((v, i) => 
           <SwiperSlide key={i}>
             <a href={v.link} className="info-link"></a>
             <figure className="imgSet">
@@ -37,7 +37,7 @@ export function SwiperBrand() {
               <dd>{v.subTxt}</dd>
             </dl>
           </SwiperSlide>
-        ))}
+        )}
       </Swiper>
     </>
   );

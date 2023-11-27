@@ -5,6 +5,7 @@ import { useEffect } from "react";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { bMenu } from "../data/bmenu";
 
 export function FooterArea() {
   useEffect(() => {
@@ -60,53 +61,16 @@ export function FooterArea() {
               </a>
             </div>
             <div className="sitemap">
-              <dl>
-                <dt>support</dt>
-                <dd>
-                  <a href="#">고객지원센터</a>
-                </dd>
-                <dd>
-                  <a href="#">1:1 문의</a>
-                </dd>
-                <dd>
-                  <a href="#">주문/배송 조회</a>
-                </dd>
-              </dl>
-              <dl>
-                <dt>information</dt>
-                <dd>
-                  <a href="#">컨버스에 대하여</a>
-                </dd>
-                <dd>
-                  <a href="#">회원가입</a>
-                </dd>
-                <dd>
-                  <a href="#">매장안내</a>
-                </dd>
-                <dd>
-                  <a href="#">공지사항</a>
-                </dd>
-              </dl>
-              <dl>
-                <dt>policy</dt>
-                <dd>
-                  <a href="#">이용약관</a>
-                </dd>
-                <dd>
-                  <a href="#">개인정보처리방침</a>
-                </dd>
-              </dl>
-              <dl>
-                <dt>family sites</dt>
-                <dd>
-                  <a href="#">nike</a>
-                </dd>
-                <dd>
-                  <a href="#" className="cap">
-                    jordan
-                  </a>
-                </dd>
-              </dl>
+              {bMenu.map((v, i) => (
+                <dl key={i}>
+                  <dt>{v.txt}</dt>
+                  {v.sub.map((v, i) => (
+                    <dd key={i}>
+                      <a href={v.link}>{v.txt}</a>
+                    </dd>
+                  ))}
+                </dl>
+              ))}
             </div>
           </div>
         </div>

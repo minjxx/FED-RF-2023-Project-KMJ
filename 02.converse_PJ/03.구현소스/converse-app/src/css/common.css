@@ -1,7 +1,7 @@
 /* 공통모듈 CSS - common.css */
 
 :root {
-    --container-width: 1440px;
+    --container-width: 1480px;
     --main-black: #101010;
     --point-color: #3b00fe;
     --gray-color: #d8d8d8;
@@ -227,6 +227,7 @@ html {
     color: #999;
     line-height: 14px;
     transition: .3s;
+    text-transform: uppercase;
 }
 .subMenu-wrap .subMenu .depth2_list:hover a {
     font-weight: bold;

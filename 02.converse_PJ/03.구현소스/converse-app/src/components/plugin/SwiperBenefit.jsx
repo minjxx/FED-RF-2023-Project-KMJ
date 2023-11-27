@@ -7,21 +7,25 @@ import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import { benefitData } from "../data/benefit_data";
 
 export function SwiperBenefit() {
   return (
     <>
-      <Swiper 
+      <Swiper
         loop={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay]} 
+        modules={[Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="./images/main/benefit01.png" alt="앱다운로드 안내" /></SwiperSlide>
-        <SwiperSlide><img src="./images/main/benefit02.png" alt="멤버쉽 안내" /></SwiperSlide>
+        {benefitData.map((v, i) => (
+          <SwiperSlide key={i}>
+            <img src={v.imgSrc} alt={v.title} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

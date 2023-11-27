@@ -3,6 +3,11 @@ import $ from "jquery";
 
 import { useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
+// GNB 데이터
+import { gnbMenu } from "../data/gnb";
+
 export function TopArea() {
   useEffect(() => {
     // [ 대상 : header ] //////////////////////////////////////
@@ -42,69 +47,35 @@ export function TopArea() {
           </h1>
           <nav className="pc-nav">
             <ul className="menu-list-wrap">
-              <li className="menu-list">
-                <a href="#">men</a>
-                <div className="subMenu-wrap">
-                  <div className="subMenu">
-                    <strong className="depth1_title">men</strong>
-                    <ul className="depth2">
-                      <li className="depth2_list">
-                        <a href="#">ALL</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">NEW</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">BEST</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li className="menu-list">
-                <a href="#">women</a>
-                <div className="subMenu-wrap">
-                  <div className="subMenu">
-                    <strong className="depth1_title">women</strong>
-                    <ul className="depth2">
-                      <li className="depth2_list">
-                        <a href="#">ALL</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">NEW</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">BEST</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li className="menu-list">
-                <a href="#">kids</a>
-                <div className="subMenu-wrap">
-                  <div className="subMenu">
-                    <strong className="depth1_title">kids</strong>
-                    <ul className="depth2">
-                      <li className="depth2_list">
-                        <a href="#">ALL</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">NEW</a>
-                      </li>
-                      <li className="depth2_list">
-                        <a href="#">BEST</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li className="menu-list">
-                <a href="#">event</a>
-              </li>
-              <li className="menu-list">
-                <a href="#">sale</a>
-              </li>
+              {/* gnb메뉴 데이터기반으로 li태그 생성 */}
+              {gnbMenu.map((v, i) => (
+                <li className="menu-list" key={i}>
+                  {
+                    // 하위메뉴가 있으면 일반 a요소에 출력
+                    // 없으면 Link 라우팅 출력
+                    // v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>
+                    <a href={v.link}>{v.txt}</a>
+                  }
+                  {
+                    // 서브메뉴 데이터가 있으면 하위 그리기
+                    v.sub && (
+                      <div className="subMenu-wrap">
+                        <div className="subMenu">
+                          <strong className="depth1_title">{v.txt}</strong>
+                          <ul className="depth2">
+                            {v.sub.map((v, i) => (
+                              <li className="depth2_list" key={i}>
+                                {/* <Link to={v.link}>{v.txt}</Link> */}
+                                <a href={v.link}>{v.txt}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )
+                  }
+                </li>
+              ))}
             </ul>
           </nav>
           <div className="top-icon">
