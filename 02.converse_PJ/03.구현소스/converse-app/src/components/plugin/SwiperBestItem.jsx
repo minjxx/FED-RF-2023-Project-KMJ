@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import { bItemData } from "../data/best_item";
 
 export function SwiperBestItem() {
   return (
@@ -32,146 +33,23 @@ export function SwiperBestItem() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
+        {bItemData.map((v,i) => (
+          <SwiperSlide key={i}>
+            <a href="#">
+              <div className="img-wrap">
+                <img src={v.imgSrc} alt="상품사진" />
               </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
+              <div className="prod-info-box">
+                <div className="prod-cate">{v.cateName}</div>
+                <p className="prod-name">{v.itemName}</p>
+                <div className="prod-price">
+                  {v.itemPrice}
+                  <em className="price-unit">원</em>
+                </div>
               </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="">
-            <div className="img-wrap">
-              <img src="./images/main/item_01.jpg" alt="상품사진" />
-            </div>
-            <div className="prod-info-box">
-              <div className="prod-cate">런스타</div>
-              <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-              <div className="prod-price">
-                92,000<em className="price-unit">원</em>
-              </div>
-            </div>
-          </a>
-        </SwiperSlide>
+            </a>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

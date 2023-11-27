@@ -1,3 +1,5 @@
+import { nItemData } from "../data/new_item";
+
 export function NewItem() {
   return (
     <>
@@ -5,122 +7,27 @@ export function NewItem() {
         <h2 className="section-title">new arrivals</h2>
         <div className="col-4 tab-cont">
           <ul>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
+            {nItemData.map((v,i) => (
+              <li key={i}>
+                <a href="#">
+                  <div className="img-wrap">
+                    <img src={v.imgSrc} alt="상품사진" />
                   </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
+                  <div className="prod-info-box">
+                    <div className="prod-cate">{v.cateName}</div>
+                    <p className="prod-name">{v.itemName}</p>
+                    <div className="prod-price">
+                      {v.itemPrice}
+                      <em className="price-unit">원</em>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div className="img-wrap">
-                  <img src="./images/main/item_01.jpg" alt="상품사진" />
-                </div>
-                <div className="prod-info-box">
-                  <div className="prod-cate">런스타</div>
-                  <p className="prod-name">척테일러 올스타 컨스트럭트 빈티지 화이트</p>
-                  <div className="prod-price">
-                    92,000<em className="price-unit">원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="bottom-btn">
-          <a href="" className="morebtn">
+          <a href="#" className="morebtn">
             view more
           </a>
         </div>

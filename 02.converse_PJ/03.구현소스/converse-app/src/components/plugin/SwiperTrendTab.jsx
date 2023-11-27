@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import { tMenuData } from "../data/trend_menu";
 
 export function SwiperTrendTab() {
   return (
@@ -13,10 +14,11 @@ export function SwiperTrendTab() {
         spaceBetween={15}
         className="tab-btn"
       >
-        <SwiperSlide className="active"><button>런스타</button></SwiperSlide>
-        <SwiperSlide><button>척 70</button></SwiperSlide>
-        <SwiperSlide><button>플랫폼</button></SwiperSlide>
-        <SwiperSlide><button>스케이트보딩</button></SwiperSlide>
+        {
+          tMenuData.map((v,i)=>
+            <SwiperSlide key={i}><button>{v.tabName}</button></SwiperSlide>
+          )
+        }
       </Swiper>
     </>
   );

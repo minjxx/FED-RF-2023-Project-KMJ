@@ -1,6 +1,5 @@
 import $ from "jquery";
 
-import { useEffect } from "react";
 import { SwiperTrendTab } from "../plugin/SwiperTrendTab";
 
 export function Trend() {
@@ -9,6 +8,7 @@ export function Trend() {
   $(function() {
     let tabBtn = $(".main-trend .tab-btn .swiper-slide"); //버튼 설정
     let tabCont = $(".main-trend .tab-cont .tab-box"); //콘텐츠 설정
+    tabBtn.eq(0).addClass('active'); // 첫번째 탭버튼 active 넣기
     tabCont.hide().eq(0).show(); //첫번째 콘텐츠만 보이게 설정
 
     tabBtn.click(function(){
