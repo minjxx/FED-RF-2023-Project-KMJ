@@ -324,14 +324,13 @@
 }
 
 /* 트렌드 스타일 */
-.main-sec .tab-wrap .tab-btn ul {
-    display: flex;
+.main-sec .tab-wrap .tab-btn .swiper-wrapper {
     margin-bottom: 40px;
 }
-.main-sec .tab-wrap .tab-btn li {
+.main-sec .tab-wrap .tab-btn .swiper-slide {
     width: auto;
 }
-.main-sec .tab-wrap .tab-btn li a {
+.main-sec .tab-wrap .tab-btn .swiper-slide button {
     display: block;
     padding: 12px 18px;
     border-radius: 50px;
@@ -340,7 +339,7 @@
     color: #fff;
     background-color: var(--gray-color);
 }
-.main-sec .tab-wrap .tab-btn li.active a {
+.main-sec .tab-wrap .tab-btn .swiper-slide.active button {
     background-color: var(--main-black);
 }
 .col-4 ul {
