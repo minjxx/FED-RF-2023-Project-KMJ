@@ -264,11 +264,11 @@
     margin-left: calc((100% - var(--container-width))/2);
     overflow: hidden;
 }
-.main-best .swiper-container {
+.main-best .swiper {
     padding-right: 40px;
     padding-bottom: 40px;
 }
-.main-best .swiper-pagination {
+.main-best .swiper-pagination.swiper-pagination-progressbar {
     top: auto;
     bottom: 0;
     height: 3px;

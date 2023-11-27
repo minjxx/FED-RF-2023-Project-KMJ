@@ -63,7 +63,7 @@ const mainVisualSwiper = new Swiper(".main-visual.swiper-container", {
     },
 });
 
-// 브랜드 배너 슬라이드
+// 베스트 배너 슬라이드
 const bestSwiper = new Swiper(".main-best .swiper-container", {
     slidesPerView: 3.8,
     spaceBetween: 40,
