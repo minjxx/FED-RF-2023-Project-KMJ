@@ -3,10 +3,10 @@ import "./css/index.css";
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // 컴포넌트 불러오기
 import { Layout } from './components/layout/Layout';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Main } from "./components/pages/Main";
 import { All } from "./components/pages/All";
 import { New } from "./components/pages/New";
