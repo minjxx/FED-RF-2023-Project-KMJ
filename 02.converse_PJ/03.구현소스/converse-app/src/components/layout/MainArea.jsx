@@ -3,8 +3,8 @@ import { Main } from "../pages/Main";
 
 export function MainArea() {
   return (
-    <>
+    <main className="main">
       <Outlet />
-    </>
+    </main>
   );
 }
