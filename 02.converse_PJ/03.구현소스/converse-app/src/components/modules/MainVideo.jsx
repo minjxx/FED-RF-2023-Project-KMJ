@@ -8,12 +8,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 export function MainVideo() {
   useEffect(() => {
 
-    /////////////////////////////////////
     /// 인트로 동영상 클릭시 플레이하기 ////
-    // 대상: .intro-mv-img
-    // 이벤트: click
-    // -> 가상요소 플레이버튼 클릭시
-    // 이벤트 버블링으로 본 박스가 반응함!
     // 1. 대상 선정하기
     const mvBox = $(".intro-mv-img");
   
