@@ -72,6 +72,7 @@ html {
 }
 .header .header-wrap .logo {
     width: 132px;
+    cursor: pointer;
 }
 .header .header-wrap .logo img {
     width: 100%;
@@ -375,3 +376,10 @@ html {
     opacity: 1;
     bottom: 7%;
 }
+
+/************** 공통 미디어쿼리 **************/
+@media screen and (max-width: 1300px) {
+    .sec-intro > div {
+      aspect-ratio: 1/2;
+    }
+  }

@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { gnbMenu } from "../data/gnb";
 
 import { cvCon } from "../modules/cvContext";
+import { Logo } from "../modules/Logo";
 
 export function TopArea() {
 
@@ -43,13 +44,14 @@ export function TopArea() {
 
   return (
     <>
-      <header className="header" style={myCon.mode?{position:'fixed'}:{position:'sticky'}}>
+      <header className="header" style={myCon.mode?{position:''}:{position:'sticky'}}>
         <div className="header-wrap">
-          <h1 className="logo">
+          <Logo />
+          {/* <h1 className="logo">
             <a href="/" className="logo-img">
               <img src="./images/common/logo_black.png" alt="컨버스" />
             </a>
-          </h1>
+          </h1> */}
           <nav className="pc-nav">
             <ul className="menu-list-wrap">
               {/* gnb메뉴 데이터기반으로 li태그 생성 */}

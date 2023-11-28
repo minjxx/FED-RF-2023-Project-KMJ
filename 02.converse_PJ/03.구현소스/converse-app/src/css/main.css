@@ -1,7 +1,7 @@
 /* 메인페이지 CSS - main.css */
 
 /* 리셋,공통 외부 CSS 합치기 */
-@import url(./style.css);
+@import url(./index.css);
 
 /******************** 인트로  ********************/
 .intro {
