@@ -13,6 +13,9 @@ import { New } from "./components/pages/New";
 import { Best } from "./components/pages/Best";
 import { Event } from "./components/pages/Event";
 import { Sale } from "./components/pages/Sale";
+import { Women } from "./components/pages/Women";
+import { Kids } from "./components/pages/Kids";
+import { Men } from "./components/pages/Men";
 
 export default function App() {
   return (
@@ -20,9 +23,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="all" element={<All />} />
+          <Route path="men" element={<Men />} />
+          <Route path="women" element={<Women  />} />
+          <Route path="kids" element={<Kids />} />
+          {/* <Route path="all" element={<All />} />
           <Route path="new" element={<New />} />
-          <Route path="best" element={<Best />} />
+          <Route path="best" element={<Best />} /> */}
           <Route path="event" element={<Event />} />
           <Route path="sale" element={<Sale />} />
 
