@@ -6,12 +6,29 @@ import ReactDOM from 'react-dom/client';
 
 // 컴포넌트 불러오기
 import { Layout } from './components/layout/Layout';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Main } from "./components/pages/Main";
+import { All } from "./components/pages/All";
+import { New } from "./components/pages/New";
+import { Best } from "./components/pages/Best";
+import { Event } from "./components/pages/Event";
+import { Sale } from "./components/pages/Sale";
 
 export default function App() {
   return (
-    <>
-      <Layout />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path="all" element={<All />} />
+          <Route path="new" element={<New />} />
+          <Route path="best" element={<Best />} />
+          <Route path="event" element={<Event />} />
+          <Route path="sale" element={<Sale />} />
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 } ///////////// App 컴포넌트 ///////////////////
 
