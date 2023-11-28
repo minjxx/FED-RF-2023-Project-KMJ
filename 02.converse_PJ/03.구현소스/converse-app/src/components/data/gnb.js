@@ -2,55 +2,55 @@
 export const gnbMenu = [
   {
       txt:"men",
-      link:"/men",
+      link:"/all",
       sub:[
         {
             txt: "all",
-            link: "/men",
+            link: "/all",
         },
         {
             txt: "new",
-            link: "/men",
+            link: "/new",
         },
         {
             txt: "best",
-            link: "/men",
+            link: "/best",
         },
     ],
   },
   {
       txt:"women",
-      link:"/women",
+      link:"/all",
       sub:[
           {
               txt: "all",
-              link: "/women",
+              link: "/all",
           },
           {
               txt: "new",
-              link: "/women",
+              link: "/new",
           },
           {
               txt: "best",
-              link: "/women",
+              link: "/best",
           },
       ],
   },
   {
       txt:"kids",
-      link:"/kids",
+      link:"/all",
       sub:[
         {
             txt: "all",
-            link: "/kids",
+            link: "/all",
         },
         {
             txt: "new",
-            link: "/kids",
+            link: "/new",
         },
         {
             txt: "best",
-            link: "/kids",
+            link: "/best",
         },
     ],
   },
