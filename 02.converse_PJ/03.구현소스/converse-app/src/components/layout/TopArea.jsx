@@ -1,14 +1,19 @@
 // 제이쿼리
 import $ from "jquery";
 
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 // GNB 데이터
 import { gnbMenu } from "../data/gnb";
 
+import { cvCon } from "../modules/cvContext";
+
 export function TopArea() {
+
+  const myCon = useContext(cvCon);
+
   useEffect(() => {
     // [ 대상 : header ] //////////////////////////////////////
     const header = document.querySelector(".header");
@@ -38,7 +43,7 @@ export function TopArea() {
 
   return (
     <>
-      <header className="header">
+      <header className="header" style={myCon.mode?{position:'fixed'}:{position:'relative'}}>
         <div className="header-wrap">
           <h1 className="logo">
             <a href="/" className="logo-img">
@@ -53,8 +58,9 @@ export function TopArea() {
                   {
                     // 하위메뉴가 있으면 일반 a요소에 출력
                     // 없으면 Link 라우팅 출력
+                    <Link to={v.link}>{v.txt}</Link>
                     // v.sub ? (<a href="#">{v.txt}</a>) : (<Link to={v.link}>{v.txt}</Link>)
-                    <a href={v.link}>{v.txt}</a>
+                    // <a href={v.link}>{v.txt}</a>
                   }
                   {
                     // 서브메뉴 데이터가 있으면 하위 그리기
@@ -65,8 +71,8 @@ export function TopArea() {
                           <ul className="depth2">
                             {v.sub.map((v, i) => (
                               <li className="depth2_list" key={i}>
-                                {/* <Link to={v.link}>{v.txt}</Link> */}
-                                <a href={v.link}>{v.txt}</a>
+                                <Link to={v.link}>{v.txt}</Link>
+                                {/* <a href={v.link}>{v.txt}</a> */}
                               </li>
                             ))}
                           </ul>

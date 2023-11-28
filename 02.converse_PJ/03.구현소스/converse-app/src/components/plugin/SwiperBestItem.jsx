@@ -8,10 +8,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { bItemData } from "../data/best_item";
 
 export function SwiperBestItem() {
+
+  const swpr = useRef(null);
+
+
   return (
     <>
       <h2 className="section-title">
@@ -20,17 +24,17 @@ export function SwiperBestItem() {
         best item
       </h2>
       <div className="btn-box">
-        <button type="button" className="item-btn prev-btn"></button>
-        <button type="button" className="item-btn next-btn"></button>
+        <button type="button" className="item-btn prev-btn" onClick={()=>swpr.current.swiper.slidePrev()}></button>
+        <button type="button" className="item-btn next-btn" onClick={()=>swpr.current.swiper.slideNext()}></button>
       </div>
       <Swiper
+        ref={swpr}
         slidesPerView={3.8}
         spaceBetween={40}
         pagination={{
           type: "progressbar",
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
         className="mySwiper"
       >
         {bItemData.map((v,i) => (

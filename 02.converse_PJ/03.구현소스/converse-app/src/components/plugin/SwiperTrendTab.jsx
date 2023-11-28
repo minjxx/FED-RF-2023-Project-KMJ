@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { tMenuData } from "../data/trend_menu";
 
-export function SwiperTrendTab() {
+export function SwiperTrendTab({chgItemCatFn}) {
   return (
     <>
       <Swiper 
@@ -16,7 +16,7 @@ export function SwiperTrendTab() {
       >
         {
           tMenuData.map((v,i)=>
-            <SwiperSlide key={i}><button>{v.tabName}</button></SwiperSlide>
+            <SwiperSlide key={i}><button onClick={()=>chgItemCatFn(v.tabCode)}>{v.tabName}</button></SwiperSlide>
           )
         }
       </Swiper>

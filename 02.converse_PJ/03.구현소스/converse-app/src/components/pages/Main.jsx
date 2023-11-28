@@ -9,7 +9,19 @@ import { NewItem } from "../modules/NewItem";
 import { Trend } from "../modules/Trend";
 import { LoopText } from "../modules/LoopText";
 
+import { cvCon } from "../modules/cvContext";
+import { useContext, useEffect } from "react";
+
 export function Main() {
+  const myCon = useContext(cvCon);
+  myCon.chgMode(1);
+
+  useEffect(()=>{
+    return(()=>{
+      myCon.chgMode(0);
+    })
+  },[])
+
   return (
     <>
       <main className="main">
