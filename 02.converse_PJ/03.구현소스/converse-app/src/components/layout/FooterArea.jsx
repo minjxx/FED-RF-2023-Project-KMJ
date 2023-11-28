@@ -60,6 +60,8 @@ export function FooterArea() {
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
+
+            {/* 사이트맵 */}
             <div className="sitemap">
               {bMenu.map((v, i) => (
                 <dl key={i}>
@@ -72,9 +74,11 @@ export function FooterArea() {
                 </dl>
               ))}
             </div>
+
           </div>
         </div>
       </footer>
+      
       {/* 탑버튼 */}
       <button className="topBtn"></button>
     </>
