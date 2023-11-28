@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -14,7 +13,6 @@ import { bItemData } from "../data/best_item";
 export function SwiperBestItem() {
 
   const swpr = useRef(null);
-
 
   return (
     <>

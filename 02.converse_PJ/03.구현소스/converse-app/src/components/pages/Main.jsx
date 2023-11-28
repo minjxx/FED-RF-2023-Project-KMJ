@@ -10,11 +10,14 @@ import { Trend } from "../modules/Trend";
 import { LoopText } from "../modules/LoopText";
 
 import { cvCon } from "../modules/cvContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useLayoutEffect } from "react";
 
 export function Main() {
   const myCon = useContext(cvCon);
-  myCon.chgMode(1);
+
+  useLayoutEffect(()=>{
+    myCon.chgMode(1);
+  },[])
 
   useEffect(()=>{
     return(()=>{

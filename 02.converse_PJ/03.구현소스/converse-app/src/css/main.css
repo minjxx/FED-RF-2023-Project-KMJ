@@ -528,29 +528,18 @@
     font-weight: 500;
 }
 .main-brand .controller-btn {
-    width: 42px;
-    height: 42px;
-    margin-top: -40px;
+    width: 40px;
+    height: 40px;
+    margin-top: -60px;
 }
 .main-brand .prev-btn {
-    left: -60px;
-    background-image: url(../../public/images/main/ico_arrow_prev.png);
-}
-.main-brand .prev-btn:hover {
+    left: -55px;
     background-image: url(../../public/images/main/ico_arrow_prev_b.png);
 }
 .main-brand .next-btn {
-    right: -60px;
-    background-image: url(../../public/images/main/ico_arrow_next.png);
-}
-.main-brand .next-btn:hover {
+    right: -55px;
     background-image: url(../../public/images/main/ico_arrow_next_b.png);
 }
-
-.main-brand .swiper-button-prev,.main-brand .swiper-button-next {
-    margin-top: -90px;
-}
-
 .main-brand .swiper-pagination {
     bottom: 0px;
     width: 100%;

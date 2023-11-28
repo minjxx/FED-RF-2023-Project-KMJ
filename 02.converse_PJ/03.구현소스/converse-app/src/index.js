@@ -23,9 +23,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="men" element={<Men />} />
-          <Route path="women" element={<Women  />} />
-          <Route path="kids" element={<Kids />} />
+          {/* <Route path="men" element={<Men />} />
+          <Route path="women" element={<Women />} />
+          <Route path="kids" element={<Kids />} /> */}
           <Route path="all" element={<All />} />
           <Route path="new" element={<New />} />
           <Route path="best" element={<Best />} />

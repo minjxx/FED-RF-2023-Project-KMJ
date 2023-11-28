@@ -7,8 +7,6 @@ export function BrandDisplay() {
           <h2 className="section-title">what's hot&amp;new</h2>
           <div className="banner-wrap">
             <SwiperBrand />
-            <button type="button" className="controller-btn next-btn"></button>
-            <button type="button" className="controller-btn prev-btn"></button>
           </div>
         </section>
     </>

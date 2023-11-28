@@ -43,7 +43,7 @@ export function TopArea() {
 
   return (
     <>
-      <header className="header" style={myCon.mode?{position:'fixed'}:{position:'relative'}}>
+      <header className="header" style={myCon.mode?{position:'fixed'}:{position:'sticky'}}>
         <div className="header-wrap">
           <h1 className="logo">
             <a href="/" className="logo-img">

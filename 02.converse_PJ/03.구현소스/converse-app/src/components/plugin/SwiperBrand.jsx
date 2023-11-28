@@ -5,16 +5,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { brandData } from "../data/brand_display";
 
 export function SwiperBrand() {
+  const swpr = useRef(null);
   return (
     <>
+      <button type="button" className="controller-btn next-btn" onClick={()=>swpr.current.swiper.slideNext()}></button>
+      <button type="button" className="controller-btn prev-btn" onClick={()=>swpr.current.swiper.slidePrev()}></button>
       <Swiper
+        ref={swpr}
         slidesPerView={2}
         spaceBetween={25}
         slidesPerGroup={2}
@@ -22,8 +25,7 @@ export function SwiperBrand() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
         className="mySwiper"
       >
         {brandData.map((v, i) => 
@@ -42,19 +44,3 @@ export function SwiperBrand() {
     </>
   );
 }
-
-/* const brandSwiper = new Swiper(".main-brand .swiper-container", {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 25,
-    loop: true,
-    pagination: {
-        el: ".main-brand .swiper-pagination",
-        clickable: true,
-    },
-    navigation:{
-        nextEl:".main-brand .next-btn", 
-        prevEl:".main-brand .prev-btn",
-    },
-
-}); */
