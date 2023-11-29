@@ -46,12 +46,7 @@ export function TopArea() {
     <>
       <header className="header" style={myCon.mode?{position:''}:{position:'sticky'}}>
         <div className="header-wrap">
-          <Logo />
-          {/* <h1 className="logo">
-            <a href="/" className="logo-img">
-              <img src="./images/common/logo_black.png" alt="컨버스" />
-            </a>
-          </h1> */}
+          <Logo logoStyle="top" />
           <nav className="pc-nav">
             <ul className="menu-list-wrap">
               {/* gnb메뉴 데이터기반으로 li태그 생성 */}

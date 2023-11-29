@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { bMenu } from "../data/bmenu";
+import { Logo } from "../modules/Logo";
 
 export function FooterArea() {
   useEffect(() => {
@@ -28,7 +29,7 @@ export function FooterArea() {
         <div className="footer-wrap">
           <div className="footer-left">
             <div className="footer-logo">
-              <img src="./images/common/logo_white.png" alt="컨버스" />
+              <Logo logoStyle="bottom" />
             </div>
             <address>
               <p>

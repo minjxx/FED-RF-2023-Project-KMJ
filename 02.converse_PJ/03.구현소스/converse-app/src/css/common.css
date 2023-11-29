@@ -70,10 +70,6 @@ html {
     max-width: var(--container-width);
     margin: 0 auto;
 }
-.header .header-wrap .logo {
-    width: 132px;
-    cursor: pointer;
-}
 .header .header-wrap .logo img {
     width: 100%;
 }
@@ -269,12 +265,9 @@ html {
     font-size: 1.4rem;
     color: #fff;
 }
-.footer .footer-wrap .footer-logo {
-    width: 155px;
-    margin-bottom: 45px;
-}
 .footer .footer-wrap .footer-logo img {
     width: 100%;
+    filter:invert(100%);
 }
 .footer .footer-wrap address {
     margin-bottom: 50px;

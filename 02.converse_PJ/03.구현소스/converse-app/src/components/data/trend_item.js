@@ -27,19 +27,19 @@ export const tItemData = {
     {
       "imgSrc":"./images/main/trend/cont1/img_05.jpg",
       "cateName":"런스타",
-      "itemName":"런스타 레거시 CX 퓨처 컴포트 블랙",
-      "itemPrice":"125,000"
+      "itemName":"런스타 레거시 CX 에그렛",
+      "itemPrice":"139,000"
     },
     {
       "imgSrc":"./images/main/trend/cont1/img_06.jpg",
       "cateName":"런스타",
-      "itemName":"런스타 모션 화이트",
+      "itemName":"런스타 레거시 CX 미스틱 스카이",
       "itemPrice":"125,000"
     },
     {
       "imgSrc":"./images/main/trend/cont1/img_07.jpg",
       "cateName":"런스타",
-      "itemName":"런스타 레거시 CX 퓨처 컴포트 에그렛",
+      "itemName":"런스타 레거시 CX 유틸리티",
       "itemPrice":"125,000"
     },
     {
