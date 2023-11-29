@@ -1,7 +1,9 @@
 export function Sale() {
   return (
-    <>
-      <h1>세일 상품 페이지</h1>
-    </>
+    <section className="sub-cont sale-wrap">
+      <div className="comm-title">
+        <h2>sale</h2>
+      </div>
+    </section>
   );
 }

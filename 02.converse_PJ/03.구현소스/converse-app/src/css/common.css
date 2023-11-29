@@ -63,6 +63,11 @@ html {
     background-color: #fff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
+.header.sub {
+    position: sticky;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+}
 .header .header-wrap {
     display: flex;
     align-items: center;
@@ -371,8 +376,21 @@ html {
 }
 
 /************** 공통 미디어쿼리 **************/
-@media screen and (max-width: 1300px) {
-    .sec-intro > div {
-      aspect-ratio: 1/2;
+@media screen and (max-width: 1200px) {
+    .header .header-wrap .pc-nav {
+        margin-left: 0;
     }
-  }
+}
+@media screen and (max-width: 1080px) {
+    .header .header-wrap {
+        max-width: 100%;
+        padding: 20px;
+        background-color: #fff;
+    }
+    .header .header-wrap .pc-nav {
+        display: none;
+    }
+    .header .header-wrap .top-icon {
+        display: none;
+    }
+}

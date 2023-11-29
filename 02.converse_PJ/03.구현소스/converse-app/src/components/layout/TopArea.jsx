@@ -12,10 +12,10 @@ import { cvCon } from "../modules/cvContext";
 import { Logo } from "../modules/Logo";
 
 export function TopArea() {
-
   const myCon = useContext(cvCon);
 
   useEffect(() => {
+    /* 
     // [ 대상 : header ] //////////////////////////////////////
     const header = document.querySelector(".header");
     // console.log(header);
@@ -32,19 +32,33 @@ export function TopArea() {
         // 아니면 헤더에 on 을 제거
         header.classList.remove("bgWhite");
       }
-    };
+    }; 
+    */
+    const header = $(".header");
+    const headerHeight = header.innerHeight();
+    $(window).scroll(function () {
+      let windowTop = $(window).scrollTop();
+      if (windowTop >= headerHeight) {
+        header.addClass("bgWhite");
+      } else {
+        header.removeClass("bgWhite");
+      }
+    });
 
-    $(".header").mouseover(function () {
+    header.mouseover(function () {
       $(this).addClass("on");
     });
-    $(".header").mouseleave(function () {
+    header.mouseleave(function () {
       $(this).removeClass("on");
     });
+
+
   }, []);
 
   return (
     <>
-      <header className="header" style={myCon.mode?{position:''}:{position:'sticky'}}>
+      {/* <header className="header" style={myCon.mode?{position:''}:{position:'sticky',boxShadow:'0 3px 10px rgba(0, 0, 0, .1)',backgroundColor:'#fff'}}> */}
+      <header className={myCon.mode ? "header" : "header sub"}>
         <div className="header-wrap">
           <Logo logoStyle="top" />
           <nav className="pc-nav">
@@ -83,13 +97,16 @@ export function TopArea() {
           </nav>
           <div className="top-icon">
             <div className="top-search">
-              <input type="text" className="top-input-box" placeholder="Search" style={myCon.mode?{backgroundColor:''}:{backgroundColor:'var(--gray-color)'}} />
+              <input type="text" className="top-input-box" placeholder="Search" style={myCon.mode ? { backgroundColor: "" } : { backgroundColor: "var(--gray-color)" }} />
               <button className="search-icon">검색</button>
             </div>
             <a href="#" className="user"></a>
             <a href="#" className="cart">
               <span className="cart-cnt">0</span>
             </a>
+          </div>
+          <div className="moIcon">
+            
           </div>
         </div>
       </header>

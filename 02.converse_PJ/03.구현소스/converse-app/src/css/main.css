@@ -75,7 +75,7 @@
     left: 0;
 }
 
-.main {
+.container {
     min-height: calc(100vh - 323px - 80px);
 }
 /* 메인비주얼 css */
@@ -560,4 +560,9 @@
 /* 혜택 영역 */
 .main-benefit .swiper-slide img {
     width: 100%;
+}
+
+/************** 공통 미디어쿼리 **************/
+@media screen and (max-width: 1080px) {
+    
 }
