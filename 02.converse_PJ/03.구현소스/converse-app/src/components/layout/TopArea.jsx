@@ -83,7 +83,7 @@ export function TopArea() {
           </nav>
           <div className="top-icon">
             <div className="top-search">
-              <input type="text" className="top-input-box" placeholder="Search" />
+              <input type="text" className="top-input-box" placeholder="Search" style={myCon.mode?{backgroundColor:''}:{backgroundColor:'var(--gray-color)'}} />
               <button className="search-icon">검색</button>
             </div>
             <a href="#" className="user"></a>

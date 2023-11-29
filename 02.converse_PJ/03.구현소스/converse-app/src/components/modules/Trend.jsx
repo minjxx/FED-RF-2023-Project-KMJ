@@ -21,7 +21,7 @@ export function Trend() {
 
     tabBtn.click(function () {
       const index = $(this).index(); //클릭한 번호를 저장
-      console.log(index);
+      // console.log(index);
       $(this).addClass("active").siblings().removeClass("active"); //내가 클릭한 버튼에 클래스를 추가하고 나머지 버튼은 삭제
       // tabCont.eq(index).show().siblings().hide(); //내가 클릭한 버튼의 콘텐츠는 보여주고 나머지는 숨김
     });

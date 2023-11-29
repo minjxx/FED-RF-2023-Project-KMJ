@@ -15,43 +15,41 @@ import { useContext, useEffect, useLayoutEffect } from "react";
 export function Main() {
   const myCon = useContext(cvCon);
 
-  useLayoutEffect(()=>{
+  useLayoutEffect(() => {
     myCon.chgMode(1);
-  },[])
+  }, []);
 
-  useEffect(()=>{
-    return(()=>{
+  useEffect(() => {
+    return () => {
       myCon.chgMode(0);
-    })
-  },[])
+    };
+  }, []);
 
   return (
     <>
-      <main className="main">
-        {/* main banner */}
-        <MainBanner />
+      {/* main banner */}
+      <MainBanner />
 
-        {/* best item */}
-        <BestItem />
+      {/* best item */}
+      <BestItem />
 
-        {/* new arrivals */}
-        <NewItem />
+      {/* new arrivals */}
+      <NewItem />
 
-        {/* loop text */}
-        <LoopText />
+      {/* loop text */}
+      <LoopText />
 
-        {/* trend style */}
-        <Trend />
+      {/* trend style */}
+      <Trend />
 
-        {/* video */}
-        <MainVideo />
+      {/* video */}
+      <MainVideo />
 
-        {/* BrandDisplay */}
-        <BrandDisplay />
+      {/* BrandDisplay */}
+      <BrandDisplay />
 
-        {/* Benefit */}
-        <Benefit />
-      </main>
+      {/* Benefit */}
+      <Benefit />
     </>
   );
 }
