@@ -16,9 +16,6 @@
 }
 
 /* 이벤트 영역 */
-.event-wrap {
-  
-}
 .event-wrap ul {
   display: flex;
   flex-wrap: wrap;
