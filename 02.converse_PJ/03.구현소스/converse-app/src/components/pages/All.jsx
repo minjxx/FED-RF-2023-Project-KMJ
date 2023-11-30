@@ -1,7 +1,20 @@
+
+
+
 export function All() {
   return (
-    <>
-      <h1>전체 상품 페이지</h1>
-    </>
+    <section className="sub-area">
+      <div className="comm-title">
+        <h2>men</h2>
+      </div>
+      <div className="content-inner">
+        <div className="filter">
+          
+        </div>
+        <div className="list-box">
+          
+        </div>
+      </div>
+    </section>
   );
 }

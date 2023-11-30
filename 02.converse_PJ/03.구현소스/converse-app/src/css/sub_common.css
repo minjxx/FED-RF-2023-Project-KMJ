@@ -1,6 +1,6 @@
 /* 서브페이지 공통 CSS - sub_common.css */
 
-.sub-cont {
+.sub-area {
   max-width: var( --container-width);
   margin: 0 auto;
 }

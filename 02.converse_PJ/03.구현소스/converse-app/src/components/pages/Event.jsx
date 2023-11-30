@@ -1,14 +1,14 @@
 import "../../css/sub_common.css";
 
 import { eventData } from "../data/event_data";
-import { SwiperBrand } from "../plugin/SwiperBrand";
 
 export function Event() {
   return (
-    <section className="sub-cont">
+    <section className="sub-area">
       <div className="comm-title">
         <h2>event</h2>
       </div>
+
       <div className="event-wrap">
         <ul>
           {eventData.map((v, i) => (
