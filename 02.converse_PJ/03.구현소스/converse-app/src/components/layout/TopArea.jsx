@@ -105,9 +105,9 @@ export function TopArea() {
               <span className="cart-cnt">0</span>
             </a>
           </div>
-          <div className="moIcon">
+          {/* <div className="moIcon">
             
-          </div>
+          </div> */}
         </div>
       </header>
     </>

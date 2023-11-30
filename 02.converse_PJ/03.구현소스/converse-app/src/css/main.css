@@ -301,18 +301,12 @@
 .main-best .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color: var(--main-black);
 }
-.main-best .swiper-button-prev::after, .main-best .swiper-button-next::after {
-    /* color: var(--main-black); */
-}
-.main-best .swiper-button-prev {}
-.main-best .swiper-button-next {}
 /* 원본 페이지네이션 */
 .main-best .btn-box {
     position: relative;
     bottom: 45px;
     width: 100%;
     max-width: var(--container-width);
-    margin: 0 auto;
     text-align: right;
 }
 .main-best .item-btn {
@@ -564,5 +558,7 @@
 
 /************** 공통 미디어쿼리 **************/
 @media screen and (max-width: 1080px) {
-    
+    .main-visual {
+        padding-top: 58px;
+    }
 }
