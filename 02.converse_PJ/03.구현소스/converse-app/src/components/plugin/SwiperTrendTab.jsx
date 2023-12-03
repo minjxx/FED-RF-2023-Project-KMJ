@@ -12,7 +12,7 @@ export function SwiperTrendTab({chgItemCatFn}) {
       <Swiper 
         slidesPerView={'auto'}
         spaceBetween={15}
-        className="tab-btn"
+        className="tab-btn mPd20"
       >
         {
           tMenuData.map((v,i)=>

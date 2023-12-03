@@ -3,7 +3,7 @@ import { SwiperBrand } from "../plugin/SwiperBrand";
 export function BrandDisplay() {
   return (
     <>
-      <section className="main-sec main-brand">
+      <section className="main-sec main-brand mPd20">
         <h2 className="section-title">what's hot&amp;new</h2>
         <div className="banner-wrap">
           <SwiperBrand />

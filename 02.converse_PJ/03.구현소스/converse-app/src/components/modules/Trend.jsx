@@ -33,11 +33,11 @@ export function Trend() {
   return (
     <>
       <section className="main-sec main-trend">
-        <h2 className="section-title">trend style</h2>
+        <h2 className="section-title mPd20">trend style</h2>
         <div className="tab-wrap">
           <SwiperTrendTab chgItemCatFn={chgItemCat} />
 
-          <div className="col-4 tab-cont">
+          <div className="col-4 mcol-2 tab-cont mPd20">
             {/* 1 */}
             <div className="tab-box">
               <ul>

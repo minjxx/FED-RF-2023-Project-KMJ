@@ -16,7 +16,7 @@ export function SwiperBestItem() {
 
   return (
     <>
-      <h2 className="section-title">
+      <h2 className="section-title mPd20">
         on-line
         <br />
         best item
@@ -27,13 +27,23 @@ export function SwiperBestItem() {
       </div>
       <Swiper
         ref={swpr}
-        slidesPerView={3.8}
-        spaceBetween={40}
+        slidesPerView={2.1}
+        spaceBetween={20}
+        breakpoints={{
+          780: {
+            slidesPerView: 3.1,
+            spaceBetween: 25,
+          },
+          1080: {
+            slidesPerView: 3.8,
+            spaceBetween: 35,
+          },
+        }}
         pagination={{
           type: "progressbar",
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="bestSwiper"
       >
         {bItemData.map((v,i) => (
           <SwiperSlide key={i}>

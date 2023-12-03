@@ -48,6 +48,16 @@ export function FooterArea() {
                 <span>이용문의 : conversekorea@converse.co.kr</span>
               </p>
             </address>
+            <div className="social">
+              {/* 페이스북 아이콘 */}
+              <a href="https://www.facebook.com/converse.kr" target="_blank" title="Facebook">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              {/* 인스타 아이콘 */}
+              <a href="https://www.instagram.com/converse_kr" target="_blank" title="Instagram">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </div>
             <p className="copyright">2020 Converse Korea LLC. All Rights Reserved.</p>
           </div>
           <div className="footer-right">

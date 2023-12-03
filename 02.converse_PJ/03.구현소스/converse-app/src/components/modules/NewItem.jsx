@@ -3,9 +3,9 @@ import { nItemData } from "../data/new_item";
 export function NewItem() {
   return (
     <>
-      <section className="main-sec main-new">
+      <section className="main-sec main-new mPd20">
         <h2 className="section-title">new arrivals</h2>
-        <div className="col-4 tab-cont">
+        <div className="col-4 mcol-2 tab-cont">
           <ul>
             {nItemData.map((v,i) => (
               <li key={i}>

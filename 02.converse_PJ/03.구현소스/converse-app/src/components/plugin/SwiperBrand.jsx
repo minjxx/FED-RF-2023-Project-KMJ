@@ -14,21 +14,27 @@ export function SwiperBrand() {
   const swpr = useRef(null);
   return (
     <>
-      <button type="button" className="controller-btn next-btn" onClick={()=>swpr.current.swiper.slideNext()}></button>
-      <button type="button" className="controller-btn prev-btn" onClick={()=>swpr.current.swiper.slidePrev()}></button>
+      <button type="button" className="controller-btn next-btn" onClick={() => swpr.current.swiper.slideNext()}></button>
+      <button type="button" className="controller-btn prev-btn" onClick={() => swpr.current.swiper.slidePrev()}></button>
       <Swiper
         ref={swpr}
-        slidesPerView={2}
+        slidesPerView={1}
+        slidesPerGroup={1}
         spaceBetween={25}
-        slidesPerGroup={2}
         loop={true}
+        breakpoints={{
+          780: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+        }}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
       >
-        {brandData.map((v, i) => 
+        {brandData.map((v, i) => (
           <SwiperSlide key={i}>
             <a href={v.link} className="info-link"></a>
             <figure className="imgSet">
@@ -39,7 +45,7 @@ export function SwiperBrand() {
               <dd>{v.subTxt}</dd>
             </dl>
           </SwiperSlide>
-        )}
+        ))}
       </Swiper>
     </>
   );

@@ -15,25 +15,6 @@ export function TopArea() {
   const myCon = useContext(cvCon);
 
   useEffect(() => {
-    /* 
-    // [ 대상 : header ] //////////////////////////////////////
-    const header = document.querySelector(".header");
-    // console.log(header);
-    // 1. 스크롤 내리면 header에 on클래스 넣어서 흰색배경 나오게하기
-    let headerHeight = header.offsetHeight;
-    // console.log(headerHeight);
-    window.onscroll = function () {
-      let windowTop = window.scrollY;
-      // console.log(windowTop);
-      if (windowTop >= headerHeight) {
-        // 세로 스크롤값이 헤더높이값보다 크거나 같으면
-        header.classList.add("bgWhite"); // 헤더에 on 을 추가
-      } else {
-        // 아니면 헤더에 on 을 제거
-        header.classList.remove("bgWhite");
-      }
-    }; 
-    */
     const header = $(".header");
     const headerHeight = header.innerHeight();
     $(window).scroll(function () {
@@ -52,6 +33,14 @@ export function TopArea() {
       $(this).removeClass("on");
     });
 
+    $(".hambtn").click(function(){
+      $(this).toggleClass("on");
+      $(this).siblings(".mo-menu").toggleClass("on");
+    });
+    $(".menu-list").click(function(){
+      $(this).parents(".mo-menu").toggleClass("on");
+      $(this).parents(".mo-menu").siblings(".hambtn").toggleClass("on");
+    });
 
   }, []);
 
@@ -95,7 +84,7 @@ export function TopArea() {
               ))}
             </ul>
           </nav>
-          <div className="top-icon">
+          <div className="top-icon log-icon">
             <div className="top-search">
               <input type="text" className="top-input-box" placeholder="Search" style={myCon.mode ? { backgroundColor: "" } : { backgroundColor: "var(--gray-color)" }} />
               <button className="search-icon">검색</button>
@@ -105,9 +94,55 @@ export function TopArea() {
               <span className="cart-cnt">0</span>
             </a>
           </div>
-          {/* <div className="moIcon">
-            
-          </div> */}
+          {/* 모바일용 햄버거 버튼 */}
+          <div className="hambtn">
+            <span></span>
+            <span></span>
+          </div>
+          {/* 모바일 메뉴 */}
+          <div className="mo-menu">
+            <div className="layerBg"></div>
+            <div className="menu-box">
+              <div className="mo-icon log-icon">
+                <a href="#" className="user"></a>
+                <a href="#" className="cart">
+                  <span className="cart-cnt">0</span>
+                </a>
+              </div>
+              <div className="menu-inner">
+                <div className="schBox">
+                  <input type="text" placeholder="Search" />
+                  <button type="submit" className="search-icon">검색</button>
+                </div>
+                <div className="inner">
+                  <ul className="mo-menu-list">
+                    {/* gnb메뉴 데이터기반으로 li태그 생성 */}
+                    {gnbMenu.map((v, i) => (
+                      <li className="menu-list" key={i}>
+                        {
+                          <Link to={v.link}>{v.txt}</Link>
+                        }
+                        {
+                          // 서브메뉴 데이터가 있으면 하위 그리기
+                          v.sub && (
+                            <div className="mo-sub">
+                              <ul className="depth2">
+                                {v.sub.map((v, i) => (
+                                  <li className="depth2_list" key={i}>
+                                    <Link to={v.link}>{v.txt}</Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )
+                        }
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
     </>

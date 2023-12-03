@@ -16,10 +16,10 @@ export function SwiperVisual() {
       <Swiper 
         loop={true}
         effect={'fade'}
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 6000,
+        //   disableOnInteraction: false,
+        // }}
         navigation={true}
         modules={[EffectFade, Autoplay, Navigation]} 
         className="mainSwiper"

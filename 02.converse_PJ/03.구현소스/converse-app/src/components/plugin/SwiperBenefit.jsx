@@ -8,6 +8,7 @@ import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import { benefitData } from "../data/benefit_data";
+import { moBenefitData } from "../data/benefit_data _mo";
 
 export function SwiperBenefit() {
   return (
@@ -19,9 +20,24 @@ export function SwiperBenefit() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
+        className="bfitSwiper"
       >
         {benefitData.map((v, i) => (
+          <SwiperSlide key={i}>
+            <img src={v.imgSrc} alt={v.title} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Swiper
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className="mBfitSwiper"
+      >
+        {moBenefitData.map((v, i) => (
           <SwiperSlide key={i}>
             <img src={v.imgSrc} alt={v.title} />
           </SwiperSlide>
