@@ -20,37 +20,37 @@ export const gnbMenu = [
   },
   {
       txt:"women",
-      link:"/all",
+      link:"/women",
       sub:[
           {
               txt: "all",
-              link: "/all",
+              link: "/women",
           },
           {
               txt: "new",
-              link: "/new",
+              link: "/women",
           },
           {
               txt: "best",
-              link: "/best",
+              link: "/women",
           },
       ],
   },
   {
       txt:"kids",
-      link:"/all",
+      link:"/kids",
       sub:[
         {
             txt: "all",
-            link: "/all",
+            link: "/kids",
         },
         {
             txt: "new",
-            link: "/new",
+            link: "/kids",
         },
         {
             txt: "best",
-            link: "/best",
+            link: "/kids",
         },
     ],
   },
