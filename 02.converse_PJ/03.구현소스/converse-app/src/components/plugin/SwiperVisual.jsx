@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { EffectFade, Autoplay, Navigation } from "swiper/modules";
+import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,13 +16,16 @@ export function SwiperVisual() {
       <Swiper 
         loop={true}
         effect={'fade'}
-        // autoplay={{
-        //   delay: 6000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        modules={[EffectFade, Autoplay, Navigation]} 
-        className="mainSwiper"
+        modules={[EffectFade, Autoplay, Navigation, Pagination]} 
+        className="mainSwiper bullet"
       >
         <SwiperSlide>
         <span className="bg-circle"></span>

@@ -184,15 +184,28 @@
   animation: visualArrowLeft 0.6s ease-in-out infinite alternate;
   background-image: url(../../public/images/main/arrow_prev.png);
 }
-/* 원본 화살표 */
-/* .main-visual .prev-btn {
-    left: 11%;
-    animation: visualArrowLeft 0.6s ease-in-out infinite alternate;
+/* 비주얼, 브랜드 영역 하단 스와이퍼 불렛 */
+.bullet .swiper-pagination {
+  bottom: 0px;
+  width: 100%;
 }
-.main-visual .next-btn {
-    right: 11%;
-    animation: visualArrowRight 0.6s ease-in-out infinite alternate;
-} */
+.bullet .swiper-pagination-bullet {
+  width: 18px;
+  height: 5px;
+  margin: 0 3px;
+  background: #aaa;
+  border-radius: 0;
+  opacity: 1;
+  outline: 0;
+}
+.bullet .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--main-black);
+}
+.main-visual .swiper-pagination.swiper-pagination-bullets {
+  display: none;
+  bottom: 40px;
+}
+
 /* 메인비주얼 애니메이션 */
 @keyframes visualTxtTop {
   0% {
@@ -549,22 +562,6 @@
   right: -4%;
   background-image: url(../../public/images/main/ico_arrow_next_b.png);
 }
-.main-brand .swiper-pagination {
-  bottom: 0px;
-  width: 100%;
-}
-.main-brand .swiper-pagination-bullet {
-  width: 18px;
-  height: 5px;
-  margin: 0 3px;
-  background: #ccc;
-  border-radius: 0;
-  opacity: 1;
-  outline: 0;
-}
-.main-brand .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: var(--main-black);
-}
 
 /* 혜택 영역 */
 .main-benefit .swiper-slide img {
@@ -613,6 +610,10 @@
   .main-visual {
     padding-top: 58px;
   }
+  .main-visual .mainSwiper {
+    height: 600px;
+    /* min-height: 500px; */
+  }
   .main-visual .main-title {
     width: 80%;
   }
@@ -635,6 +636,10 @@
       right: 3%;
     }
   }
+  .main-best .btn-box {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
   /* 흐르는 글씨 */
   .main-loop {
     margin-top: 80px;
@@ -642,7 +647,7 @@
   /* 비디오영역 */
   .main-video .intro-mv-img {
     height: auto;
-    padding-top: 51%;
+    padding-top: 50%;
   }
   .main-video .intro-mv-img img {
     position: absolute;
@@ -668,10 +673,56 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
+  .main-sec {
+    margin: 60px 0;
+  }
+  .section-title {
+    font-size: 2.7rem;
+  }
+  .morebtn {
+    width: 140px;
+    padding: 14px 0;
+    font-size: 1.4rem;
+  }
+  .main-visual .main-title {
+    width: 80%;
+    top: 230px;
+    transform: translateX(-50%);
+  }
+  .main-visual .shoes-img {
+    width: 75vw;
+    max-width: 500px;
+    margin-top: 0;
+  }
+  .main-visual .morebtn {
+    bottom: 18%;
+  }
+  .main-visual .swiper-pagination.swiper-pagination-bullets {
+    display: block;
+  }
+  @keyframes visualTxtTop {
+    0% {
+      top: 230px;
+      opacity: 0;
+    }
+    100% {
+      top: 250px;
+      opacity: 1;
+    }
+  }
+  .main-visual .swiper-button-prev,.main-visual .swiper-button-next {
+    display: none;
+  }
   .main-best .item-btn {
     width: 30px;
     height: 30px;
+  }
+  .main-best .next-btn {
+    margin-left: 10px;
+  }
+  .main-loop {
+    margin-top: 60px;
   }
   .main-loop .loop-wrap {
     padding: 40px 0;
@@ -715,5 +766,10 @@
   }
   .main-benefit .mBfitSwiper {
     display: block;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-visual .mainSwiper {
+    height: 500px;
   }
 }

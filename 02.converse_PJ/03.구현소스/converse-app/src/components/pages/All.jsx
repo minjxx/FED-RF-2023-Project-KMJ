@@ -1,6 +1,7 @@
-import { nItemData } from "../data/new_item";
-
-
+// 폰트어썸 불러오기
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { menAllData } from "../data/men_all_data";
 
 export function All() {
   return (
@@ -11,7 +12,7 @@ export function All() {
       </div>
 
       <div className="sort-box">
-        <button className="filter-btn">필터 숨기기</button>
+        <button type="button" className="filter-btn">필터 숨기기<FontAwesomeIcon icon={faFilter} /></button>
         <select name="aa" id="aa">
           <option value="1">정렬 기준</option>
           <option value="2">추천순</option>
@@ -20,40 +21,48 @@ export function All() {
         </select>
       </div> {/* sort-box */}
 
-      <div className="content-inner">
+      <div className="item-area">
         <div className="filter">
           <div className="filter-list">
             <p className="opt-tit">아이콘</p>
             <div className="opt-box">
               <ul>
                 <li>
-                  <input type="checkbox" name="optIcon1" id="optIcon1" />
-                  <label htmlFor="optIcon1">척테일러올스타</label>
+                  <label htmlFor="optIcon1" className="chk-box">
+                    <input type="checkbox" name="optIcon1" id="optIcon1" />
+                    <span class="chk"></span>
+                    척테일러올스타
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="optIcon2" id="optIcon2" />
-                  <label htmlFor="optIcon2">척 70</label>
+                  <label htmlFor="optIcon2" className="chk-box">
+                    <input type="checkbox" name="optIcon2" id="optIcon2" />
+                    <span class="chk"></span>
+                    척 70
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="optIcon3" id="optIcon3" />
-                  <label htmlFor="optIcon3">런스타</label>
+                  <label htmlFor="optIcon3" className="chk-box">
+                    <input type="checkbox" name="optIcon3" id="optIcon3" />
+                    <span class="chk"></span>
+                    런스타
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="optIcon4" id="optIcon4" />
-                  <label htmlFor="optIcon4">원스타</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="optIcon5" id="optIcon5" />
-                  <label htmlFor="optIcon5">잭퍼셀</label>
+                  <label htmlFor="optIcon4" className="chk-box">
+                    <input type="checkbox" name="optIcon4" id="optIcon4" />
+                    <span class="chk"></span>
+                    원스타
+                  </label>
                 </li>
               </ul>
             </div>
           </div>
         </div> {/* filter */}
 
-        <div className="col-4">
+        <div className="item-inner col-4">
           <ul>
-            {nItemData.map((v,i) => (
+            {menAllData.map((v,i) => (
               <li key={i}>
                 <a href="#">
                   <div className="img-wrap">

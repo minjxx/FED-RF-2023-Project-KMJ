@@ -32,7 +32,7 @@ export function SwiperBrand() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper bullet"
       >
         {brandData.map((v, i) => (
           <SwiperSlide key={i}>
