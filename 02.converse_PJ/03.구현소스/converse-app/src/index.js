@@ -1,12 +1,12 @@
 // 메인페이지 CSS 불러오기
 import "./css/index.css";
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 // 컴포넌트 불러오기
-import { Layout } from './components/layout/Layout';
+import { Layout } from "./components/layout/Layout";
 import { Main } from "./components/pages/Main";
 import { All } from "./components/pages/All";
 import { New } from "./components/pages/New";
@@ -19,7 +19,12 @@ import { Men } from "./components/pages/Men";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    /* basename속성은 package.json의 "homepage"속성값 읽어옴 */
+    // <BrowserRouter basename={process.env.PUBLIC_URL}>
+    // <BrowserRouter>
+
+    /* basename을 안써도 HashRouter는 package.json의 homepage 속성값을 자동으로 연결함 */
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
@@ -31,10 +36,10 @@ export default function App() {
           <Route path="best" element={<Best />} />
           <Route path="event" element={<Event />} />
           <Route path="sale" element={<Sale />} />
-
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
+    // </BrowserRouter>
   );
 } ///////////// App 컴포넌트 ///////////////////
 
