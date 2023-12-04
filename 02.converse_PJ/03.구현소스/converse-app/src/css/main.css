@@ -419,6 +419,7 @@
 }
 .prod-info-box .prod-name {
   margin-top: 12px;
+  line-height: 1.3;
   font-size: 1.5rem;
   color: #666;
   overflow: hidden;
@@ -429,13 +430,32 @@
 }
 .prod-info-box .prod-price {
   margin-top: 17px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: -0.8px;
 }
 .prod-info-box .price-unit {
   margin-left: 2px;
   font-size: 1.5rem;
+  font-style: normal;
+}
+.price-box.sale .prod-price {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #999;
+}
+.price-box .sale-box {
+  margin-top: 8px;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.price-box .sale-box .per {
+  margin-right: 6px;
+  color: #f00;
+}
+.price-box .sale-box .per em {
   font-style: normal;
 }
 

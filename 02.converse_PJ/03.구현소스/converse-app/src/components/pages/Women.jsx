@@ -4,7 +4,7 @@ import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 // 제이쿼리 불러오기
 import $ from "jquery";
-import { wAllData } from "../data/women_all_data copy";
+import { wAllData } from "../data/women_all_data";
 
 export function Women() {
   useEffect(() => {
