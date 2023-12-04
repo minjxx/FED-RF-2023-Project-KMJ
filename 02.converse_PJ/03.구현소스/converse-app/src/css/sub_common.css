@@ -23,6 +23,12 @@
 .sort-box .filter-btn {
   font-size: 1.6rem;
 }
+.sort-box .filter-btn::before {
+  content: '필터 숨기기';
+}
+.sort-box .filter-btn.on::before {
+  content: '필터 표시';
+}
 .sort-box .filter-btn svg {
   width: 14px;
   margin-left: 5px;
@@ -42,35 +48,41 @@
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right center;
+  outline: none;
 }
 .item-area {
   display: flex;
+  transition: .3s;
 }
 .item-area .filter {
   width: 18%;
   margin-right: 3%;
 }
+.item-area.on .filter {
+  display: none;
+}
 .filter .filter-list {
+  padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
+.filter .filter-list:first-child {
+  padding-top: 0;
+}
 .filter .filter-list .opt-tit {
-  margin-bottom: 15px;
-  background-image: url(../../public/images/common/select_arrow1.png);
+  background-image: url(../../public/images/common/select_arrow2.png);
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: right center;
   font-size: 1.6rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .filter .filter-list .opt-tit.on {
-  background-image: url(../../public/images/common/select_arrow2.png);
+  background-image: url(../../public/images/common/select_arrow1.png);
 }
 .filter .filter-list .opt-box li {
-  margin-bottom: 15px;
-}
-.filter .filter-list .opt-box li:last-child {
-  margin-bottom: 0;
+  margin-top: 15px;
 }
 /* input 체크박스 */
 .chk-box {
@@ -122,11 +134,12 @@
   left: 6px;
   top: 2px;
 }
-
 .item-area .item-inner {
   width: 79%;
 }
-
+.item-area.on .item-inner {
+  width: 100%;
+}
 /* 이벤트 영역 */
 .event-wrap ul {
   display: flex;

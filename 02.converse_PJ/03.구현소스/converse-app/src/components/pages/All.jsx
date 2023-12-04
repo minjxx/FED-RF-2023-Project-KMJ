@@ -2,8 +2,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { menAllData } from "../data/men_all_data";
+import { useEffect } from "react";
+// 제이쿼리 불러오기
+import $ from "jquery";
 
 export function All() {
+  useEffect(() => {
+    $(".opt-tit").click(function(){
+      $(this).toggleClass("on");
+      $(this).siblings(".opt-box").slideToggle("fast");
+    });
+    $(".filter-btn").click(function(){
+      $(this).toggleClass("on");
+      $(this).parent(".sort-box").siblings(".item-area").toggleClass("on");
+    });
+  },[]);
   return (
     <section className="sub-area">
 
@@ -12,7 +25,7 @@ export function All() {
       </div>
 
       <div className="sort-box">
-        <button type="button" className="filter-btn">필터 숨기기<FontAwesomeIcon icon={faFilter} /></button>
+        <button type="button" className="filter-btn"><FontAwesomeIcon icon={faFilter} /></button>
         <select name="aa" id="aa">
           <option value="1">정렬 기준</option>
           <option value="2">추천순</option>
@@ -30,29 +43,64 @@ export function All() {
                 <li>
                   <label htmlFor="optIcon1" className="chk-box">
                     <input type="checkbox" name="optIcon1" id="optIcon1" />
-                    <span class="chk"></span>
+                    <span className="chk"></span>
                     척테일러올스타
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon2" className="chk-box">
                     <input type="checkbox" name="optIcon2" id="optIcon2" />
-                    <span class="chk"></span>
+                    <span className="chk"></span>
                     척 70
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon3" className="chk-box">
                     <input type="checkbox" name="optIcon3" id="optIcon3" />
-                    <span class="chk"></span>
+                    <span className="chk"></span>
                     런스타
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon4" className="chk-box">
                     <input type="checkbox" name="optIcon4" id="optIcon4" />
-                    <span class="chk"></span>
+                    <span className="chk"></span>
                     원스타
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="filter-list">
+            <p className="opt-tit">가격대</p>
+            <div className="opt-box">
+              <ul>
+                <li>
+                  <label htmlFor="price1" className="chk-box">
+                    <input type="checkbox" name="price1" id="price1" />
+                    <span className="chk"></span>
+                    0 - 50,000원
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="price2" className="chk-box">
+                    <input type="checkbox" name="price2" id="price2" />
+                    <span className="chk"></span>
+                    50,000 - 100,000원
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="price3" className="chk-box">
+                    <input type="checkbox" name="price3" id="price3" />
+                    <span className="chk"></span>
+                    100,000 - 150,000원
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="price4" className="chk-box">
+                    <input type="checkbox" name="price4" id="price4" />
+                    <span className="chk"></span>
+                    150,000 - 200,000원
                   </label>
                 </li>
               </ul>

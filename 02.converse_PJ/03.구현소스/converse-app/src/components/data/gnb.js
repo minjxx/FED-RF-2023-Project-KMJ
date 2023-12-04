@@ -2,19 +2,19 @@
 export const gnbMenu = [
   {
       txt:"men",
-      link:"/all",
+      link:"/men",
       sub:[
         {
             txt: "all",
-            link: "/all",
+            link: "/men",
         },
         {
             txt: "new",
-            link: "/new",
+            link: "/men",
         },
         {
             txt: "best",
-            link: "/best",
+            link: "/men",
         },
     ],
   },
