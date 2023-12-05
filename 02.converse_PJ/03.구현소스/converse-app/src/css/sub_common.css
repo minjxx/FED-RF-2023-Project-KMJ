@@ -57,11 +57,14 @@
 .item-area .filter {
   width: 18%;
   margin-right: 3%;
+  transition: .6s;
 }
 .item-area.on .filter {
-  display: none;
+  width: 0;
+  overflow: hidden;
 }
 .filter .filter-list {
+  width: 16vw;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;

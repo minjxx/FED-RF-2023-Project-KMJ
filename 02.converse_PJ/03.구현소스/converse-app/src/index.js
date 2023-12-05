@@ -16,6 +16,7 @@ import { Sale } from "./components/pages/Sale";
 import { Women } from "./components/pages/Women";
 import { Kids } from "./components/pages/Kids";
 import { Men } from "./components/pages/Men";
+import { ItemList } from "./components/modules/ItemList";
 
 export default function App() {
   return (
@@ -28,9 +29,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="men" element={<Men />} />
-          <Route path="women" element={<Women />} />
-          <Route path="kids" element={<Kids />} />
+          <Route path="men" element={<ItemList cat="men" />} />
+          <Route path="women" element={<ItemList cat="women" />} />
+          <Route path="kids" element={<ItemList cat="kids" />} />
           {/* <Route path="all" element={<All />} />
           <Route path="new" element={<New />} />
           <Route path="best" element={<Best />} /> */}
