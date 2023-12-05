@@ -8,14 +8,8 @@ import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 // 컴포넌트 불러오기
 import { Layout } from "./components/layout/Layout";
 import { Main } from "./components/pages/Main";
-import { All } from "./components/pages/All";
-import { New } from "./components/pages/New";
-import { Best } from "./components/pages/Best";
 import { Event } from "./components/pages/Event";
 import { Sale } from "./components/pages/Sale";
-import { Women } from "./components/pages/Women";
-import { Kids } from "./components/pages/Kids";
-import { Men } from "./components/pages/Men";
 import { ItemList } from "./components/modules/ItemList";
 
 export default function App() {
@@ -32,11 +26,8 @@ export default function App() {
           <Route path="men" element={<ItemList cat="men" />} />
           <Route path="women" element={<ItemList cat="women" />} />
           <Route path="kids" element={<ItemList cat="kids" />} />
-          {/* <Route path="all" element={<All />} />
-          <Route path="new" element={<New />} />
-          <Route path="best" element={<Best />} /> */}
           <Route path="event" element={<Event />} />
-          <Route path="sale" element={<Sale />} />
+          <Route path="sale" element={<ItemList cat="sale" />} />
         </Route>
       </Routes>
     </HashRouter>

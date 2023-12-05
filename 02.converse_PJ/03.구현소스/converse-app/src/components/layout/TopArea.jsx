@@ -72,7 +72,6 @@ export function TopArea() {
                             {v.sub.map((v, i) => (
                               <li className="depth2_list" key={i}>
                                 <Link to={v.link}>{v.txt}</Link>
-                                {/* <a href={v.link}>{v.txt}</a> */}
                               </li>
                             ))}
                           </ul>
