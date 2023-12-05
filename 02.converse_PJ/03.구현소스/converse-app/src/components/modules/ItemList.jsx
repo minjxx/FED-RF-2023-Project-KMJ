@@ -2,17 +2,16 @@ import { useEffect } from "react";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+// 상품 리스트 데이터 불러오기
 import { allData } from "../data/all_data";
-
 // 제이쿼리 불러오기
 import $ from "jquery";
-import { Link } from "react-router-dom";
 
 export function ItemList({ cat }) {
   // console.log(cat);
 
   const selData = allData[cat];
-  console.log('데이터',selData);
+  // console.log('데이터',selData);
 
   useEffect(() => {
     // 필터 타이틀 클릭했을때 필터 리스트박스 클래스 on넣기
