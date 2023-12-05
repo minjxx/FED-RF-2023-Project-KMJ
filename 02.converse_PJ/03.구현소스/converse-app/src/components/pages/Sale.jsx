@@ -21,7 +21,7 @@ export function Sale() {
     <section className="sub-area">
 
       <div className="comm-title">
-        <h2>women</h2>
+        <h2>sale</h2>
       </div>
 
       <div className="sort-box">
