@@ -31,9 +31,9 @@ export default function App() {
           <Route path="men" element={<Men />} />
           <Route path="women" element={<Women />} />
           <Route path="kids" element={<Kids />} />
-          <Route path="all" element={<All />} />
+          {/* <Route path="all" element={<All />} />
           <Route path="new" element={<New />} />
-          <Route path="best" element={<Best />} />
+          <Route path="best" element={<Best />} /> */}
           <Route path="event" element={<Event />} />
           <Route path="sale" element={<Sale />} />
         </Route>
