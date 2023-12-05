@@ -108,7 +108,7 @@ export function Kids() {
           </div>
         </div> {/* filter */}
 
-        <div className="item-inner col-4">
+        <div className="item-inner col-4 mcol-2">
           <ul>
             {kAllData.map((v,i) => (
               <li key={i}>
