@@ -487,6 +487,7 @@ html {
     margin-bottom: 30px;
 }
 .mo-menu .mo-menu-list > li > a {
+    display: block;
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;

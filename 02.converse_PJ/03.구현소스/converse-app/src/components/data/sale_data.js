@@ -1,6 +1,6 @@
 export const saleData = [
   {
-    imgSrc: "../images/sub/sale/img_01.jpg",
+    imgSrc: "./images/sub/sale/img_01.jpg",
     cateName: "척70",
     itemName: "척70 빈티지 캔버스 에나멜 레드",
     itemPrice: "99,000",
@@ -8,7 +8,7 @@ export const saleData = [
     percent:"10",
   },
   {
-    imgSrc: "../images/sub/sale/img_02.jpg",
+    imgSrc: "./images/sub/sale/img_02.jpg",
     cateName: "척70",
     itemName: "척70 빈티지 캔버스 미드나잇클로버",
     itemPrice: "99,000",
@@ -16,7 +16,7 @@ export const saleData = [
     percent:"20",
   },
   {
-    imgSrc: "../images/sub/sale/img_03.jpg",
+    imgSrc: "./images/sub/sale/img_03.jpg",
     cateName: "원스타",
     itemName: "원스타 프로 클래식 스웨이드 팬텀 바이올렛",
     itemPrice: "99,000",
@@ -24,7 +24,7 @@ export const saleData = [
     percent:"10",
   },
   {
-    imgSrc: "../images/sub/sale/img_04.jpg",
+    imgSrc: "./images/sub/sale/img_04.jpg",
     cateName: "원스타",
     itemName: "원스타 프로 클래식 스웨이드 시크릿 파인스",
     itemPrice: "99,000",
@@ -32,7 +32,7 @@ export const saleData = [
     percent:"10",
   },
   {
-    imgSrc: "../images/sub/sale/img_05.jpg",
+    imgSrc: "./images/sub/sale/img_05.jpg",
     cateName: "원스타",
     itemName: "원스타 프로 클래식 스웨이드 이터널 어스",
     itemPrice: "99,000",
@@ -40,7 +40,7 @@ export const saleData = [
     percent:"20",
   },
   {
-    imgSrc: "../images/sub/sale/img_06.jpg",
+    imgSrc: "./images/sub/sale/img_06.jpg",
     cateName: "원스타",
     itemName: "원스타 프로 클래식 스웨이드 썬더",
     itemPrice: "99,000",
@@ -48,7 +48,7 @@ export const saleData = [
     percent:"10",
   },
   {
-    imgSrc: "../images/sub/sale/img_07.jpg",
+    imgSrc: "./images/sub/sale/img_07.jpg",
     cateName: "척70",
     itemName: "척70 시즈널 컬러 스쿼럴 프렌드",
     itemPrice: "99,000",
@@ -56,7 +56,7 @@ export const saleData = [
     percent:"40",
   },
   {
-    imgSrc: "../images/sub/sale/img_08.jpg",
+    imgSrc: "./images/sub/sale/img_08.jpg",
     cateName: "척테일러올스타",
     itemName: "척테일러 올스타 EVA 리프트 플랫폼 엠브로 이더드 플로럴 드리미 달리아",
     itemPrice: "69,000",
@@ -64,7 +64,7 @@ export const saleData = [
     percent:"30",
   },
   {
-    imgSrc: "../images/sub/sale/img_09.jpg",
+    imgSrc: "./images/sub/sale/img_09.jpg",
     cateName: "척테일러올스타",
     itemName: "척테일러 올스타 EVA 리프트 플랫폼 필라인 플로럴 화이트",
     itemPrice: "69,000",
@@ -72,7 +72,7 @@ export const saleData = [
     percent:"30",
   },
   {
-    imgSrc: "../images/sub/sale/img_10.jpg",
+    imgSrc: "./images/sub/sale/img_10.jpg",
     cateName: "척테일러올스타",
     itemName: "척테일러 올스타 시티 트렉 워터프루프 부츠 블랙",
     itemPrice: "125,000",
@@ -80,7 +80,7 @@ export const saleData = [
     percent:"30",
   },
   {
-    imgSrc: "../images/sub/sale/img_11.jpg",
+    imgSrc: "./images/sub/sale/img_11.jpg",
     cateName: "척테일러올스타",
     itemName: "척테일러 올스타 시티 트렉 워터프루프 부츠 듄스케이프",
     itemPrice: "125,000",
@@ -88,7 +88,7 @@ export const saleData = [
     percent:"30",
   },
   {
-    imgSrc: "../images/sub/sale/img_12.jpg",
+    imgSrc: "./images/sub/sale/img_12.jpg",
     cateName: "척테일러올스타",
     itemName: "척테일러 올스타 컨스트럭트 스포츠 리마스터드 페일 퍼티",
     itemPrice: "95,000",
