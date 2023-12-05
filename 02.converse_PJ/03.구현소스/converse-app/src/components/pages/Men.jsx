@@ -62,7 +62,7 @@ export function Men() {
                   <label htmlFor="optIcon3" className="chk-box">
                     <input type="checkbox" name="optIcon3" id="optIcon3" />
                     <span className="chk"></span>
-                    런스타
+                    플랫폼
                   </label>
                 </li>
                 <li>
