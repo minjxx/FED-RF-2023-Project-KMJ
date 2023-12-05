@@ -46,28 +46,28 @@ export function Men() {
               <ul>
                 <li>
                   <label htmlFor="optIcon1" className="chk-box">
-                    <input type="checkbox" name="optIcon1" id="optIcon1" onChange={chkSearch} />
+                    <input type="checkbox" name="optIcon1" id="optIcon1" />
                     <span className="chk"></span>
                     척테일러올스타
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon2" className="chk-box">
-                    <input type="checkbox" name="optIcon2" id="optIcon2" onChange={chkSearch} />
+                    <input type="checkbox" name="optIcon2" id="optIcon2" />
                     <span className="chk"></span>
                     척 70
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon3" className="chk-box">
-                    <input type="checkbox" name="optIcon3" id="optIcon3" onChange={chkSearch} />
+                    <input type="checkbox" name="optIcon3" id="optIcon3" />
                     <span className="chk"></span>
                     런스타
                   </label>
                 </li>
                 <li>
                   <label htmlFor="optIcon4" className="chk-box">
-                    <input type="checkbox" name="optIcon4" id="optIcon4" onChange={chkSearch} />
+                    <input type="checkbox" name="optIcon4" id="optIcon4" />
                     <span className="chk"></span>
                     원스타
                   </label>
