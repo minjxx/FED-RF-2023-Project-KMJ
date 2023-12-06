@@ -67,7 +67,7 @@ export function ItemList({ cat }) {
                     <label htmlFor="optIcon3" className="chk-box">
                       <input type="checkbox" name="optIcon3" id="optIcon3" />
                       <span className="chk"></span>
-                      플랫폼
+                      런스타
                     </label>
                   </li>
                   <li>
