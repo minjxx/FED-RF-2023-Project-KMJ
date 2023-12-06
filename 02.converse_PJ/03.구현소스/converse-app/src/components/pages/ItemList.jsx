@@ -25,6 +25,7 @@ export function ItemList({ cat }) {
       $(this).parent(".sort-box").siblings(".item-area").toggleClass("on");
     });
   }, []);
+
   
 
   // 리턴코드 /////////////////////
@@ -96,7 +97,13 @@ export function ItemList({ cat }) {
 
 // 하위 컴포넌트 //////
 function MakeList({data}){
-//   console.log(data);
+  
+  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  // console.log(data);
   return data.map((v, i) => (
     <li key={i}>
         <div className="img-sec">
@@ -113,16 +120,16 @@ function MakeList({data}){
             v.salePrice ? (
               <div className="price-box sale">
                 <div className="prod-price">
-                  {v.itemPrice}<em className="price-unit">원</em>
+                  {addComma(v.itemPrice)}<em className="price-unit">원</em>
                 </div>
                 <div className="sale-box">
                   <span className="per">{v.percent}<em>%</em></span>
-                  <span className="sale-price">{v.salePrice}<em className="price-unit">원</em></span>
+                  <span className="sale-price">{addComma(v.salePrice)}<em className="price-unit">원</em></span>
                 </div>
               </div>
             ) : (
               <div className="prod-price">
-                {v.itemPrice}<em className="price-unit">원</em>
+                {addComma(v.itemPrice)}<em className="price-unit">원</em>
               </div>
             )
           }
