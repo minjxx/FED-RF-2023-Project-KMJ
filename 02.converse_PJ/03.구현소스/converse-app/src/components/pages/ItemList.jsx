@@ -25,6 +25,7 @@ export function ItemList({ cat }) {
       $(this).parent(".sort-box").siblings(".item-area").toggleClass("on");
     });
   }, []);
+  
 
   // 리턴코드 /////////////////////
   return (
