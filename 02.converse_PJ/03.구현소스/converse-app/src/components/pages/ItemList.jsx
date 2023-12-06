@@ -1,17 +1,112 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 // 상품 리스트 데이터 불러오기
 import { allData } from "../data/all_data";
 // 제이쿼리 불러오기
-import $ from "jquery";
+import $, { now } from "jquery";
+
 
 export function ItemList({ cat }) {
   // console.log(cat);
 
   const selData = allData[cat];
   // console.log('데이터',selData);
+
+  // 데이터 구성 상태변수 : [배열데이터,정렬상태]
+  // 정렬상태값:0 -오름차순, 1- 내림차순, 2- 정렬전
+  const [sortData,setSortData] = useState([selData,2]);
+
+  
+  //////////////////////////////
+  // 체크박스 검색함수 //////////
+  /////////////////////////////
+  const chkSearch = (e) => {
+    // 체크박스 아이디 : 검색항목의 값(alignment)
+    const cid = e.target.id;
+
+    // 체크박스 체크 여부 (true/false)
+    const chked = e.target.checked;
+    console.log('아이디:',cid,chked);
+
+    // 기존 입력 데이터 가져오기
+    // sortData의 첫번째 배열값
+    let temp = sortData[0];
+    // console.log(temp);
+
+    // 결과집합배열변수 : 최종결과배열
+    let lastList = [];
+
+    // 체크박스 체크개수 세기 : 1개 초과시 배열합치기!
+    let num = $('.chkhdn:checked').length;
+    // console.log('체크개수:',num);
+
+    if(chked){
+      // 현재데이터 변수에 담기
+      const nowList = selData.filter(v=>{
+        if(v.alignment == cid) return true;
+      }); ///////// filter /////////////////
+
+      // 체크개수가 1초과일때 배열합치기
+      if(num>1){ // 스프레드 연산자(...)사용!
+        lastList = [...temp,...nowList];
+      } /////// if /////////
+      else{ // 하나일때
+        lastList = nowList;
+      }
+    } //////////// if ////////////////
+    // 체크박스가 false일때 데이터 지우기
+    else{
+      console.log('지울데이터:',cid);
+      // for문 돌면서 배열데이터중 해당값을 지운다
+      for(let i=0; i<temp.length;i++){
+        // -> 삭제대상:
+        // 데이터중 alignment 항목값이 아이디명과 같은것
+        if(temp[i].alignment==cid){
+          // 해당항목 지우기
+          temp.splice(i,1);
+          i--;
+        } ///////// if /////////
+      } //////////// for ////////////
+      console.log('삭제처리된배열:',temp);
+
+      // 결과처리
+      lastList = temp;
+    } /////// else /////////
+
+    console.log('최종리스트',lastList);
+
+    // 결과 업데이트
+    setSortData([lastList,2]);
+
+  }; ////////////// chkSearch 함수 //////////
+
+  //////////////////////////////
+  // 리스트 정렬 함수 ///////////
+  //////////////////////////////
+  const sortList = (e) => {
+    // 0 - 오름차순, 1- 내림차순
+    const optVal = e.target.value;
+    // console.log('선택옵션:',optVal);
+
+    // 재정렬할 데이터를 가져온다
+    let temp = sortData[0];
+    // console.log('임시데이터',temp);
+
+    temp.sort((a,b)=>{
+      if(optVal == 1){
+        return a.itemName==b.itemName?0:a.itemName>b.itemName?-1:1;
+      }
+      else if(optVal == 0){
+        return a.itemName==b.itemName?0:a.itemName>b.itemName?1:-1;
+      }
+    });
+
+    // 데이터 정렬후 정렬변경 반영하기
+    setSortData([temp,Number(optVal)]);
+    // console.log('정렬후',temp,'선택값',optVal);
+  }; ////////////// sortList 함수 //////////
 
   useEffect(() => {
     // 필터 타이틀 클릭했을때 필터 리스트박스 클래스 on넣기
@@ -26,8 +121,6 @@ export function ItemList({ cat }) {
     });
   }, []);
 
-  
-
   // 리턴코드 /////////////////////
   return (
     <>
@@ -39,10 +132,11 @@ export function ItemList({ cat }) {
           <button type="button" className="filter-btn">
             <FontAwesomeIcon icon={faFilter} />
           </button>
-          <select name="aa" id="aa">
-            <option value="1">정렬 기준</option>
-            <option value="2">오름차순</option>
-            <option value="3">내림차순</option>
+          {/* 정렬박스 */}
+          <select name="sel" id="sel" className="sel" onChange={sortList}>
+              <option value="2">정렬 기준</option>
+              <option value="0">오름차순</option>
+              <option value="1">내림차순</option>
           </select>
         </div>
         {/* sort-box 끝 */}
@@ -53,28 +147,28 @@ export function ItemList({ cat }) {
               <div className="opt-box">
                 <ul>
                   <li>
-                    <label htmlFor="optIcon1" className="chk-box">
-                      <input type="checkbox" name="optIcon1" id="optIcon1" />
+                    <label htmlFor="allstar" className="chk-box">
+                      <input type="checkbox" name="allstar" id="allstar" onChange={chkSearch} className="chkhdn" />
                       <span className="chk"></span>
                       척테일러올스타
                     </label>
                   </li>
                   <li>
-                    <label htmlFor="optIcon2" className="chk-box">
-                      <input type="checkbox" name="optIcon2" id="optIcon2" />
+                    <label htmlFor="chuk70" className="chk-box">
+                      <input type="checkbox" name="chuk70" id="chuk70" onChange={chkSearch} className="chkhdn" />
                       <span className="chk"></span>척 70
                     </label>
                   </li>
                   <li>
-                    <label htmlFor="optIcon3" className="chk-box">
-                      <input type="checkbox" name="optIcon3" id="optIcon3" />
+                    <label htmlFor="run" className="chk-box">
+                      <input type="checkbox" name="run" id="run" onChange={chkSearch} className="chkhdn" />
                       <span className="chk"></span>
                       런스타
                     </label>
                   </li>
                   <li>
-                    <label htmlFor="optIcon4" className="chk-box">
-                      <input type="checkbox" name="optIcon4" id="optIcon4" />
+                    <label htmlFor="one" className="chk-box">
+                      <input type="checkbox" name="one" id="one" onChange={chkSearch} className="chkhdn" />
                       <span className="chk"></span>
                       원스타
                     </label>
