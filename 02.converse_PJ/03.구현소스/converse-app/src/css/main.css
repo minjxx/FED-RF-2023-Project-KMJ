@@ -394,15 +394,6 @@
 .img-sec {
   position: relative;
 }
-/* .img-sec .cart-box {
-  opacity: 0;
-  visibility: hidden;
-}
-.img-sec:hover .cart-box {
-  opacity: 1;
-  visibility: visible;
-  transition: all .3s;
-}  */
 .img-sec .ico {
   position: absolute;
   right: 20px;
@@ -728,6 +719,18 @@
   }
   .main-brand .brand-info dd {
     font-size: 1.5rem;
+  }
+  .img-sec .ico {
+    right: 15px;
+    bottom: 15px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .img-sec .ico img {
+    width: 20px;
   }
 }
 

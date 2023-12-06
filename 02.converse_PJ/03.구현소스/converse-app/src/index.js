@@ -9,8 +9,7 @@ import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import { Main } from "./components/pages/Main";
 import { Event } from "./components/pages/Event";
-import { Sale } from "./components/pages/Sale";
-import { ItemList } from "./components/modules/ItemList";
+import { ItemList } from "./components/pages/ItemList";
 
 export default function App() {
   return (
