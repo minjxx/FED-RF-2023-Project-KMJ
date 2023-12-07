@@ -88,10 +88,10 @@ export function TopArea() {
               <input type="text" className="top-input-box" placeholder="Search" style={myCon.mode ? { backgroundColor: "" } : { backgroundColor: "var(--gray-color)" }} />
               <button className="search-icon">검색</button>
             </div>
-            <a href="#" className="user"></a>
-            <a href="#" className="cart">
+            <Link to="/login" className="user"></Link>
+            <Link to="" className="cart">
               <span className="cart-cnt">0</span>
-            </a>
+            </Link>
           </div>
           {/* 모바일용 햄버거 버튼 */}
           <div className="hambtn">
@@ -103,10 +103,10 @@ export function TopArea() {
             <div className="layerBg"></div>
             <div className="menu-box">
               <div className="mo-icon log-icon">
-                <a href="#" className="user"></a>
-                <a href="#" className="cart">
+                <Link to="/member" className="user"></Link>
+                <Link to="" className="cart">
                   <span className="cart-cnt">0</span>
-                </a>
+                </Link>
               </div>
               <div className="menu-inner">
                 <div className="schBox">

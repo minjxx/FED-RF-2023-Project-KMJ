@@ -1,0 +1,80 @@
+.login-sec {
+  max-width: 350px;
+  min-height: 450px;
+  margin: 90px auto 0;
+}
+.login-sec h2 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.login-sec .input-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.login-sec .input-box input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.login-sec .input-box input::placeholder {
+  color: #999;
+}
+.login-sec .findbtn {
+  text-align: right;
+}
+.login-sec .findbtn a {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  font-size: 1.4rem;
+}
+.login-sec .findbtn a:first-child:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: -8px;
+  width: 1px;
+  height: 12px;
+  background-color: #999;
+}
+.login-sec .loginbtn {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: var(--main-black);
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+  text-align: center;
+}
+.login-sec .loginbtn:hover {
+  opacity: .7;
+}
+.login-sec .joinbtn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid var(--main-black);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--main-black);
+  cursor: pointer;
+  transition: .3s;
+  text-align: center;
+}
+.login-sec .joinbtn:hover {
+  opacity: .6;
+}

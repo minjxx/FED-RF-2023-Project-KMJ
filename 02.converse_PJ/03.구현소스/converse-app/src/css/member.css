@@ -1,0 +1,89 @@
+/* 회원가입 페이지 CSS */
+
+/* 전체박스 */
+.membx{
+    max-width: 640px;
+    margin: 70px auto 0;
+}
+.membx h2{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid var(--main-black);
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.membx li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.membx li:last-child {
+    margin-bottom: 0;
+}
+.membx label{
+    display: inline-block;
+    width: 22%;
+    font-size: 1.7rem;
+    white-space: nowrap;
+}
+.membx .point {
+    margin-left: 5px;
+    font-size: 1.5rem;
+    color: #f00;
+    vertical-align: top;
+}
+.membx .input-box {
+    position: relative;
+    width: 76%;
+    margin-left: 2%;
+}
+.membx .input-box input{
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.membx .input-box input::placeholder {
+    color: #999;
+}
+.membx .msg{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 5px;
+    font-weight: 500;
+}
+.membx .joinbtn {
+    margin-top: 60px;
+    text-align: center;
+}
+.membx .sbtn{
+    width: 180px;
+    padding: 15px 0;
+    background-color: var(--main-black);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.membx .sbtn:hover{
+    opacity: .7;
+}
+/* 로그인하기 버튼 */
+.membx ul li:last-child a{
+    color: #0d6efd;
+    text-decoration: none;
+}
+.membx ul li:last-child a:hover{
+    color: #fd7e14;
+    text-decoration: overline;
+    text-decoration-style: wavy;
+}

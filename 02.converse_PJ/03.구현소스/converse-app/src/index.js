@@ -10,6 +10,8 @@ import { Layout } from "./components/layout/Layout";
 import { Main } from "./components/pages/Main";
 import { Event } from "./components/pages/Event";
 import { ItemList } from "./components/pages/ItemList";
+import { Member } from "./components/pages/Member";
+import { Login } from "./components/pages/Login";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="kids" element={<ItemList cat="kids" />} />
           <Route path="event" element={<Event />} />
           <Route path="sale" element={<ItemList cat="sale" />} />
+          <Route path="login" element={<Login />} />
+          <Route path="member" element={<Member />} />
         </Route>
       </Routes>
     </HashRouter>
