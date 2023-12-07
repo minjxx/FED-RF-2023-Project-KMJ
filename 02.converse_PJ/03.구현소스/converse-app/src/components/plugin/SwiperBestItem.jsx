@@ -9,9 +9,9 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 import { bItemData } from "../data/best_item";
+import { Link } from "react-router-dom";
 
 export function SwiperBestItem() {
-
   const swpr = useRef(null);
 
   return (
@@ -22,8 +22,8 @@ export function SwiperBestItem() {
         best item
       </h2>
       <div className="btn-box">
-        <button type="button" className="item-btn prev-btn" onClick={()=>swpr.current.swiper.slidePrev()}></button>
-        <button type="button" className="item-btn next-btn" onClick={()=>swpr.current.swiper.slideNext()}></button>
+        <button type="button" className="item-btn prev-btn" onClick={() => swpr.current.swiper.slidePrev()}></button>
+        <button type="button" className="item-btn next-btn" onClick={() => swpr.current.swiper.slideNext()}></button>
       </div>
       <Swiper
         ref={swpr}
@@ -45,21 +45,23 @@ export function SwiperBestItem() {
         modules={[Pagination]}
         className="bestSwiper"
       >
-        {bItemData.map((v,i) => (
+        {bItemData.map((v, i) => (
           <SwiperSlide key={i}>
-            <a href="#">
-              <div className="img-wrap">
+            <div className="img-wrap">
+              <Link to="/men">
                 <img src={v.imgSrc} alt="상품사진" />
+              </Link>
+            </div>
+            <div className="prod-info-box">
+              <div className="prod-cate">{v.cateName}</div>
+              <p className="prod-name">
+                <Link to="/men">{v.itemName}</Link>
+              </p>
+              <div className="prod-price">
+                {v.itemPrice}
+                <em className="price-unit">원</em>
               </div>
-              <div className="prod-info-box">
-                <div className="prod-cate">{v.cateName}</div>
-                <p className="prod-name">{v.itemName}</p>
-                <div className="prod-price">
-                  {v.itemPrice}
-                  <em className="price-unit">원</em>
-                </div>
-              </div>
-            </a>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

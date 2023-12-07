@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { nItemData } from "../data/new_item";
 
 export function NewItem() {
@@ -9,27 +10,25 @@ export function NewItem() {
           <ul>
             {nItemData.map((v,i) => (
               <li key={i}>
-                <a href="#">
-                  <div className="img-wrap">
-                    <img src={v.imgSrc} alt="상품사진" />
+                <div className="img-wrap">
+                <Link to="women"><img src={v.imgSrc} alt="상품사진" /></Link>
+                </div>
+                <div className="prod-info-box">
+                  <div className="prod-cate">{v.cateName}</div>
+                  <p className="prod-name"><Link to="women">{v.itemName}</Link></p>
+                  <div className="prod-price">
+                    {v.itemPrice}
+                    <em className="price-unit">원</em>
                   </div>
-                  <div className="prod-info-box">
-                    <div className="prod-cate">{v.cateName}</div>
-                    <p className="prod-name">{v.itemName}</p>
-                    <div className="prod-price">
-                      {v.itemPrice}
-                      <em className="price-unit">원</em>
-                    </div>
-                  </div>
-                </a>
+                </div>
               </li>
             ))}
           </ul>
         </div>
         <div className="bottom-btn">
-          <a href="#" className="morebtn">
+          <Link to="/men" className="morebtn">
             view more
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -9,6 +9,7 @@ import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import 'swiper/css/effect-fade';
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 export function SwiperVisual() {
   return (
@@ -36,9 +37,9 @@ export function SwiperVisual() {
             <div className="shoes-img">
               <img src="./images/main/shoe01.png" alt="올스타" />
             </div>
-            <a href="" className="morebtn">
+            <Link to="/men" className="morebtn">
               Shop now
-            </a>
+            </Link>
         </SwiperSlide>
         <SwiperSlide className="pf">
         <span className="bg-circle"></span>
@@ -49,9 +50,9 @@ export function SwiperVisual() {
             <div className="shoes-img">
               <img src="./images/main/shoe02.png" alt="런스타" />
             </div>
-            <a href="" className="morebtn">
+            <Link to="/women" className="morebtn">
               Shop now
-            </a>
+            </Link>
         </SwiperSlide>
       </Swiper>
     </>

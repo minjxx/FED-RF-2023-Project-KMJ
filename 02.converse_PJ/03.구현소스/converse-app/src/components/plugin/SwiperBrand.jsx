@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 import { brandData } from "../data/brand_display";
+import { Link } from "react-router-dom";
 
 export function SwiperBrand() {
   const swpr = useRef(null);
@@ -36,7 +37,7 @@ export function SwiperBrand() {
       >
         {brandData.map((v, i) => (
           <SwiperSlide key={i}>
-            <a href={v.link} className="info-link"></a>
+            <Link to={v.link} className="info-link"></Link>
             <figure className="imgSet">
               <img src={v.imgSrc} alt="converse" />
             </figure>
