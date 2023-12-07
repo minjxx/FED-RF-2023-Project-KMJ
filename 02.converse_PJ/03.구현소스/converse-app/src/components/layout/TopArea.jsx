@@ -33,13 +33,18 @@ export function TopArea() {
       $(this).removeClass("on");
     });
 
+    // 모바일
     $(".hambtn").click(function(){
       $(this).toggleClass("on");
-      $(this).siblings(".mo-menu").toggleClass("on");
+      $(".mo-menu").toggleClass("on");
     });
     $(".menu-list").click(function(){
-      $(this).parents(".mo-menu").toggleClass("on");
-      $(this).parents(".mo-menu").siblings(".hambtn").toggleClass("on");
+      $(".mo-menu").toggleClass("on");
+      $(".hambtn").toggleClass("on");
+    });
+    $(".mo-icon a").click(function(){
+      $(".mo-menu").toggleClass("on");
+      $(".hambtn").toggleClass("on");
     });
 
   }, []);
@@ -103,7 +108,7 @@ export function TopArea() {
             <div className="layerBg"></div>
             <div className="menu-box">
               <div className="mo-icon log-icon">
-                <Link to="/member" className="user"></Link>
+                <Link to="/login" className="user"></Link>
                 <Link to="" className="cart">
                   <span className="cart-cnt">0</span>
                 </Link>
