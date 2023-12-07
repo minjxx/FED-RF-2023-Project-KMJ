@@ -7,6 +7,7 @@ import { allData } from "../data/all_data";
 // 제이쿼리 불러오기
 import $ from "jquery";
 import { CartList } from "../modules/CartList";
+import { Link } from "react-router-dom";
 
 
 export function ItemList({ cat }) {
@@ -37,7 +38,7 @@ export function ItemList({ cat }) {
     // 기존 입력 데이터 가져오기
     // sortData의 첫번째 배열값
     let temp = sortData[0];
-    // console.log(temp);
+    // console.log("temp",temp);
 
     // 결과집합배열변수 : 최종결과배열
     let lastList = [];
@@ -177,7 +178,8 @@ export function ItemList({ cat }) {
                   <li>
                     <label htmlFor="chuk70" className="chk-box">
                       <input type="checkbox" name="chuk70" id="chuk70" onChange={chkSearch} className="chkhdn" />
-                      <span className="chk"></span>척 70
+                      <span className="chk"></span>
+                      척70
                     </label>
                   </li>
                   <li>
@@ -207,7 +209,7 @@ export function ItemList({ cat }) {
         {/* content-inner 끝 */}
       </section>
       {/* 장바구니 */}
-      <CartList />
+      {/* <CartList /> */}
     </>
   );
 }
@@ -229,13 +231,13 @@ function MakeList({data}){
     <li key={i}>
         <div className="img-sec">
           <div className="img-wrap">
-            <a href=""><img src={v.imgSrc} alt="상품사진" /></a>
+            <Link to=""><img src={v.imgSrc} alt="상품사진" /></Link>
           </div>
           <span className="ico" onClick={useCart}><img src="./images/common/icon_cart.png" alt="장바구니" /></span>
         </div>
         <div className="prod-info-box">
           <div className="prod-cate">{v.cateName}</div>
-          <p className="prod-name"><a href="">{v.itemName}</a></p>
+          <p className="prod-name"><Link to="">{v.itemName}</Link></p>
           {
             // 데이터에 salePrice 있으면 할인율 나오고 없으면 안나오게
             v.salePrice ? (
