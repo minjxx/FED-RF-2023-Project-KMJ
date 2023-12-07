@@ -5,7 +5,8 @@ import { faFilter } from "@fortawesome/free-solid-svg-icons";
 // 상품 리스트 데이터 불러오기
 import { allData } from "../data/all_data";
 // 제이쿼리 불러오기
-import $, { now } from "jquery";
+import $ from "jquery";
+import { CartList } from "../modules/CartList";
 
 
 export function ItemList({ cat }) {
@@ -185,6 +186,8 @@ export function ItemList({ cat }) {
         </div>
         {/* content-inner 끝 */}
       </section>
+      {/* 장바구니 */}
+      <CartList />
     </>
   );
 }
@@ -197,6 +200,10 @@ function MakeList({data}){
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  const useCart = (e) => {
+
+  }; ////////////// sortList 함수 //////////
+
   // console.log(data);
   return data.map((v, i) => (
     <li key={i}>
@@ -204,7 +211,7 @@ function MakeList({data}){
           <div className="img-wrap">
             <a href=""><img src={v.imgSrc} alt="상품사진" /></a>
           </div>
-          <span className="ico"><img src="./images/common/icon_cart.png" alt="장바구니" /></span>
+          <span className="ico" onClick={useCart}><img src="./images/common/icon_cart.png" alt="장바구니" /></span>
         </div>
         <div className="prod-info-box">
           <div className="prod-cate">{v.cateName}</div>
