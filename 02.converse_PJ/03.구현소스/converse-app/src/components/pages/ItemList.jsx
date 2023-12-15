@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
@@ -9,14 +9,21 @@ import $ from "jquery";
 import { CartList } from "../modules/CartList";
 import { Link } from "react-router-dom";
 
-export function ItemList({ cat }) {
-  // console.log(cat);
 
+let copyData = {
+  'men':Array.from(allData['men']),
+  'women':Array.from(allData['women']),
+  'kids':Array.from(allData['kids']),
+  'sale':Array.from(allData['sale']),
+};
+
+export function ItemList({ cat }) {
   // 현재 컴포넌트 새로운 카테고리 상태여부를 위한 참조변수
   const chkSts = useRef(cat); // 이전카테고리를 항상 기억함
 
-  const [selData, setSelData] = useState(allData[cat]);
-  // console.log('데이터',selData);
+  const [selData, setSelData] = useState(copyData[cat]);
+  console.log('데이터카피본:',copyData);
+  console.log('데이터선택본',selData);
 
   // 데이터 구성 상태변수 : [배열데이터,정렬상태]
   // 정렬상태값:0 -오름차순, 1- 내림차순, 2- 정렬전
