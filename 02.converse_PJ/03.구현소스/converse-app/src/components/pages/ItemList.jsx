@@ -10,24 +10,22 @@ import { CartList } from "../modules/CartList";
 import { Link } from "react-router-dom";
 
 
-let copyData = {
-  'men':Array.from(allData['men']),
-  'women':Array.from(allData['women']),
-  'kids':Array.from(allData['kids']),
-  'sale':Array.from(allData['sale']),
-};
-
 export function ItemList({ cat }) {
   // 현재 컴포넌트 새로운 카테고리 상태여부를 위한 참조변수
   const chkSts = useRef(cat); // 이전카테고리를 항상 기억함
+  const newSts = useRef(0);
 
-  const [selData, setSelData] = useState(copyData[cat]);
-  console.log('데이터카피본:',copyData);
-  console.log('데이터선택본',selData);
+  const [selData, setSelData] = useState(allData[cat]);
 
   // 데이터 구성 상태변수 : [배열데이터,정렬상태]
   // 정렬상태값:0 -오름차순, 1- 내림차순, 2- 정렬전
   const [sortData, setSortData] = useState([selData, 2]);
+
+  useEffect(()=>{
+    console.log('갱신!!!!!!');
+    setSortData([allData[cat],2])
+  },[selData]);
+
 
   //////////////////////////////
   // 체크박스 검색함수 //////////
@@ -42,7 +40,7 @@ export function ItemList({ cat }) {
 
     // 기존 입력 데이터 가져오기
     // sortData의 첫번째 배열값
-    let temp = sortData[0];
+    let temp = selData[0];
     // console.log("temp",temp);
 
     // 결과집합배열변수 : 최종결과배열
@@ -50,11 +48,12 @@ export function ItemList({ cat }) {
 
     // 체크박스 체크개수 세기 : 1개 초과시 배열합치기!
     let num = $(".chkhdn:checked").length;
-    // console.log('체크개수:',num);
+    console.log('체크개수:',num);
 
     if (chked) {
+      const tempData = selData.map(v=>v);
       // 현재데이터 변수에 담기
-      const nowList = selData.filter((v) => {
+      const nowList = tempData.filter((v) => {
         if (v.alignment == cid) return true;
       }); ///////// filter /////////////////
 
@@ -89,8 +88,9 @@ export function ItemList({ cat }) {
     const optVal = e.target.value;
     console.log("선택옵션:", optVal);
 
-    // 재정렬할 데이터를 가져온다
-    let temp = selData; //sortData[0];
+    // 재정렬할 데이터를 가져온다 
+    // (->map() 으로 기존 배열을 새로 만들어서 연.결성을 끊어준다!)
+    let temp = selData.map(v=>v); //sortData[0];
     console.log("임시데이터", temp);
 
     temp.sort((a, b) => {
