@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 export function ItemList({ cat }) {
   // 현재 컴포넌트 새로운 카테고리 상태여부를 위한 참조변수
   const chkSts = useRef(cat); // 이전카테고리를 항상 기억함
-  const newSts = useRef(0);
+  // const newSts = useRef(0);
 
   const [selData, setSelData] = useState(allData[cat]);
 
@@ -21,10 +21,10 @@ export function ItemList({ cat }) {
   // 정렬상태값:0 -오름차순, 1- 내림차순, 2- 정렬전
   const [sortData, setSortData] = useState([selData, 2]);
 
-  useEffect(()=>{
+  /* useEffect(()=>{
     console.log('갱신!!!!!!');
     setSortData([allData[cat],2])
-  },[selData]);
+  },[selData]); */
 
 
   //////////////////////////////
