@@ -65,6 +65,11 @@ export function ItemList({ cat }) {
       console.log("추가구역:", transData.current);
     } /////////// if /////////
 
+    else if(num == 0) {
+      setSelData(selData);
+      console.log('체크한게 0개일때 상품 12개 모두 나와야함:',selData);
+    }
+
     // (2) 체크박스가 false일때 데이터 지우기
     // -> 참조변수에 있는 데이터를 기준으로 데이터를 삭제함!
     else {
@@ -101,7 +106,7 @@ export function ItemList({ cat }) {
     } /////////// else ///////////
 
     // 6. 검색결과 리스트 업데이트 하기
-    setSelData(transData.current);
+    // setSelData(transData.current);
     // 위의 분기문에서 만들어진 참조변수 데이터를
     // 최종 업데이트함!
     // 리스트가 리랜더링됨!!!
