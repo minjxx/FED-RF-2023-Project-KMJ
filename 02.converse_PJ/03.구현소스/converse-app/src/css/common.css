@@ -501,6 +501,9 @@ html {
     .header .header-wrap .pc-nav {
         margin-left: 0;
     }
+    .header .header-wrap .pc-nav .menu-list-wrap .menu-list > a {
+        padding: 0 25px;
+    }
 }
 @media screen and (max-width: 1080px) {
     .header .header-wrap {

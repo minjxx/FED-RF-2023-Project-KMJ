@@ -47,6 +47,16 @@ export function TopArea() {
       $(".hambtn").toggleClass("on");
     });
 
+    // 창크기 변화 감지
+    $( window ).resize(function() {
+      let windowWidth = $( window ).width();
+      // console.log(windowWidth);
+      if(windowWidth < 1080) {
+        $(".mo-menu").removeClass("on");
+        $(".hambtn").removeClass("on");
+      }
+    });
+
   }, []);
 
   return (
