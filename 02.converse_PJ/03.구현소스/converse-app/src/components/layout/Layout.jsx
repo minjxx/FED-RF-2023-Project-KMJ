@@ -9,6 +9,7 @@ export function Layout(){
   const [mode,setMode] = useState(0);
   const chgMode = v => setMode(v);
 
+  // 랜더링 후(화면보이기전) 실행구역 //////////
   useLayoutEffect(()=>{
     window.scrollTo(0,0);
   })

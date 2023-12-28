@@ -1,14 +1,18 @@
-// DC PJ 회원가입 페이지 컴포넌트
+// 컨버스 PJ 회원가입 페이지 컴포넌트
 
 // 회원가입 CSS 불러오기
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/member.css";
-import { useId, useState } from "react";
+import { useContext, useId, useState } from "react";
 
 // 로컬스토리지 생성 JS
 import { clearData, initData } from "../func/mem_fn";
+import { cvCon } from "../modules/cvContext";
 
 export function Member() {
+  // 컨텍스트 API 사용하기
+  const myCon = useContext(cvCon);
+
   // [ 회원가입 페이지 요구사항 ]
   // -> 각 입력항목별로 유효성검사를 실행함
   // -> 특이사항: 글자를 입력할때 마다 검사
@@ -219,8 +223,15 @@ export function Member() {
       // 5. 로컬스에 반영하기
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
-      // 6. 로그인 페이지로 이동(라우터이동) - 보류!
-      document.querySelector(".sbtn").innerText = "가입완료";
+      // 6. 알럿 띄우기
+      // document.querySelector(".sbtn").innerText = "가입완료";
+      alert("가입완료");
+
+      // 7. 페이지 이동 : 로그인페이지로!
+      setTimeout(()=>
+        myCon.chgPage('login',{})
+      ,1000);
+
     } ///////// if ////////
     // 3. 불통과시
     else {
