@@ -71,11 +71,7 @@ export function TopArea() {
               {gnbMenu.map((v, i) => (
                 <li className="menu-list" key={i}>
                   {
-                    // 하위메뉴가 있으면 일반 a요소에 출력
-                    // 없으면 Link 라우팅 출력
                     <Link to={v.link}>{v.txt}</Link>
-                    // v.sub ? (<a href="#">{v.txt}</a>) : (<Link to={v.link}>{v.txt}</Link>)
-                    // <a href={v.link}>{v.txt}</a>
                   }
                   {
                     // 서브메뉴 데이터가 있으면 하위 그리기

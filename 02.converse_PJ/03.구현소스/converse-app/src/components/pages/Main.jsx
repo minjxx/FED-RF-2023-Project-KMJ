@@ -15,10 +15,10 @@ import { useContext, useEffect, useLayoutEffect } from "react";
 export function Main() {
   const myCon = useContext(cvCon);
 
+  // 탑영역 메인,서브 구분하기위해 넣음
   useLayoutEffect(() => {
     myCon.chgMode(1);
   }, []);
-
   useEffect(() => {
     return () => {
       myCon.chgMode(0);
