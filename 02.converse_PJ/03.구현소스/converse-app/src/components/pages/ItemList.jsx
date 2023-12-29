@@ -61,14 +61,14 @@ export function ItemList({ cat }) {
       // 체크개수가 1초과일때 배열합치기
       if (num > 1) {
         lastList = [...temp, ...selList];
-        console.log('selData',temp);
-        console.log('selList 현재선택',selList,cid);
-        console.log('lastList 하나이상 이전전택',lastList);
+        // console.log('selData',temp);
+        // console.log('selList 현재선택',selList,cid);
+        // console.log('lastList 하나이상 이전전택',lastList);
       } //// if /////
       else {
         // 하나일때
         lastList = selList;
-        console.log('lastList 하나일때',lastList);
+        // console.log('lastList 하나일때',lastList);
       }
     } /////////// if /////////
 
@@ -83,11 +83,8 @@ export function ItemList({ cat }) {
     } /////////// else ///////////
 
     // 6. 검색결과 리스트 업데이트 하기
-    console.log('lastList 최종',lastList);
+    // console.log('lastList 최종',lastList);
     setSelData(lastList);
-    // 위의 분기문에서 만들어진 참조변수 데이터를
-    // 최종 업데이트함!
-    // 리스트가 리랜더링됨!!!
 
   }; ////////////// changeList 함수 ///////////
 
@@ -141,6 +138,7 @@ export function ItemList({ cat }) {
       console.log("새카테고리시작!");
       $("#sel").val("2");
       $(".chkbx").prop("checked", false);
+      transData.current = allData[cat];
       setSelData(allData[cat]);
     }
 
