@@ -109,14 +109,14 @@ export const allData = {
       imgSrc: "./images/sub/men/img_16.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 코스믹 터틀",
-      itemPrice: "76,000",
+      itemPrice: "76000",
       alignment: "allstar",
     },
     {
       imgSrc: "./images/sub/men/img_17.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 타우니 아울",
-      itemPrice: "76,000",
+      itemPrice: "76000",
       alignment: "allstar",
     },
     {

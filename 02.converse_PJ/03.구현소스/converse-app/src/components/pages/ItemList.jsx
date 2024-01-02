@@ -220,6 +220,10 @@ export function ItemList({ cat }) {
           </div>
           {/* col-4 끝 */}
         </div>
+
+        <div className="pagination">
+          페이지 나오는곳!!!
+        </div>
         {/* content-inner 끝 */}
       </section>
       {/* 장바구니 */}
