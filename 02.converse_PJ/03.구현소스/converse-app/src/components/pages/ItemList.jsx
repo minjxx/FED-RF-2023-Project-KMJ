@@ -97,20 +97,28 @@ export function ItemList({ cat }) {
   const sortList = (e) => {
     // 0 - 오름차순, 1- 내림차순
     const optVal = e.target.value;
-    // console.log("선택옵션:", optVal);
+    console.log("선택옵션:", optVal);
 
     // 재정렬할 데이터를 가져온다 
     // (->map() 으로 기존 배열을 새로 만들어서 연.결성을 끊어준다!)
     let temp = selData.map(v=>v); //sortData[0];
     // console.log("임시데이터", temp);
 
+    // 신상품순
+    if(optVal == 0) {
+      return setSelData(transData.current);
+    }
     temp.sort((a, b) => {
+      // 낮은가격순
       if (optVal == 1) {
-        return Number(a.itemPrice) == Number(b.itemPrice) ? 0 : Number(a.itemPrice) > Number(b.itemPrice) ? -1 : 1;
-      } else if (optVal == 0) {
         return Number(a.itemPrice) == Number(b.itemPrice) ? 0 : Number(a.itemPrice) > Number(b.itemPrice) ? 1 : -1;
       }
+      // 높은가격순
+      else if (optVal == 2) {
+        return Number(a.itemPrice) == Number(b.itemPrice) ? 0 : Number(a.itemPrice) > Number(b.itemPrice) ? -1 : 1;
+      }
     });
+    
     // 데이터 정렬후 정렬변경 반영하기
     setSelData(temp);
     setSortData([temp, Number(optVal)]);
@@ -135,7 +143,7 @@ export function ItemList({ cat }) {
     // 참조변수 업데이트전에 들어온 cat과 비교
     if (cat !== chkSts.current) {
       // console.log("새카테고리시작!");
-      $("#sel").val("2");
+      $("#sel").val("0");
       $(".chkbx").prop("checked", false);
       setSelData(allData[cat]);
       transData.current = allData[cat];
@@ -162,9 +170,9 @@ export function ItemList({ cat }) {
           </div>
           {/* 정렬박스 */}
           <select name="sel" id="sel" className="sel" onChange={sortList}>
-            <option value="2">정렬 기준</option>
-            <option value="0">낮은가격순</option>
-            <option value="1">높은가격순</option>
+            <option value="0">신상품순</option>
+            <option value="1">낮은가격순</option>
+            <option value="2">높은가격순</option>
           </select>
         </div>
         {/* sort-box 끝 */}
