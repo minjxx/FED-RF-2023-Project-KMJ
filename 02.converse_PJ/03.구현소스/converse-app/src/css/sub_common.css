@@ -33,6 +33,14 @@
   width: 14px;
   margin-left: 5px;
 }
+.sort-box .item-cnt {
+  margin-left: 20px;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+.sort-box .item-cnt b {
+  font-size: 1.7rem;
+}
 .sort-box select {
   width: auto;
   height: 32px;
@@ -145,6 +153,7 @@
 .item-area.on .item-inner {
   width: 100%;
 }
+
 /* 이벤트 영역 */
 .event-wrap ul {
   display: flex;

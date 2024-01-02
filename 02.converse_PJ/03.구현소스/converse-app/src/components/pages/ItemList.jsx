@@ -24,8 +24,11 @@ export function ItemList({ cat }) {
   const transData = useRef(JSON.parse(JSON.stringify(selData)));
   // -> 깊은복사로 원본데이터와 연결성 없음!!!
   // 주의: 사용시 current 속성을 씀!
-
-  console.log('transData.current:',transData.current,'selData',selData);
+  
+  // 상품 개수
+  let itemCnt = selData.length;
+  console.log(itemCnt);
+  const [cnt, setCnt] = useState(itemCnt);
 
   /******************************************* 
     함수명: changeList
@@ -41,7 +44,7 @@ export function ItemList({ cat }) {
     // console.log("아이디:", cid, chked);
 
     let temp = selData;
-    console.log("temp = 현재카테의 셀데이타", temp);
+    // console.log("temp = 현재카테의 셀데이타", temp);
 
     let lastList = [];
 
@@ -85,11 +88,9 @@ export function ItemList({ cat }) {
     // 6. 검색결과 리스트 업데이트 하기
     // console.log('lastList 최종',lastList);
     setSelData(lastList);
+    setCnt(lastList.length);
 
   }; ////////////// changeList 함수 ///////////
-
-
-
 
 
   //////////////////////////////
@@ -107,9 +108,9 @@ export function ItemList({ cat }) {
 
     temp.sort((a, b) => {
       if (optVal == 1) {
-        return a.itemName == b.itemName ? 0 : a.itemName > b.itemName ? -1 : 1;
+        return Number(a.itemPrice) == Number(b.itemPrice) ? 0 : Number(a.itemPrice) > Number(b.itemPrice) ? -1 : 1;
       } else if (optVal == 0) {
-        return a.itemName == b.itemName ? 0 : a.itemName > b.itemName ? 1 : -1;
+        return Number(a.itemPrice) == Number(b.itemPrice) ? 0 : Number(a.itemPrice) > Number(b.itemPrice) ? 1 : -1;
       }
     });
     // 데이터 정렬후 정렬변경 반영하기
@@ -127,7 +128,7 @@ export function ItemList({ cat }) {
     // 필터 숨기기 버튼 클릭했을때 on 들어오게 하기
     $(".filter-btn").click(function () {
       $(this).toggleClass("on");
-      $(this).parent(".sort-box").siblings(".item-area").toggleClass("on");
+      $(this).parents(".sort-box").siblings(".item-area").toggleClass("on");
     });
   }, []);
 
@@ -140,6 +141,7 @@ export function ItemList({ cat }) {
       $(".chkbx").prop("checked", false);
       transData.current = allData[cat];
       setSelData(allData[cat]);
+      setCnt(allData[cat].length);
     }
 
     // 참조변수 업데이트
@@ -154,15 +156,20 @@ export function ItemList({ cat }) {
           <h2>{cat}</h2>
         </div>
         <div className="sort-box">
-          <button type="button" className="filter-btn">
-            <FontAwesomeIcon icon={faFilter} />
-          </button>
+          <div>
+            <button type="button" className="filter-btn">
+              <FontAwesomeIcon icon={faFilter} />
+            </button>
+            <span className="item-cnt">총 <b>{cnt}</b>개 상품</span>
+          </div>
           {/* 정렬박스 */}
+          <div>
           <select name="sel" id="sel" className="sel" onChange={sortList}>
             <option value="2">정렬 기준</option>
-            <option value="0">오름차순</option>
-            <option value="1">내림차순</option>
+            <option value="0">낮은가격순</option>
+            <option value="1">높은가격순</option>
           </select>
+          </div>
         </div>
         {/* sort-box 끝 */}
         <div className="item-area">
@@ -245,9 +252,10 @@ function MakeList({ data }) {
         {
           // 데이터에 salePrice 있으면 할인율 나오고 없으면 안나오게
           v.salePrice ? (
+            // 세일 O
             <div className="price-box sale">
               <div className="prod-price">
-                {addComma(v.itemPrice)}
+                {addComma(v.salePrice)}
                 <em className="price-unit">원</em>
               </div>
               <div className="sale-box">
@@ -256,12 +264,13 @@ function MakeList({ data }) {
                   <em>%</em>
                 </span>
                 <span className="sale-price">
-                  {addComma(v.salePrice)}
+                  {addComma(v.itemPrice)}
                   <em className="price-unit">원</em>
                 </span>
               </div>
             </div>
           ) : (
+            // 세일 X
             <div className="prod-price">
               {addComma(v.itemPrice)}
               <em className="price-unit">원</em>
