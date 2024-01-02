@@ -97,7 +97,7 @@ export function ItemList({ cat }) {
   const sortList = (e) => {
     // 0 - 오름차순, 1- 내림차순
     const optVal = e.target.value;
-    console.log("선택옵션:", optVal);
+    // console.log("선택옵션:", optVal);
 
     // 재정렬할 데이터를 가져온다 
     // (->map() 으로 기존 배열을 새로 만들어서 연.결성을 끊어준다!)
@@ -125,13 +125,98 @@ export function ItemList({ cat }) {
     // console.log("정렬후", temp, "선택값", optVal);
   }; ////////////// sortList 함수 //////////
 
+
+
+  /********************************  ********************************/
+  // 한 페이지당 갯수
+  const itemsPerPage = 8;
+  // 초기 페이지 번호 셋팅 1로 시작
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // 처음 시작 번호는 1-1 > 0*20 = 0부터 시작 / 2-1*20 = 20번부터 시작
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  // 끝 번호는 1*20= 20까지  / 2*20 = 40까지
+  const endIndex = currentPage * itemsPerPage;
+  // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음
+  //맵돌리는 중
+  const paginatedData = selData.slice(startIndex, endIndex);
+
+  // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
+  const totalPages = Math.ceil(selData.length / itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
+
+  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  const makeItem = () => {
+    let temp = [];
+
+    paginatedData.map((v, i) => {
+      temp[i] = (
+        <li key={i}>
+          <div className="img-sec">
+            <div className="img-wrap">
+              <Link to="">
+                <img src={v.imgSrc} alt="상품사진" />
+              </Link>
+            </div>
+            <span className="ico">
+              <img src="./images/common/icon_cart.png" alt="장바구니" />
+            </span>
+          </div>
+          <div className="prod-info-box">
+            <div className="prod-cate">{v.cateName}</div>
+            <p className="prod-name">
+              <Link to="">{v.itemName}</Link>
+            </p>
+            {
+              // 데이터에 salePrice 있으면 할인율 나오고 없으면 안나오게
+              v.salePrice ? (
+                // 세일 O
+                <div className="price-box sale">
+                  <div className="prod-price">
+                    {addComma(v.salePrice)}
+                    <em className="price-unit">원</em>
+                  </div>
+                  <div className="sale-box">
+                    <span className="per">
+                      {v.percent}
+                      <em>%</em>
+                    </span>
+                    <span className="sale-price">
+                      {addComma(v.itemPrice)}
+                      <em className="price-unit">원</em>
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                // 세일 X
+                <div className="prod-price">
+                  {addComma(v.itemPrice)}
+                  <em className="price-unit">원</em>
+                </div>
+              )
+            }
+          </div>
+        </li>
+      );
+    });
+    return temp;
+  };
+  /********************************  ********************************/
+
   useEffect(() => {
     // 필터 타이틀 클릭했을때 필터 리스트박스 클래스 on넣기
     $(".opt-tit").click(function () {
       $(this).toggleClass("on");
       $(this).siblings(".opt-box").slideToggle("fast");
     });
-
     // 필터 숨기기 버튼 클릭했을때 on 들어오게 하기
     $(".filter-btn").click(function () {
       $(this).toggleClass("on");
@@ -154,7 +239,6 @@ export function ItemList({ cat }) {
     // 참조변수 업데이트
     chkSts.current = cat;
   });
-  
 
   // 리턴코드 /////////////////////
   return (
@@ -218,9 +302,22 @@ export function ItemList({ cat }) {
           </div>
           {/* filter 끝 */}
           <div className="item-inner col-4 mcol-2">
-            <ul>{<MakeList data={selData} />}</ul>
+            <ul>{makeItem()}</ul>
           </div>
           {/* col-4 끝 */}
+        </div>
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+            (pageNumber) => (
+              <span
+                key={pageNumber}
+                className={pageNumber === currentPage ? "active" : ""}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </span>
+            )
+          )}
         </div>
         {/* content-inner 끝 */}
       </section>

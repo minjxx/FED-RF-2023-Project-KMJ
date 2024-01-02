@@ -5,7 +5,7 @@
   padding-top: 80px;
 }
 .comm-title {
-  margin: 50px 0 40px;
+  margin: 50px 0 30px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--main-black);
 }
@@ -230,7 +230,7 @@
 }
 @media screen and (max-width: 680px) {
   .comm-title {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
   .event-wrap ul li {
     width: 47.5%;
@@ -244,9 +244,6 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .comm-title {
-    margin-bottom: 25px;
-  }
   .event-wrap ul li {
     margin-bottom: 35px;
   }
