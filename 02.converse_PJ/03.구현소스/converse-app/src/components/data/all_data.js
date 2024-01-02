@@ -84,6 +84,13 @@ export const allData = {
       itemPrice: "95000",
       alignment: "one",
     },
+    {
+      imgSrc: "./images/sub/men/img_13.jpg",
+      cateName: "척테일러 올스타",
+      itemName: "척테일러 올스타 시즈널 컬러",
+      itemPrice: "75000",
+      alignment: "allstar",
+    },
   ],
   women: [
     {

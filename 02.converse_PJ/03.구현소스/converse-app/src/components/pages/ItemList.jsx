@@ -27,7 +27,6 @@ export function ItemList({ cat }) {
   
   // 상품 개수
   let itemCnt = selData.length;
-  console.log(itemCnt);
   const [cnt, setCnt] = useState(itemCnt);
 
   /******************************************* 
@@ -89,7 +88,6 @@ export function ItemList({ cat }) {
     // console.log('lastList 최종',lastList);
     setSelData(lastList);
     setCnt(lastList.length);
-
   }; ////////////// changeList 함수 ///////////
 
 
@@ -99,12 +97,12 @@ export function ItemList({ cat }) {
   const sortList = (e) => {
     // 0 - 오름차순, 1- 내림차순
     const optVal = e.target.value;
-    console.log("선택옵션:", optVal);
+    // console.log("선택옵션:", optVal);
 
     // 재정렬할 데이터를 가져온다 
     // (->map() 으로 기존 배열을 새로 만들어서 연.결성을 끊어준다!)
     let temp = selData.map(v=>v); //sortData[0];
-    console.log("임시데이터", temp);
+    // console.log("임시데이터", temp);
 
     temp.sort((a, b) => {
       if (optVal == 1) {
@@ -116,7 +114,7 @@ export function ItemList({ cat }) {
     // 데이터 정렬후 정렬변경 반영하기
     setSelData(temp);
     setSortData([temp, Number(optVal)]);
-    console.log("정렬후", temp, "선택값", optVal);
+    // console.log("정렬후", temp, "선택값", optVal);
   }; ////////////// sortList 함수 //////////
 
   useEffect(() => {
@@ -133,14 +131,14 @@ export function ItemList({ cat }) {
   }, []);
 
   useEffect(() => {
-    console.log("실행", cat, chkSts.current);
+    // console.log("실행", cat, chkSts.current);
     // 참조변수 업데이트전에 들어온 cat과 비교
     if (cat !== chkSts.current) {
-      console.log("새카테고리시작!");
+      // console.log("새카테고리시작!");
       $("#sel").val("2");
       $(".chkbx").prop("checked", false);
-      transData.current = allData[cat];
       setSelData(allData[cat]);
+      transData.current = allData[cat];
       setCnt(allData[cat].length);
     }
 
@@ -163,19 +161,17 @@ export function ItemList({ cat }) {
             <span className="item-cnt">총 <b>{cnt}</b>개 상품</span>
           </div>
           {/* 정렬박스 */}
-          <div>
           <select name="sel" id="sel" className="sel" onChange={sortList}>
             <option value="2">정렬 기준</option>
             <option value="0">낮은가격순</option>
             <option value="1">높은가격순</option>
           </select>
-          </div>
         </div>
         {/* sort-box 끝 */}
         <div className="item-area">
-          <div className="filter">
+          <div className="filter-box">
             <div className="filter-list">
-              <p className="opt-tit">아이콘</p>
+              <p className="opt-tit">카테고리</p>
               <div className="opt-box">
                 <ul>
                   <li>
