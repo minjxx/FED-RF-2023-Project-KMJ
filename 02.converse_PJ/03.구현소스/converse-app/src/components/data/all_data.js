@@ -91,6 +91,13 @@ export const allData = {
       itemPrice: "75000",
       alignment: "allstar",
     },
+    {
+      imgSrc: "./images/sub/men/img_14.jpg",
+      cateName: "척70",
+      itemName: "척 70 까치 빈티지 화이트",
+      itemPrice: "105000",
+      alignment: "chuk70",
+    },
   ],
   women: [
     {

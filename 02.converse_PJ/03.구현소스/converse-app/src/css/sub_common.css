@@ -64,8 +64,8 @@
   transition: .3s;
 }
 .item-area .filter-box {
-  width: 266px;
-  margin-right: 34px;
+  width: 220px;
+  margin-right: 35px;
   transition: width .3s;
 }
 .item-area.on .filter-box {
@@ -74,7 +74,7 @@
   overflow: hidden;
 }
 .filter-box .filter-list {
-  width: 266px;
+  width: 220px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -148,7 +148,7 @@
   top: 2px;
 }
 .item-area .item-inner {
-  width: calc(100% - 300px);
+  width: calc(100% - 255px);
   transition: width .3s;
 }
 .item-area.on .item-inner {
