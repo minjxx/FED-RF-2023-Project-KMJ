@@ -12,6 +12,7 @@ import { Event } from "./components/pages/Event";
 import { ItemList } from "./components/pages/ItemList";
 import { Member } from "./components/pages/Member";
 import { Login } from "./components/pages/Login";
+import { Notice } from "./components/pages/Notice";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="kids" element={<ItemList cat="kids" />} />
           <Route path="event" element={<Event />} />
           <Route path="sale" element={<ItemList cat="sale" />} />
+          <Route path="notice" element={<Notice/>} />
           <Route path="login" element={<Login />} />
           <Route path="member" element={<Member />} />
         </Route>
