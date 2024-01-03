@@ -12,7 +12,7 @@ export function FooterArea() {
   useEffect(() => {
     // 탑버튼 ////////////////////////
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 200) {
+      if ($(this).scrollTop() > 150) {
         $(".topBtn").addClass("on");
       } else {
         $(".topBtn").removeClass("on");
