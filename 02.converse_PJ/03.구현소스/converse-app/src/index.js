@@ -18,11 +18,11 @@ import { Notice } from "./components/pages/Notice";
 export default function App() {
   return (
     /* basename속성은 package.json의 "homepage"속성값 읽어옴 */
-    // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    // <BrowserRouter>
+    /* <BrowserRouter basename={process.env.PUBLIC_URL}> */
+    <BrowserRouter>
 
-    /* basename을 안써도 HashRouter는 package.json의 homepage 속성값을 자동으로 연결함 */
-    <HashRouter>
+    {/* basename을 안써도 HashRouter는 package.json의 homepage 속성값을 자동으로 연결함 */}
+    {/* <HashRouter> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
@@ -36,8 +36,8 @@ export default function App() {
           <Route path="member" element={<Member />} />
         </Route>
       </Routes>
-    </HashRouter>
-    // </BrowserRouter>
+    {/* </HashRouter> */}
+    </BrowserRouter>
   );
 } ///////////// App 컴포넌트 ///////////////////
 
