@@ -24,7 +24,7 @@ export default function App() {
     {/* basename을 안써도 HashRouter는 package.json의 homepage 속성값을 자동으로 연결함 */}
     {/* <HashRouter> */}
       <Routes>
-        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="men" element={<ItemList cat="men" />} />
           <Route path="women" element={<ItemList cat="women" />} />

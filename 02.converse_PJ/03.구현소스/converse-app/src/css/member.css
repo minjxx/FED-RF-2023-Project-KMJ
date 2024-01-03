@@ -7,11 +7,20 @@
 }
 .membx h2{
     margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 2px solid var(--main-black);
     text-align: center;
     font-size: 2.8rem;
     font-weight: 500;
+}
+.membx .req {
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--main-black);
+    text-align: right;
+    font-size: 1.4rem;
+    color: #666;
+}
+.membx .req span {
+    color: #ff6262;
 }
 .membx li{
     position: relative;
@@ -30,8 +39,8 @@
 }
 .membx .point {
     margin-left: 5px;
-    font-size: 1.5rem;
-    color: #f00;
+    font-size: 1.4rem;
+    color: #ff6262;
     vertical-align: top;
 }
 .membx .input-box {

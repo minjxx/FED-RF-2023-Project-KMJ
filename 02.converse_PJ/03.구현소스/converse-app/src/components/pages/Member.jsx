@@ -245,6 +245,7 @@ export function Member() {
       {/* 회원가입 모듈코드 */}
       <div className="membx">
         <h2>회원가입</h2>
+        <div className="req"><span>*</span> 필수입력사항</div>
         <form action="process.php" method="post">
           <ul>
             <li>
