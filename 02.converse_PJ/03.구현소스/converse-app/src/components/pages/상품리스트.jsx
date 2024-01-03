@@ -1,4 +1,4 @@
-import { ItemList } from "./ItemList";
+
 import "../css/item_list.css";
 import "../css/sell.css";
 
@@ -18,6 +18,16 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function Shop(props) {
+
+
+  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+
+
   const myCon = useContext(sCon);
   let cat = myCon.pgName;
 
@@ -100,6 +110,7 @@ export function Shop(props) {
   ////////////////////////
   const chkSearch = (e) => {
     setCurrentPage(1);
+  
 
     const cid = e.target.id;
 
@@ -126,38 +137,39 @@ export function Shop(props) {
 
       // 체크개수가 1초과일때 배열합치기
       if (num > 1) {
+   
         // 스프레드 연산자(...)사용!
         // ** lastList가 계속 업데이트가 안돼서 paginatedList 이게 계속 전에 선택한 내용이 들어가길래.. 넣었더니 합쳐진다..........
         lastList = [...lastLastList, ...selList];
-        console.log("selList 현재선택", selList, cid);
-        console.log("lastList 하나이상 이전전택", lastList);
-        console.log("lastLastList", lastLastList);
+        // console.log("selList 현재선택", selList, cid);
+        // console.log("lastList 하나이상 이전전택", lastList);
+        // console.log("lastLastList", lastLastList);
       } //// if /////
       else if (num === 1) {
         // 하나일때
         lastList = selList;
-        console.log("selList 하나", lastList, cid);
+        // console.log("selList 하나", lastList, cid);
       }
     } else {
       // ㅠ... 이해해보기**
       lastList = lastLastList.filter((v) => v.category !== cid);
-      console.log("체크해제배열", lastList, lastLastList, cid);
+      // console.log("체크해제배열", lastList, lastLastList, cid);
 
       if (num < 1) {
         lastList = temp;
       }
 
-      console.log("다해제된상태 temp넣기", lastList);
+      // console.log("다해제된상태 temp넣기", lastList);
     } /// else ////
 
     //왜 전 선택 배열이 들어있는지 모르겟네
     setLastLastList(lastList);
-    console.log("setPaginatedList(lastList) / paginatedList", setLastLastList);
+    // console.log("setPaginatedList(lastList) / paginatedList", setLastLastList);
     setCnt(lastList.length);
 
     //맵돌리는 배열 > 슬라이스 배열도 여기로 담음
     setSelDataList(lastList);
-    console.log("lastList 최종", lastList);
+    // console.log("lastList 최종", lastList);
   }; // chkSearch 체크박스검색 함수 ////
 
 
@@ -176,7 +188,7 @@ export function Shop(props) {
  
  
 
-
+ 
 
   //////////////////////
   // 리스트 정렬 함수 ///
@@ -184,22 +196,21 @@ export function Shop(props) {
  const sortList = (e) => {
   setSortData(e);
   const temp = [...selDataList];
-  const otemp = [...selDataList];
 
-console.log(temp)
+  console.log(temp)
 
   temp.sort((a, b) => {
     if (e === 0) {
-      console.log('인기순', temp);
-      return otemp; 
+      // console.log('인기순');
+      return Number(a.idx) === Number(b.idx) ? 0 : Number(a.idx) > Number(b.idx) ? 1 : -1;
     } else if (e === 1) {
-      console.log('추천리뷰순', temp);
+      // console.log('추천리뷰순');
       return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
     } else if (e === 2) {
-      console.log('낮은가격순', temp);
+      // console.log('낮은가격순');
       return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
     } else if (e === 3) {
-      console.log('높은가격순', temp);
+      // console.log('높은가격순');
       return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
     }
   });
@@ -277,7 +288,11 @@ console.log(temp)
             <div className="shop__item__content">
               <span className="shop__item__content-name"> {v.name} </span>
               <span className="shop__item__content-cont">{v.cont}</span>
-              <span className="shop__item__content-price"> {v.price} </span>
+              <div className="shop__item__content-price"> 
+             <span> {addComma(v.price)} </span>
+                원
+              </div>
+            
 
               <span className="shop__item__content-review">
                 리뷰 {v.review}
@@ -326,9 +341,7 @@ console.log(temp)
             <div className="pagination">
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                 (pageNumber) => (
-                  <span
-                    key={pageNumber}
-                    className={pageNumber === currentPage ? "active" : ""}
+                  <span key={pageNumber} className={pageNumber === currentPage ? "active" : ""}
                     onClick={() => handlePageChange(pageNumber)}
                   >
                     {pageNumber}

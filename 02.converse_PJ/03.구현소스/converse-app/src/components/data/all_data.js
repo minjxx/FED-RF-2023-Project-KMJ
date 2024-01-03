@@ -1,6 +1,7 @@
 export const allData = {
   men: [
     {
+      idx:1,
       imgSrc: "./images/sub/men/img_01.jpg",
       cateName: "척70",
       itemName: "척 70 빈티지 캔버스 울프그레이",
@@ -8,6 +9,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:2,
       imgSrc: "./images/sub/men/img_02.jpg",
       cateName: "척70",
       itemName: "척 70 빈티지 캔버스 러쉬블루",
@@ -15,6 +17,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:3,
       imgSrc: "./images/sub/men/img_03.jpg",
       cateName: "척70",
       itemName: "척 70 뮬 파운데이션 블랙",
@@ -22,6 +25,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:4,
       imgSrc: "./images/sub/men/img_04.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 데인티 뮬 블랙",
@@ -29,6 +33,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:5,
       imgSrc: "./images/sub/men/img_05.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 클래식 레더 화이트",
@@ -36,6 +41,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:6,
       imgSrc: "./images/sub/men/img_06.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 팬텀 바이올렛",
@@ -43,6 +49,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:7,
       imgSrc: "./images/sub/men/img_07.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 블랙",
@@ -50,6 +57,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:8,
       imgSrc: "./images/sub/men/img_08.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 러기드 블랙",
@@ -57,6 +65,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:9,
       imgSrc: "./images/sub/men/img_09.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 데님 미드나잇 네이비",
@@ -64,6 +73,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:10,
       imgSrc: "./images/sub/men/img_10.jpg",
       cateName: "런스타",
       itemName: "런스타 하이크 블랙",
@@ -71,6 +81,7 @@ export const allData = {
       alignment: "run",
     },
     {
+      idx:11,
       imgSrc: "./images/sub/men/img_11.jpg",
       cateName: "런스타",
       itemName: "런스타 레거시 CX 서밋 세이지",
@@ -78,6 +89,7 @@ export const allData = {
       alignment: "run",
     },
     {
+      idx:12,
       imgSrc: "./images/sub/men/img_12.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 스웨이드 에그렛",
@@ -85,6 +97,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:13,
       imgSrc: "./images/sub/men/img_13.jpg",
       cateName: "척테일러 올스타",
       itemName: "척테일러 올스타 시즈널 컬러",
@@ -92,6 +105,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:14,
       imgSrc: "./images/sub/men/img_14.jpg",
       cateName: "척70",
       itemName: "척 70 까치 빈티지 화이트",
@@ -99,6 +113,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:15,
       imgSrc: "./images/sub/men/img_15.jpg",
       cateName: "척70",
       itemName: "척 70 시즈널 컬러 나이스 블루",
@@ -106,6 +121,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:16,
       imgSrc: "./images/sub/men/img_16.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 코스믹 터틀",
@@ -113,6 +129,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:17,
       imgSrc: "./images/sub/men/img_17.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 타우니 아울",
@@ -120,6 +137,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:18,
       imgSrc: "./images/sub/men/img_18.jpg",
       cateName: "척70",
       itemName: "척 70 빈티지 애슬레틱 비치 스톤",
@@ -127,6 +145,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:19,
       imgSrc: "./images/sub/men/img_19.jpg",
       cateName: "척70",
       itemName: "척 70 레더 블랙",
@@ -134,6 +153,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:20,
       imgSrc: "./images/sub/men/img_20.jpg",
       cateName: "원스타",
       itemName: "콘스 원스타 프로 나이트 퍼플",
@@ -143,6 +163,7 @@ export const allData = {
   ],
   women: [
     {
+      idx:1,
       imgSrc: "./images/sub/women/img_01.jpg",
       cateName: "척70",
       itemName: "컨버스 X 꼼데 가르송 플레이 척 70 스틸그레이",
@@ -150,6 +171,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:2,
       imgSrc: "./images/sub/women/img_02.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 쇼어라인 화이트",
@@ -157,6 +179,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:3,
       imgSrc: "./images/sub/women/img_03.jpg",
       cateName: "척70",
       itemName: "척 70 비치 참스 타이드풀 그레이",
@@ -164,6 +187,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:4,
       imgSrc: "./images/sub/women/img_04.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 클래식 레더 화이트",
@@ -171,6 +195,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:5,
       imgSrc: "./images/sub/women/img_05.jpg",
       cateName: "척테일러올스타",
       itemName: "척 테일러 올스타 피치 빔",
@@ -178,6 +203,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:6,
       imgSrc: "./images/sub/women/img_06.jpg",
       cateName: "척70",
       itemName: "척 70 시즈널 컬러 코쿤 블루",
@@ -185,6 +211,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:7,
       imgSrc: "./images/sub/women/img_07.jpg",
       cateName: "런스타",
       itemName: "런스타 레거시 CX 플랫폼 모노 블랙",
@@ -192,6 +219,7 @@ export const allData = {
       alignment: "run",
     },
     {
+      idx:8,
       imgSrc: "./images/sub/women/img_08.jpg",
       cateName: "런스타",
       itemName: "런스타 레거시 CX 인챈티드 가든 핑크 세이지",
@@ -199,6 +227,7 @@ export const allData = {
       alignment: "run",
     },
     {
+      idx:9,
       imgSrc: "./images/sub/women/img_09.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 스웨이드 울프 그레이",
@@ -206,6 +235,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:10,
       imgSrc: "./images/sub/women/img_10.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 오트밀크",
@@ -213,6 +243,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:11,
       imgSrc: "./images/sub/women/img_11.jpg",
       cateName: "원스타",
       itemName: "컨버스 X 어웨이크 뉴욕 원스타 프로",
@@ -220,6 +251,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:12,
       imgSrc: "./images/sub/women/img_12.jpg",
       cateName: "척70",
       itemName: "척 70 레더 후무스",
@@ -227,6 +259,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:13,
       imgSrc: "./images/sub/women/img_13.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 무브 플랫폼 스파클 화이트",
@@ -234,6 +267,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:14,
       imgSrc: "./images/sub/women/img_14.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 리프트 플랫폼 플라워 엠브로이더리 도넛 글레이즈",
@@ -241,6 +275,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:15,
       imgSrc: "./images/sub/women/img_15.jpg",
       cateName: "척70",
       itemName: "척 70 레더 문배스",
@@ -248,6 +283,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:16,
       imgSrc: "./images/sub/women/img_16.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 크루즈 로케이션 그래픽 다크 모스",
@@ -257,6 +293,7 @@ export const allData = {
   ],
   kids: [
     {
+      idx:1,
       imgSrc: "./images/sub/kids/img_01.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 테디 베어 노마드",
@@ -264,6 +301,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:2,
       imgSrc: "./images/sub/kids/img_02.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 카 블랙",
@@ -271,6 +309,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:3,
       imgSrc: "./images/sub/kids/img_03.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 두들스 화이트",
@@ -278,6 +317,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:4,
       imgSrc: "./images/sub/kids/img_04.jpg",
       cateName: "척70",
       itemName: "척70 이지 온 레더 빈티지 화이트",
@@ -285,6 +325,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:5,
       imgSrc: "./images/sub/kids/img_05.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 버크셔 부츠 옵시디언",
@@ -292,6 +333,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:6,
       imgSrc: "./images/sub/kids/img_06.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 웁스 핑크",
@@ -299,6 +341,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:7,
       imgSrc: "./images/sub/kids/img_07.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 레더 에그렛",
@@ -306,6 +349,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:8,
       imgSrc: "./images/sub/kids/img_08.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 레오파드 드리프트우드",
@@ -313,6 +357,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:9,
       imgSrc: "./images/sub/kids/img_09.jpg",
       cateName: "척70",
       itemName: "척70 이지 온 언차티드 워터스",
@@ -320,6 +365,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:10,
       imgSrc: "./images/sub/kids/img_10.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 레오파드 드리프트우드",
@@ -327,6 +373,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:11,
       imgSrc: "./images/sub/kids/img_11.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 레더 에그렛",
@@ -334,6 +381,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:12,
       imgSrc: "./images/sub/kids/img_12.jpg",
       cateName: "척70",
       itemName: "척70 시즈널 컬러 키즈 바이탈리티 그린",
@@ -341,6 +389,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:13,
       imgSrc: "./images/sub/kids/img_13.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 이지 온 스파클 화이트",
@@ -348,6 +397,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:14,
       imgSrc: "./images/sub/kids/img_14.jpg",
       cateName: "원스타",
       itemName: "스타 플레이어 76 이지-온 빈티지 화이트",
@@ -355,6 +405,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:15,
       imgSrc: "./images/sub/kids/img_15.jpg",
       cateName: "원스타",
       itemName: "스타 플레이어 76 이지-온 네이비",
@@ -364,6 +415,7 @@ export const allData = {
   ],
   sale: [
     {
+      idx:1,
       imgSrc: "./images/sub/sale/img_01.jpg",
       cateName: "척70",
       itemName: "척70 빈티지 캔버스 에나멜 레드",
@@ -373,6 +425,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:2,
       imgSrc: "./images/sub/sale/img_02.jpg",
       cateName: "척70",
       itemName: "척70 빈티지 캔버스 미드나잇클로버",
@@ -382,6 +435,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:3,
       imgSrc: "./images/sub/sale/img_03.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 팬텀 바이올렛",
@@ -391,6 +445,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:4,
       imgSrc: "./images/sub/sale/img_04.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 시크릿 파인스",
@@ -400,6 +455,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:5,
       imgSrc: "./images/sub/sale/img_05.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 이터널 어스",
@@ -409,6 +465,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:6,
       imgSrc: "./images/sub/sale/img_06.jpg",
       cateName: "원스타",
       itemName: "원스타 프로 클래식 스웨이드 썬더",
@@ -418,6 +475,7 @@ export const allData = {
       alignment: "one",
     },
     {
+      idx:7,
       imgSrc: "./images/sub/sale/img_07.jpg",
       cateName: "척70",
       itemName: "척70 시즈널 컬러 스쿼럴 프렌드",
@@ -427,6 +485,7 @@ export const allData = {
       alignment: "chuk70",
     },
     {
+      idx:8,
       imgSrc: "./images/sub/sale/img_08.jpg",
       cateName: "런스타",
       itemName: "런스타 레거시 CX 미스틱 스카이",
@@ -436,6 +495,7 @@ export const allData = {
       alignment: "run",
     },
     {
+      idx:9,
       imgSrc: "./images/sub/sale/img_09.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 EVA 리프트 플랫폼 필라인 플로럴 화이트",
@@ -445,6 +505,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:10,
       imgSrc: "./images/sub/sale/img_10.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 워터프루프 부츠 블랙",
@@ -454,6 +515,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:11,
       imgSrc: "./images/sub/sale/img_11.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 시티 트렉 워터프루프 부츠 듄스케이프",
@@ -463,6 +525,7 @@ export const allData = {
       alignment: "allstar",
     },
     {
+      idx:12,
       imgSrc: "./images/sub/sale/img_12.jpg",
       cateName: "척테일러올스타",
       itemName: "척테일러 올스타 컨스트럭트 스포츠 리마스터드 페일 퍼티",

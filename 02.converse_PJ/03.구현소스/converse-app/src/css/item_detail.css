@@ -1,0 +1,82 @@
+.detail-wrap {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+.detail-wrap .left-box {
+  width: 700px;
+  margin-right: 50px;
+}
+.detail-wrap .left-box img {
+  width: 100%;
+}
+.detail-wrap .right-box {
+  width: calc(100% - 750px);
+}
+.detail-wrap .right-box .prod-cate {
+  font-size: 1.7rem;
+  color: #888;
+}
+.detail-wrap .right-box .prod-name {
+  margin-top: 15px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.detail-wrap .right-box .price {
+  margin-top: 20px;
+}
+.detail-wrap .right-box .price .per {
+  margin-right: 10px;
+  color: #f00;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.detail-wrap .right-box .price .per em {
+  font-style: normal;
+}
+.detail-wrap .right-box .price-box {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.detail-wrap .right-box .price-box .price-unit {
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.detail-wrap .right-box .line-box {
+  margin-top: 12px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #999;
+}
+.detail-wrap .right-box .line-box .price-unit {
+  font-size: 1.5rem;
+  font-style: normal;
+}
+.size-box {
+  margin-top: 30px;
+}
+.size-box p {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.size-box ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.size-box ul li {
+  width: 18%;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  margin-right: 2%;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.size-box ul li:nth-child(5n){
+  margin-right: 0;
+}

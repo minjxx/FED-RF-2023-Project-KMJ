@@ -125,6 +125,69 @@ export function ItemList({ cat }) {
     // console.log("정렬후", temp, "선택값", optVal);
   }; ////////////// sortList 함수 //////////
 
+  
+  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  // 리스트 만들기 함수 ///////
+  const makeList = () => {
+    // 리턴용변수
+    let retVal;
+
+    retVal = selData.map((v, i) => (
+      <li key={i}>
+        <div className="img-sec">
+          <div className="img-wrap">
+            <Link to="">
+              <img src={v.imgSrc} alt="상품사진" />
+            </Link>
+          </div>
+          <span className="ico">
+            <img src="./images/common/icon_cart.png" alt="장바구니" />
+          </span>
+        </div>
+        <div className="prod-info-box">
+          <div className="prod-cate">{v.cateName}</div>
+          <p className="prod-name">
+            <Link to="">{v.itemName}</Link>
+          </p>
+          {
+            // 데이터에 salePrice 있으면 할인율 나오고 없으면 안나오게
+            v.salePrice ? (
+              // 세일 O
+              <div className="price-box sale">
+                <div className="prod-price">
+                  {addComma(v.salePrice)}
+                  <em className="price-unit">원</em>
+                </div>
+                <div className="sale-box">
+                  <span className="per">
+                    {v.percent}
+                    <em>%</em>
+                  </span>
+                  <span className="sale-price">
+                    {addComma(v.itemPrice)}
+                    <em className="price-unit">원</em>
+                  </span>
+                </div>
+              </div>
+            ) : (
+              // 세일 X
+              <div className="prod-price">
+                {addComma(v.itemPrice)}
+                <em className="price-unit">원</em>
+              </div>
+            )
+          }
+        </div>
+      </li>
+    ));
+
+    return retVal;
+  }
+
   useEffect(() => {
     // 필터 타이틀 클릭했을때 필터 리스트박스 클래스 on넣기
     $(".opt-tit").click(function () {
@@ -220,7 +283,7 @@ export function ItemList({ cat }) {
           <div className="item-inner col-4 mcol-2">
             {
               (itemCnt != 0) && (
-              <ul>{<MakeList data={selData} />}</ul>
+              <ul>{makeList()}</ul>
               )
             }
             {
@@ -236,66 +299,7 @@ export function ItemList({ cat }) {
         </div>
         {/* content-inner 끝 */}
       </section>
-      {/* 장바구니 */}
-      {/* <CartList /> */}
     </>
   );
 }
 
-// 하위 컴포넌트 //////
-function MakeList({ data }) {
-  //정규식함수(숫자 세자리마다 콤마해주는 기능)
-  function addComma(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
-  // console.log(data);
-  return data.map((v, i) => (
-    <li key={i}>
-      <div className="img-sec">
-        <div className="img-wrap">
-          <Link to="">
-            <img src={v.imgSrc} alt="상품사진" />
-          </Link>
-        </div>
-        <span className="ico">
-          <img src="./images/common/icon_cart.png" alt="장바구니" />
-        </span>
-      </div>
-      <div className="prod-info-box">
-        <div className="prod-cate">{v.cateName}</div>
-        <p className="prod-name">
-          <Link to="">{v.itemName}</Link>
-        </p>
-        {
-          // 데이터에 salePrice 있으면 할인율 나오고 없으면 안나오게
-          v.salePrice ? (
-            // 세일 O
-            <div className="price-box sale">
-              <div className="prod-price">
-                {addComma(v.salePrice)}
-                <em className="price-unit">원</em>
-              </div>
-              <div className="sale-box">
-                <span className="per">
-                  {v.percent}
-                  <em>%</em>
-                </span>
-                <span className="sale-price">
-                  {addComma(v.itemPrice)}
-                  <em className="price-unit">원</em>
-                </span>
-              </div>
-            </div>
-          ) : (
-            // 세일 X
-            <div className="prod-price">
-              {addComma(v.itemPrice)}
-              <em className="price-unit">원</em>
-            </div>
-          )
-        }
-      </div>
-    </li>
-  ));
-}

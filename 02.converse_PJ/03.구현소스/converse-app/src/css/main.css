@@ -424,6 +424,7 @@
   position: relative;
   padding-top: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 .img-wrap img {
   position: absolute;
@@ -457,6 +458,7 @@
   color: #666;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
