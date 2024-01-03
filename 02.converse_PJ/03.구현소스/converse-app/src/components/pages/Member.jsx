@@ -225,7 +225,7 @@ export function Member() {
 
       // 6. 알럿 띄우기
       // document.querySelector(".sbtn").innerText = "가입완료";
-      alert("회원가입 완료되었습니다 :D");
+      alert("회원가입이 완료되었습니다 :D");
 
       // 7. 페이지 이동 : 로그인페이지로!
       setTimeout(()=>
