@@ -154,7 +154,23 @@
 .item-area.on .item-inner {
   width: 100%;
 }
-
+.item-area .item-none {
+  display: flex;
+  width: 100%;
+  height: 380px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.item-area .item-none svg {
+  height: 25px;
+  color: #999;
+}
+.item-area .item-none p {
+  margin-top: 15px;
+  font-size: 1.7rem;
+  color: #999;
+}
 /* 이벤트 영역 */
 .event-wrap ul {
   display: flex;

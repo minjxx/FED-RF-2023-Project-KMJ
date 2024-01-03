@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useContext } from "react";
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faFilter,faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 // 상품 리스트 데이터 불러오기
 import { allData } from "../data/all_data";
 // 제이쿼리 불러오기
@@ -228,7 +228,19 @@ export function ItemList({ cat }) {
           </div>
           {/* filter 끝 */}
           <div className="item-inner col-4 mcol-2">
-            <ul>{<MakeList data={selData} />}</ul>
+            {
+              (itemCnt != 0) && (
+              <ul>{<MakeList data={selData} />}</ul>
+              )
+            }
+            {
+              (itemCnt == 0) && (
+                <div className="item-none">
+                  <FontAwesomeIcon icon={faCircleExclamation} />
+                  <p>해당 상품이 없습니다.</p>
+                </div>
+              )
+            }
           </div>
           {/* col-4 끝 */}
         </div>
