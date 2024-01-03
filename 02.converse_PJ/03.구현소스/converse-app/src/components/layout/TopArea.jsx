@@ -38,13 +38,9 @@ export function TopArea() {
       $(this).toggleClass("on");
       $(".mo-menu").toggleClass("on");
     });
-    $(".mo-menu-list .menu-list").click(function(){
-      $(".mo-menu").toggleClass("on");
+    $(".mo-icon a, .mo-menu-list a").click(function(){
       $(".hambtn").toggleClass("on");
-    });
-    $(".mo-icon a").click(function(){
       $(".mo-menu").toggleClass("on");
-      $(".hambtn").toggleClass("on");
     });
 
   }, []);
