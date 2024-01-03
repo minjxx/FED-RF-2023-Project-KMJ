@@ -247,6 +247,13 @@ export const allData = {
       itemPrice: "69000",
       alignment: "chuk70",
     },
+    {
+      imgSrc: "./images/sub/women/img_16.jpg",
+      cateName: "척테일러올스타",
+      itemName: "척테일러 올스타 크루즈 로케이션 그래픽 다크 모스",
+      itemPrice: "66500",
+      alignment: "allstar",
+    },
   ],
   kids: [
     {
@@ -339,6 +346,20 @@ export const allData = {
       itemName: "척테일러 올스타 이지 온 스파클 화이트",
       itemPrice: "39000",
       alignment: "allstar",
+    },
+    {
+      imgSrc: "./images/sub/kids/img_14.jpg",
+      cateName: "원스타",
+      itemName: "스타 플레이어 76 이지-온 빈티지 화이트",
+      itemPrice: "38500",
+      alignment: "one",
+    },
+    {
+      imgSrc: "./images/sub/kids/img_15.jpg",
+      cateName: "원스타",
+      itemName: "스타 플레이어 76 이지-온 네이비",
+      itemPrice: "38500",
+      alignment: "one",
     },
   ],
   sale: [
