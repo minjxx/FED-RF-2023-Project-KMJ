@@ -25,7 +25,7 @@ export function ItemDetail() {
     const modalPop = $('.modal');
     modalPop.fadeIn();
     $('body').css({"overflow-y":"hidden"});
-    $('body').on('scroll touchmove mousewheel', function(e){
+    $('body').on('touchmove', function(e){
       e.preventDefault();
     });
   }
@@ -34,7 +34,7 @@ export function ItemDetail() {
     const modalPop = $('.modal');
     modalPop.fadeOut();
     $('body').css({"overflow-y":"auto"});
-    $('body').off('scroll touchmove mousewheel');
+    $('body').off('touchmove');
   }
   
   return (
@@ -123,8 +123,8 @@ export function ItemDetail() {
 
         {/* 사이즈 가이드 팝업 */}
         <section className="modal">
-          <button className="modal-close" onClick={modalClose}><FontAwesomeIcon icon={faXmark} /></button>
           <div className="moder-inner">
+              <button className="modal-close" onClick={modalClose}><FontAwesomeIcon icon={faXmark} /></button>
               <h3>사이즈 차트</h3>
               <div className="chart">
                 <img src="./images/sub/detail/size_guide.jpg" alt="사이즈 가이드" />
