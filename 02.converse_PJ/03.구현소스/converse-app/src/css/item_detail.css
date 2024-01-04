@@ -67,7 +67,7 @@
   flex-wrap: wrap;
 }
 .size-box ul li {
-  width: 18%;
+  width: 18.4%;
   margin-bottom: 10px;
   padding: 15px 0;
   margin-right: 2%;
@@ -76,7 +76,30 @@
   border-radius: 6px;
   font-size: 1.6rem;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .size-box ul li:nth-child(5n){
   margin-right: 0;
 }
+
+
+
+
+/* 
+.easyPayWrap .easyPayBox {margin: 0 -15px;padding:15px;}
+.easyPayWrap .easyPayBox ul {display: flex;flex-wrap: wrap;box-sizing: border-box;}
+.easyPayWrap .easyPayBox ul li {flex-basis: 32%;flex-shrink: 1;flex-grow: 1;margin-right:2%;margin-bottom:10px; box-sizing: border-box; border:1px solid #eee;background-color:#fff;border-radius:8px;cursor: pointer;z-index:10;}
+.easyPayWrap .easyPayBox ul li:nth-child(3n) {margin-right:0;}
+.easyPayWrap .easyPayBox ul li:nth-child(n+4) {flex-grow:inherit;}
+.easyPayWrap .easyPayBox ul li .pay_label {margin:0;padding: 20px 10px;}
+.easyPayWrap .easyPayBox ul li .icon {display: block; width: 60px;margin: 0 auto;text-align: center}
+.easyPayWrap .easyPayBox ul li .icon.wi_size img {max-width: 30px;max-height: 30px;}
+.easyPayWrap .easyPayBox ul li .icon img {width:100%;max-width:50px;max-height:40px;}
+.easyPayWrap .easyPayBox ul li .tit {margin-top: 10px;text-align: center;font-size: 13px;line-height:1;color: #333;font-weight: 500;font-family:"Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", sans-serif;}
+
+@media(max-width:310px){
+	.easyPayWrap .easyPayBox ul {gap: 10px;}
+	.easyPayWrap .easyPayBox ul li {flex-basis: 31.3%;margin-right:0;margin-bottom:0;}
+	.easyPayWrap .easyPayBox ul li:nth-child(n+4) {flex-grow:1;}
+}
+*/
