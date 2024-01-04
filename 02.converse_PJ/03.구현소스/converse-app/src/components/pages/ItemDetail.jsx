@@ -1,7 +1,14 @@
-
+// 상품상세 페이지
 import { useLocation } from "react-router-dom";
 import "../../css/item_detail.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+
+// 제이쿼리 불러오기
+import $ from "jquery";
+
+// 폰트어썸 불러오기
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExpand,faBasketShopping,faCreditCard,faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export function ItemDetail() {
 
@@ -13,6 +20,23 @@ export function ItemDetail() {
   const location = useLocation();
   const { state } = location;
 
+  // 모달창 띄우기
+  const modalPop = () => {
+    const modalPop = $('.modal');
+    modalPop.fadeIn();
+    $('body').css({"overflow-y":"hidden"});
+    $('body').on('scroll touchmove mousewheel', function(e){
+      e.preventDefault();
+    });
+  }
+  // 모달창 닫기
+  const modalClose = () => {
+    const modalPop = $('.modal');
+    modalPop.fadeOut();
+    $('body').css({"overflow-y":"auto"});
+    $('body').off('scroll touchmove mousewheel');
+  }
+  
   return (
     <>
       <section className="sub-area">
@@ -56,8 +80,7 @@ export function ItemDetail() {
             <div className="size-box">
               <p>사이즈 선택</p>
               <ul>
-                <li>220</li>
-                <li>225</li>
+                {/* 라디오버튼으로 변경 */}
                 <li>230</li>
                 <li>235</li>
                 <li>240</li>
@@ -74,10 +97,42 @@ export function ItemDetail() {
                 <li>295</li>
                 <li>300</li>
               </ul>
+              {/* 위에 사이즈 선택영역 라디오버튼으로 변경 */}
+              {/* <div>
+                <label htmlFor="">
+                  <input type="radio" name="" id="" />
+                </label>
+              </div> */}
+              <button className="guide-btn" onClick={modalPop}>
+                <FontAwesomeIcon icon={faExpand} />
+                사이즈를 찾아보세요!
+              </button>
+            </div> {/* size-box 끝 */}
+            <div className="total-box">
+              <span className="title">총 합계</span>
+              <div className="total-price">
+                <strong>{addComma(state.itemPrice)}</strong><em>원</em>
+              </div>
             </div>
+            <div className="buy-btns">
+              <button className="btn cart"><FontAwesomeIcon icon={faBasketShopping} />장바구니</button>
+              <button className="btn"><FontAwesomeIcon icon={faCreditCard} />구매하기</button>
+            </div>
+          </div> {/* right-box 끝 */}
+        </div> {/* detail-wrap 끝 */}
+
+        {/* 사이즈 가이드 팝업 */}
+        <section className="modal">
+          <button className="modal-close" onClick={modalClose}><FontAwesomeIcon icon={faXmark} /></button>
+          <div className="moder-inner">
+              <h3>사이즈 차트</h3>
+              <div className="chart">
+                <img src="./images/sub/detail/size_guide.jpg" alt="사이즈 가이드" />
+              </div>
           </div>
-        </div>
-      </section>
+        </section> {/* modal 끝 */}
+
+      </section> {/* sub-area 끝 */}
     </>
   );
 }

@@ -44,18 +44,18 @@ address {
 }
 
 /* 스크롤바 전체 기본 꾸미기 */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 9px;
 }
 
 /* 스크롤바 막대 꾸미기 */
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #333;
 	border-radius: 50px;
 }
 
 /* 스크롤바 트랙 꾸미기 */
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: #e8e8e8;
 }
 
