@@ -62,8 +62,8 @@ export const gnbMenu = [
       txt:"sale",
       link:"/sale",
   },
-  {
-      txt:"notice",
-      link:"/notice",
-  },
+//   {
+//       txt:"notice",
+//       link:"/notice",
+//   },
 ];
