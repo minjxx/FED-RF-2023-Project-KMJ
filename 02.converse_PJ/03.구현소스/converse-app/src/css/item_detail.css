@@ -76,33 +76,48 @@ button:hover {
   font-size: 1.8rem;
   font-weight: bold;
 }
-.size-box ul {
+
+/* 라디오버튼 커스텀 */
+.radio_box {
   display: flex;
   flex-wrap: wrap;
 }
-.size-box ul li {
+.radio_btn {
   margin-right:2%;
-  margin-bottom:10px; 
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  box-sizing: border-box; 
+  margin-bottom:10px;
   font-size: 1.6rem;
   flex-basis: 18.4%;
   flex-shrink: 1;
-  /* flex-grow: 1; */
-  background-color:#fff;
-  border-radius:5px;
-  cursor: pointer;
-  transition: .3s;
 }
-.size-box ul li:nth-child(5n){
+.radio_btn input[type=radio] {
+  display: none;
+}
+.radio_btn label {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 45px;
+  background-color:#fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: .2s;
+}
+/* Checked */
+.radio_btn input[type=radio]:checked + label {
+  border: 1px solid var(--main-black);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+/* Hover */
+.radio_btn input[type=radio] + label:hover {
+  border: 1px solid var(--main-black);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.radio_btn:nth-child(5n){
   margin-right: 0;
 }
-.size-box ul li.on, .size-box ul li:hover {
-  border: 1px solid var(--main-black);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+
 /* 사이즈 가이드 버튼 */
 .guide-btn {
   width: 100%;
@@ -259,7 +274,7 @@ button:hover {
     margin-top: 12px;
     font-size: 2rem;
   }
-  .size-box ul li {
+  .radio_btn {
     font-size: 1.5rem;
   }
   .guide-btn {
@@ -295,14 +310,17 @@ button:hover {
   }
 }
 @media screen and (max-width: 340px) {
-  .size-box ul li {
+  .radio_btn {
     flex-basis: 32%;
     font-size: 1.5rem;
   }
-  .size-box ul li:nth-child(5n){
+  .radio_btn:nth-child(5n){
     margin-right: 2%;
   }
-  .size-box ul li:nth-child(3n){
+  .radio_btn:nth-child(3n){
     margin-right: 0;
+  }
+  .radio_btn label{
+    line-height: 42px;
   }
 }

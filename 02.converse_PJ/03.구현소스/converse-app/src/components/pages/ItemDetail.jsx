@@ -79,30 +79,69 @@ export function ItemDetail() {
             }
             <div className="size-box">
               <p>사이즈 선택</p>
-              <ul>
-                {/* 라디오버튼으로 변경 */}
-                <li>230</li>
-                <li>235</li>
-                <li>240</li>
-                <li>245</li>
-                <li>250</li>
-                <li>255</li>
-                <li>260</li>
-                <li>265</li>
-                <li>270</li>
-                <li>275</li>
-                <li>280</li>
-                <li>285</li>
-                <li>290</li>
-                <li>295</li>
-                <li>300</li>
-              </ul>
-              {/* 위에 사이즈 선택영역 라디오버튼으로 변경 */}
-              {/* <div>
-                <label htmlFor="">
-                  <input type="radio" name="" id="" />
-                </label>
-              </div> */}
+              <div className="radio_box">
+                <div class="radio_btn">
+                  <input id="size1" type="radio" name="userSize" value="230" />
+                  <label for="size1">230</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size2" type="radio" name="userSize" value="235" />
+                  <label for="size2">235</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size3" type="radio" name="userSize" value="240" />
+                  <label for="size3">240</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size4" type="radio" name="userSize" value="245" />
+                  <label for="size4">245</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size5" type="radio" name="userSize" value="250" />
+                  <label for="size5">250</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size6" type="radio" name="userSize" value="255" />
+                  <label for="size6">255</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size7" type="radio" name="userSize" value="260" />
+                  <label for="size7">260</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size8" type="radio" name="userSize" value="265" />
+                  <label for="size8">265</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size9" type="radio" name="userSize" value="270" />
+                  <label for="size9">270</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size10" type="radio" name="userSize" value="275" />
+                  <label for="size10">275</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size11" type="radio" name="userSize" value="280" />
+                  <label for="size11">280</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size12" type="radio" name="userSize" value="285" />
+                  <label for="size12">285</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size13" type="radio" name="userSize" value="290" />
+                  <label for="size13">290</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size14" type="radio" name="userSize" value="295" />
+                  <label for="size14">295</label>
+                </div>
+                <div class="radio_btn">
+                  <input id="size15" type="radio" name="userSize" value="300" />
+                  <label for="size15">300</label>
+                </div>
+              </div>
+
               <button className="guide-btn" onClick={modalPop}>
                 <FontAwesomeIcon icon={faExpand} />
                 사이즈를 찾아보세요!
