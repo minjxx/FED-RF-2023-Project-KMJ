@@ -14,6 +14,7 @@ import { Member } from "./components/pages/Member";
 import { Login } from "./components/pages/Login";
 import { Notice } from "./components/pages/Notice";
 import { ItemDetail } from "./components/pages/ItemDetail";
+import { SearchList } from "./components/pages/SearchList";
 
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="notice" element={<Notice/>} />
           <Route path="login" element={<Login />} />
           <Route path="member" element={<Member />} />
+          <Route path="search" element={<SearchList />} />
         </Route>
       </Routes>
     </HashRouter>
