@@ -80,65 +80,65 @@ export function ItemDetail() {
             <div className="size-box">
               <p>사이즈 선택</p>
               <div className="radio_box">
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size1" type="radio" name="userSize" value="230" />
-                  <label for="size1">230</label>
+                  <label htmlFor="size1">230</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size2" type="radio" name="userSize" value="235" />
-                  <label for="size2">235</label>
+                  <label htmlFor="size2">235</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size3" type="radio" name="userSize" value="240" />
-                  <label for="size3">240</label>
+                  <label htmlFor="size3">240</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size4" type="radio" name="userSize" value="245" />
-                  <label for="size4">245</label>
+                  <label htmlFor="size4">245</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size5" type="radio" name="userSize" value="250" />
-                  <label for="size5">250</label>
+                  <label htmlFor="size5">250</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size6" type="radio" name="userSize" value="255" />
-                  <label for="size6">255</label>
+                  <label htmlFor="size6">255</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size7" type="radio" name="userSize" value="260" />
-                  <label for="size7">260</label>
+                  <label htmlFor="size7">260</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size8" type="radio" name="userSize" value="265" />
-                  <label for="size8">265</label>
+                  <label htmlFor="size8">265</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size9" type="radio" name="userSize" value="270" />
-                  <label for="size9">270</label>
+                  <label htmlFor="size9">270</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size10" type="radio" name="userSize" value="275" />
-                  <label for="size10">275</label>
+                  <label htmlFor="size10">275</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size11" type="radio" name="userSize" value="280" />
-                  <label for="size11">280</label>
+                  <label htmlFor="size11">280</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size12" type="radio" name="userSize" value="285" />
-                  <label for="size12">285</label>
+                  <label htmlFor="size12">285</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size13" type="radio" name="userSize" value="290" />
-                  <label for="size13">290</label>
+                  <label htmlFor="size13">290</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size14" type="radio" name="userSize" value="295" />
-                  <label for="size14">295</label>
+                  <label htmlFor="size14">295</label>
                 </div>
-                <div class="radio_btn">
+                <div className="radio_btn">
                   <input id="size15" type="radio" name="userSize" value="300" />
-                  <label for="size15">300</label>
+                  <label htmlFor="size15">300</label>
                 </div>
               </div>
 
