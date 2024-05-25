@@ -8,7 +8,7 @@ import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import { benefitData } from "../data/benefit_data";
-import { moBenefitData } from "../data/benefit_data _mo";
+import { moBenefitData } from "../data/benefit_data_mo";
 
 export function SwiperBenefit() {
   return (
